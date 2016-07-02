@@ -16,12 +16,12 @@
 (defn update-state [state]
   ; Update sketch state by changing circle color and position.
   {:color  (mod (+ (:color state) 0.27) 255)
-   :angle  (+ (:angle state) 0.1)
+   :angle  (+ (:angle state) 0.01)
    :chance (+ (:chance state) 0.01)})
 
 (defn draw-state [state]
   ; Clear the sketch by filling it with light-grey color.
-  (q/background 240 0.5)
+  (q/background 255)
   ; Set circle color.
   (q/fill (:color state) 255 255 100)
   ; disable stroke
@@ -30,12 +30,12 @@
   (let [angle (:angle state)
         x (* 25 (q/cos angle))
         y (* 150 (q/sin angle))]
-    (dotimes [n 24]
-      (q/with-translation [(/ (q/width) 2)
-                           (/ (q/height) 2)]
+    (dotimes [n 10]
+      (q/with-translation [(/ (q/width) 3)
+                           (/ (q/height) 3)]
                           ; Draw the circle.
                           ; Move origin point to the center of the sketch.
-                          (q/with-rotation [(* 90 n)]
+                          (q/with-rotation [(* 120 n)]
                                            (q/ellipse x y 100 100))))))
 
 
