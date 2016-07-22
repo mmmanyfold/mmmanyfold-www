@@ -16,10 +16,10 @@
       h2, h4 {
         margin-top: 5px;
       }
-      .spacer {
+      .space {
         margin: 15px;
       }
-      .big-spacer {
+      .big-space {
         margin: 25px;
       }
       .vid {
@@ -39,7 +39,7 @@
         -webkit-flex-flow: column nowrap;
         flex-flow: column nowrap;
       }
-      .first, .second {
+      .first, .second, .third {
         position: absolute;
       }
     </style>
@@ -49,7 +49,7 @@
     <div class="horizontal flex">
       <div class="front flex">
         <div style="margin-bottom:auto">
-          <h3 class="spacer">July 19-22, 2016<br><br>
+          <h3 class="space">July 19-22, 2016<br><br>
             Objective:<br>
             Explore the design thinking process<br>
             from a different theme each day.<br>
@@ -57,7 +57,7 @@
           </h3><br>
         </div>
         <div style="margin-top:auto">
-          <h3 class="spacer">
+          <h3 class="space">
             > observe / brainstorm / prototype / test
           </h3>
           <span class="title">DESIGN<br>CHALLENGE</span>
@@ -68,13 +68,13 @@
           <img height="60%" src="img/light1.jpg"/><br>
           <h2>@ the Denver Art Museum</h2>
         </div>
-        <div class="spacer">
+        <div class="space">
           <h2>Day 1</h2><br>
           <h3>Goals:<br>
-            Prototype with light &amp; sound<br>
-            Create a comfortable shared space<br>
-            Explore identity through<br>
-            images &amp; stories</h3>
+            Prototype with light &amp; sound.<br>
+            Create a comfortable shared space.<br>
+            Explore personal identities through<br>
+            stories &amp; images.</h3>
           <iframe class="vid" width="560" height="315" src="https://www.youtube.com/embed/e_fLUcHnmuA" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
@@ -83,18 +83,36 @@
           <a href="http://denverartmuseum.org/exhibitions/dancelab"><img height="30%" width=auto src="img/dancelab.gif"/></a><br>
           <h4>#dancelab</h4>
         </div>
-        <div class="spacer" height="100%">
-          <div class="big-spacer" style="margin-bottom:5px">
+        <div class="space" height="100%">
+          <div class="big-space" style="margin-bottom:5px">
             <h2>Day 2</h2><br>
             <h3>Goals:<br>
-              Innovate on the idea of a chair<br>
+              Explore innovation in chair design.<br>
               Define problems from specific users'
-              <br>points of view</h3><br>
+              <br>points of view.</h3><br>
           </div>
-          <div style="text-align:right">
-            <a href="https://youtu.be/4I2Ppgr2M0A"><img height="60%" src="img/samuel.jpg"/></a><br>
-            <h4>excerpt: <em>On the Way to School</em></h4>
+          <div>
+            <a href="http://denverartmuseum.org/exhibitions/unseated">
+              <img height="50%" src="img/unseated.jpg"/></a>
           </div>
+        </div>
+        <div style="text-align:right;align-self:center">
+          <a href="https://youtu.be/4I2Ppgr2M0A">
+            <img height="60%" src="img/samuel.jpg"/></a><br>
+          <h4>excerpt: <em>On the Way to School</em></h4>
+        </div>
+      </div>
+      <div class="third flex" style="align-items:flex-end">
+        <div height="100%">
+          <img height="50%" src="img/ducttape.png"/>
+        </div>
+        <div class="space" height="100%">
+          <h2>Day 3</h2><br>
+          <h3>Goals:<br>
+            Explore the things we carry.<br>
+            Brainstorm as if we're right,<br>
+            &amp; test as if we're wrong.</h3><br>
+          <img height="50%" src="img/bandolier.png"/>
         </div>
       </div>
     </div>
@@ -129,6 +147,9 @@
         $('h4').css({
           'font-size': (height/33) + 'px',
           'line-height': (height/33) + 'px'
+        });
+        $('.third').css({
+          'left': (width*3.13) + 'px'
         });
       }).trigger('resize');
     </script>
