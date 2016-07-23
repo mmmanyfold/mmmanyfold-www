@@ -39,8 +39,11 @@
         -webkit-flex-flow: column nowrap;
         flex-flow: column nowrap;
       }
-      .first, .second, .third {
+      .first, .second, .third, .fourth {
         position: absolute;
+      }
+      a:hover{
+        opacity: 0.75;
       }
     </style>
 </head>
@@ -80,15 +83,17 @@
       </div>
       <div class="second flex">
         <div class="big-space" width="100%" style="text-align:center; margin-top:0">
-          <a href="http://denverartmuseum.org/exhibitions/dancelab"><img height="30%" width=auto src="img/dancelab.gif"/></a><br>
+          <a target="blank" href="http://denverartmuseum.org/exhibitions/dancelab">
+            <img height="30%" width=auto src="img/dancelab.gif"/></a><br>
           <h4>#dancelab</h4>
         </div>
         <div class="big-space" style="margin:40px;align-self:center;text-align:center">
           <iframe src="https://embed.spotify.com/?uri=spotify:user:ellesm:playlist:584PLewSqLvFauIqdLZjZk&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
           <h4>collective work playlist</h4>
         </div>
-        <div class="big-space" height="100%" style="margin-top:10px">
+        <div class="big-space" height="100%" style="margin-top:10px;text-align:center">
           <img height="85%" src="img/selfportraits.jpg"/>
+          <h4>collage self-portraits</h4>
         </div>
         <div height="100%" style="align-self:center">
           <div style="margin-bottom:5px">
@@ -96,15 +101,16 @@
             <h3>Goals:<br>
               Explore innovations in chair design.<br>
               Define problems from specific users'
-              <br>points of view.</h3><br>
+              <br>points of view. Brainstorm solutions.<br>
+              Prototype!</h3><br>
           </div>
           <div>
-            <a href="http://denverartmuseum.org/exhibitions/unseated">
+            <a target="blank" href="http://denverartmuseum.org/exhibitions/unseated">
               <img height="50%" src="img/unseated.jpg"/></a>
           </div>
         </div>
         <div class="big-space" style="text-align:right;align-self:center" height="100%">
-          <a href="https://youtu.be/4I2Ppgr2M0A">
+          <a target="blank" href="https://youtu.be/4I2Ppgr2M0A">
             <img height="50%" src="img/samuel.jpg"/></a><br>
           <h4>excerpt: <em>On the Way to School</em></h4>
         </div>
@@ -113,19 +119,40 @@
         </div>
       </div>
       <div class="third flex" style="align-items:flex-end">
-        <div height="100%">
-          <img height="50%" src="img/ducttape.png"/>
+        <div height="100%" style="margin-bottom:20px;">
+          <img height="35%" src="img/quote.png"/>
         </div>
         <div height="100%">
           <h2>Day 3</h2><br>
           <h3>Goals:<br>
-            Explore the things we carry.<br>
-            Brainstorm as if we're right,<br>
-            &amp; test as if we're wrong.</h3><br>
-          <img height="65%" src="img/bandolier.png"/>
+            Explore the things we wear &amp; carry.<br>
+            Learn about powwow regalia from Native<br>
+            Artist-in-Residence, Verla Howell.<br>
+            Design your own bag &amp; make it<br>
+            out of materials that last.</h3><br>
+          <a target="blank" href="http://denverartmuseum.org/object/1955.142">
+            <img height="55%" width="auto" src="img/bandolier.png"/></a>
         </div>
-        <div style="align-self:flex-start">
+        <div class="big-space" style="align-self:flex-start">
           <img height="65%" src="img/brainstorm.jpg"/>
+        </div>
+        <div class="big-space">
+          <h2>Day 4</h2><br>
+          <h3>Goals:<br>
+            Make posters that pop.<br>
+            Explore high-contrast, silhouettes,<br>
+            and color-blocking.<br>
+            Use the techniques we've<br>
+            learned to re-design an object<br>
+            of your choice.
+            </h3>
+        </div>
+      </div>
+      <div class="fourth flex">
+        <div height="100%" style="margin-top:27%">
+          <a target="blank" href="http://www.imdb.com/title/tt0097814/">
+            <img height="50%" src="img/inspiration.gif">
+          </a>
         </div>
       </div>
     </div>
@@ -162,7 +189,10 @@
           'line-height': (height/33) + 'px'
         });
         $('.third').css({
-          'left': (width*4.5) + 'px'
+          'left': (width*4.35) + 'px'
+        });
+        $('.fourth').css({
+          'left': (width*5.6) + 'px'
         });
       }).trigger('resize');
     </script>
