@@ -6,8 +6,10 @@
               [mmm.subs]
               [mmm.routes :as routes]
               [mmm.views :as views]
-              [mmm.config :as config]))
+              [mmm.config :as config]
+              [mmm.components.logo :refer [GSAnimationSeq]]))
 
+(GSAnimationSeq)
 
 (defn dev-setup []
   (when config/debug?
