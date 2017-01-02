@@ -1,16 +1,49 @@
-# test-js
+# mmm
 
-A Quil sketch designed to ... well, that part is up to you.
+A [re-frame](https://github.com/Day8/re-frame) application designed to ... well, that part is up to you.
 
-## Usage
+## Development Mode
 
-Run `lein compile` command and open `index.html` in your browser.
+### Compile css:
 
-For interactive development run `lein cljsbuild auto` command. This command will be recompiling cljs to js each time you modify `core.cljs` and you can see result immediately by refreshing page.
+Compile css file once.
 
-## License
+```
+lein less once
+```
 
-Copyright © 2015 FIXME
+Automatically recompile css file on change.
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+```
+lein less auto
+```
+
+### Run application:
+
+```
+lein clean
+lein figwheel dev
+```
+
+Figwheel will automatically push cljs changes to the browser.
+
+Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
+
+### Run tests:
+
+```
+lein clean
+lein doo phantom test once
+```
+
+The above command assumes that you have [phantomjs](https://www.npmjs.com/package/phantomjs) installed. However, please note that [doo](https://github.com/bensu/doo) can be configured to run cljs.test in many other JS environments (chrome, ie, safari, opera, slimer, node, rhino, or nashorn).
+
+## Production Build
+
+
+To compile clojurescript to javascript:
+
+```
+lein clean
+lein cljsbuild once min
+```
