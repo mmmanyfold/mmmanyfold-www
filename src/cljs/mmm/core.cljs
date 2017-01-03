@@ -9,8 +9,6 @@
               [mmm.config :as config]
               [mmm.components.logo :refer [GSAnimationSeq]]))
 
-(GSAnimationSeq)
-
 (defn dev-setup []
   (when config/debug?
     (enable-console-print!)
@@ -19,6 +17,7 @@
 
 (defn mount-root []
   (re-frame/clear-subscription-cache!)
+  (GSAnimationSeq true)
   (reagent/render [views/main-panel]
                   (.getElementById js/document "app")))
 
