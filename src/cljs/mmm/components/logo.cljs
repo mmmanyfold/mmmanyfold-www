@@ -19,15 +19,13 @@
       dot
       (clj->js {:width           dot-size
                 :height          dot-size
-                :transformOrigin (str (* -1 radius) "px 0px")
+                :transformOrigin (str (* -0.5 radius) "px 0px")
                 :x               radius
-                :backgroundColor (last colors)
+                :backgroundColor "red"
                 :borderRadius    "50%"
                 :force3D         true
                 :position        "absolute"
                 :rotation        rotation}))
-
-    (set! (.-className dot) "preloader-dot")
 
     dot))
 
@@ -35,16 +33,16 @@
 
   "inits green sock animation sequence for logo animation"
 
-  [active]
+  []
 
   (let [parent (js/document.getElementById "mmm")
         element (js/document.createElement "div")
-        radius 42
-        dot-size 15
+        box (js/document.createElement "div")
+        radius 45
+        dot-size 20
         animation-offset 1.8
-        dot-count 10
-        animation (js/TimelineLite. #js {:paused false})
-        box (js/document.createElement "div")]
+        dot-count 15
+        animation (js/TimelineLite. #js {:paused false})]
 
     ;; TODO: find a more clojure idomatic way to do this
     ;(.push colors (.shift colors))
@@ -66,7 +64,7 @@
 
     (dotimes [i dot-count]
 
-      (let [rotation-increment (/ 360 i)
+      (let [rotation-increment (/ 180 i)
             dot (create-dot!
                   (* i rotation-increment)
                   element
@@ -80,9 +78,11 @@
                                      :ease    (aget js/Power1 "easeOut")})
                            animation-offset)
 
-        (let [timeline (js/TimelineMax. #js {:repeat -1 :repeatDelay 0.25})]
+        (let [timeline (js/TimelineMax. #js {:repeat      1
+                                             :repeatDelay 0.25})]
 
-          (dotimes [j (count colors)]
+
+          (dotimes [j 10]
 
             (-> timeline
                 (.to dot 2.5
@@ -93,16 +93,13 @@
                      (clj->js {:skewX           "+=360"
                                :backgroundColor (get colors j)
                                :ease            (aget js/Power2 "easeInOut")})
-                     (* 2.9 j))))
+                     (+ 1.6 (* 2.9 j)))))
 
-          (js/animation.add timeline (* i 0.07)))))
+          (js/animation.add timeline (* i 0.7)))))
 
     (when-not (nil? (.-render js/TweenLite))
       (js/TweenLite.render))
 
-    (if active
-      (do
-        (set! (-> element .-style .-visibility) "visible")
-        (js/TweenLite #js [element box]
+    (js/TweenLite.set #js [element box]
                       #js {:rotation 0})
-        (js/animation.play animation-offset)))))
+    (js/animation.play animation-offset)))
