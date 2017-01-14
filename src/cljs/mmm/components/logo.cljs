@@ -19,7 +19,7 @@
       dot
       (clj->js {:width           dot-size
                 :height          dot-size
-                :transformOrigin (str (* -0.5 radius) "px 0px")
+                :transformOrigin (str (* -2 radius) "px 0px")
                 :x               radius
                 :backgroundColor "red"
                 :borderRadius    "50%"
