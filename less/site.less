@@ -1,3 +1,88 @@
+html {
+  height: 100%;
+}
+
 body {
-    color:red;
+  color: #f2f2f2;
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: white;
+  font-weight: normal;
+}
+
+h2, h3 {
+  font-style: italic;
+}
+
+h2 mark a {
+  color: #2f1916;
+}
+
+h2 mark {
+  background-color: #e3eee6;
+  color: #2f1916;
+  font-size: 1em;
+  padding: 2px;
+  padding-right: 7px;
+  font-weight: bold;
+}
+
+h3 mark {
+  font-weight: normal;
+  color: #e3eee6;
+  background-color: #2f1916;
+  padding: 2px 7px 2px 5px;
+  font-size: 0.8em;
+}
+
+#app { // previously #bg
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  background: #463734; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #463734 0%, #fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#463734', endColorstr='#fcfcfc', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.content {
+  z-index: 1;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row wrap;
+  flex-direction: row wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+a {
+  color: #2f1916;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+
+  float: right;
+  span {
+    padding: 0 5px;
+  }
 }

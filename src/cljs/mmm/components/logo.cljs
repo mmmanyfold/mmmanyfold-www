@@ -35,7 +35,7 @@
 
   []
 
-  (let [parent (js/document.getElementById "mmm")
+  (let [parent (js/document.getElementById "mmm-logo")
         element (js/document.createElement "div")
         box (js/document.createElement "div")
         radius 45

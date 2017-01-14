@@ -1,14 +1,8 @@
 (ns mmm.views
-    (:require [re-frame.core :as re-frame]
-              [re-com.core :as re-com]))
-
+  (:require [re-frame.core :as re-frame]
+            [re-com.core :as re-com]))
 
 ;; home
-
-(defn home-title []
-  [re-com/title
-   :label "mmm"
-   :level :level1])
 
 (defn link-to-about-page []
   [re-com/hyperlink-href
@@ -18,9 +12,7 @@
 (defn home-panel []
   [re-com/v-box
    :gap "1em"
-   :children [[home-title] [link-to-about-page]]])
-
-
+   :children [[link-to-about-page]]])
 ;; about
 
 (defn about-title []
@@ -47,12 +39,25 @@
     :about-panel [about-panel]
     [:div]))
 
-(defn show-panel [panel-name]
-  [panels panel-name])
+;; [:h3 [:mark "UX DESIGN/DEVELOPMENT BY MICHELLE LIM + DAVID VIRAMONTES-MARTINEZ"]]
 
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]
     (fn []
-      [re-com/v-box
-       :height "100%"
-       :children [[panels @active-panel]]])))
+      [:div.content
+       [:div.header
+        [:div
+         [:a {:href "/"}
+          [:img.logo {:src "img/logo-graydient.png"}]]
+         [:nav
+          [:span "Gallery"]
+          "/"
+          [:span "About"]
+          "/"
+          [:span "Contact"]
+          "/"
+          [:span "Blog"]]]
+        [:h1 "mmmanyfold"]]
+       [re-com/v-box
+        :height "100%"
+        :children [[panels @active-panel]]]])))
