@@ -10,4 +10,4 @@
 (re-frame/reg-sub
  :active-view
  (fn [db _]
-   (reaction (:active-view db))))
+   (:active-view db)))

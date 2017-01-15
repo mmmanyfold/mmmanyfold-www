@@ -22,7 +22,8 @@
     (re-frame/dispatch [:set-active-view :gallery-view]))
   (defroute "/about" []
     (re-frame/dispatch [:set-active-view :about-view]))
-
+  (defroute "/contact" []
+    (re-frame/dispatch [:set-active-view :contact-view]))
 
   ;; --------------------
   (hook-browser-navigation!))
