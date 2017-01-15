@@ -19,10 +19,9 @@
   ;; --------------------
   ;; define routes here
   (defroute "/" []
-    (re-frame/dispatch [:set-active-panel :home-panel]))
-
+    (re-frame/dispatch [:set-active-view :gallery-view]))
   (defroute "/about" []
-    (re-frame/dispatch [:set-active-panel :about-panel]))
+    (re-frame/dispatch [:set-active-view :about-view]))
 
 
   ;; --------------------

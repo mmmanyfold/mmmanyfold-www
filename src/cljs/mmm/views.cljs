@@ -1,63 +1,29 @@
 (ns mmm.views
   (:require [re-frame.core :as re-frame]
-            [re-com.core :as re-com]))
+            [re-com.core :as re-com]
+            [mmm.views.gallery :refer [gallery-view]]
+            [mmm.views.about :refer [about-view]]))
 
-;; home
-
-(defn link-to-about-page []
-  [re-com/hyperlink-href
-   :label "go to About Page"
-   :href "#/about"])
-
-(defn home-panel []
-  [re-com/v-box
-   :gap "1em"
-   :children [[link-to-about-page]]])
-;; about
-
-(defn about-title []
-  [re-com/title
-   :label "This is the About Page."
-   :level :level1])
-
-(defn link-to-home-page []
-  [re-com/hyperlink-href
-   :label "go to Home Page"
-   :href "#/"])
-
-(defn about-panel []
-  [re-com/v-box
-   :gap "1em"
-   :children [[about-title] [link-to-home-page]]])
-
-
-;; main
-
-(defn- panels [panel-name]
-  (case panel-name
-    :home-panel [home-panel]
-    :about-panel [about-panel]
+(defn- views [view-name]
+  (case view-name
+    :gallery-view [gallery-view]
+    :about-view [about-view]
     [:div]))
 
 ;; [:h3 [:mark "UX DESIGN/DEVELOPMENT BY MICHELLE LIM + DAVID VIRAMONTES-MARTINEZ"]]
 
-(defn main-panel []
-  (let [active-panel (re-frame/subscribe [:active-panel])]
+(defn main-view []
+  (let [active-view (re-frame/subscribe [:active-view])]
     (fn []
       [:div.content
-       [:div.header
-        [:div
-         [:a {:href "/"}
-          [:img.logo {:src "img/logo-graydient.png"}]]
-         [:nav
-          [:span "Gallery"]
-          "/"
-          [:span "About"]
-          "/"
-          [:span "Contact"]
-          "/"
-          [:span "Blog"]]]
-        [:h1 "mmmanyfold"]]
-       [re-com/v-box
-        :height "100%"
-        :children [[panels @active-panel]]]])))
+        [:div.header
+          [:div
+            [:a.logo {:href "/"}
+              [:img {:src "img/logo-graydient.png"}]]
+            [:nav
+              [:span [:a {:href "#/about"} "About"]] "/"
+              [:span [:a {:href "#"} "Gallery"]] "/"
+              [:span [:a {:href "#/contact"} "Contact"]] "/"
+              [:span [:a {:href "http://blog.mmmanyfold.com"} "Blog"]]]]
+          [:h1 "mmmanyfold"]]
+        [views @active-view]])))

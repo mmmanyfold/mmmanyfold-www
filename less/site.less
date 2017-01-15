@@ -9,9 +9,57 @@ body {
   font-family: sans-serif;
 }
 
+#app { // previously #bg
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #463734; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #463734 0%, #fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#463734', endColorstr='#fcfcfc', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+
+.content {
+  z-index: 1;
+  padding: 30px 50px;
+}
+
+nav {
+  float: right;
+  background-color: #e3eee6;
+  color: #2f1916;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 10px;
+  padding: 1px 0;
+  span {
+    padding: 0 15px;
+  }
+  a {
+    color: #2f1916;
+    text-decoration: none;
+    &:hover {
+      color: #2f1916;
+      text-decoration: none;
+      font-style: normal;
+    }
+    &:focus {
+      color: #2f1916;
+      text-decoration: none;
+      font-style: normal;
+    }
+  }
+}
+.logo:hover {
+  opacity: 0.75;
+}
+
 h1 {
   color: white;
   font-weight: normal;
+  font-size: 4em;
 }
 
 h2, h3 {
@@ -39,49 +87,11 @@ h3 mark {
   font-size: 0.8em;
 }
 
-#app { // previously #bg
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: #463734; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #463734 0%, #fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#463734', endColorstr='#fcfcfc', GradientType=1); /* IE6-9 fallback on horizontal gradient */
-}
-
-.logo:hover {
-  opacity: 0.75;
-}
-
-.content {
-  z-index: 1;
-  padding-left: 50px;
-  padding-top: 30px;
-}
-
-.flex {
+.flex-row {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row wrap;
   flex-direction: row wrap;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-}
-
-a {
-  color: #2f1916;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-nav {
-
-  float: right;
-  span {
-    padding: 0 5px;
-  }
 }

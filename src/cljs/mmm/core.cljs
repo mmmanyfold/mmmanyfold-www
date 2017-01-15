@@ -18,7 +18,7 @@
 (defn mount-root []
   (re-frame/clear-subscription-cache!)
   ;(GSAnimationSeq) ;; draw mmm logo
-  (reagent/render [views/main-panel]
+  (reagent/render [views/main-view]
                   (.getElementById js/document "app")))
 
 (defn ^:export init []
