@@ -13,16 +13,44 @@ body {
   width: 100%;
   z-index: -1;
   position: fixed;
-  background: #000;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #000000 0%, #ffffff 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #000000 0%, #ffffff 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#fff', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+  background: linear-gradient(136deg, #463734, #fcfcfc);
+  background-size: 400% 400%;
+  -webkit-animation: BgRipple 30s cubic-bezier(0.63, 0, 0.375, 1) infinite;
+  -moz-animation: BgRipple 30s cubic-bezier(0.63, 0, 0.375, 1) infinite;
+  animation: BgRipple 30s cubic-bezier(0.63, 0, 0.375, 1) infinite;
+}
+@-webkit-keyframes BgRipple {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+@-moz-keyframes BgRipple {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+@keyframes BgRipple {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
 }
 .content {
   z-index: 1;

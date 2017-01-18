@@ -10,23 +10,69 @@ body {
   font-size: 1.2em;
 }
 
+@time: 30s;
+@fun: cubic-bezier(0.630, 0.000, 0.375, 1.000);
+@start-color: #463734;
+@end-color: #fcfcfc;
+
 #bg {
   height: 100%;
   width: 100%;
   z-index: -1;
   position: fixed;
 
-  // background: #463734; /* Old browsers */
-  // background: -moz-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* FF3.6-15 */
-  // background: -webkit-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
-  // background: linear-gradient(135deg, #463734 0%, #fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#463734', endColorstr='#fcfcfc', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+  background: linear-gradient(136deg, @start-color, @end-color);
+  background-size: 400% 400%;
 
-  background: #000; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #000 0%, #fff 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #000 0%, #fff 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #000 0%, #fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#fff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+  -webkit-animation: BgRipple @time @fun infinite;
+  -moz-animation: BgRipple @time @fun infinite;
+  animation: BgRipple @time @fun infinite;
+
+  @-webkit-keyframes BgRipple {
+    0% {
+      background-position: 5% 0%
+    }
+    50% {
+      background-position: 96% 100%
+    }
+    100% {
+      background-position: 5% 0%
+    }
+  }
+  @-moz-keyframes BgRipple {
+    0% {
+      background-position: 5% 0%
+    }
+    50% {
+      background-position: 96% 100%
+    }
+    100% {
+      background-position: 5% 0%
+    }
+  }
+  @keyframes BgRipple {
+    0% {
+      background-position: 5% 0%
+    }
+    50% {
+      background-position: 96% 100%
+    }
+    100% {
+      background-position: 5% 0%
+    }
+  }
+
+  //background: #463734; /* Old browsers */
+  //background: -moz-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(-45deg, #463734 0%, #fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(135deg, #463734 0%, #fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#463734', endColorstr='#fcfcfc', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+  //background: #000; /* Old browsers */
+  //background: -moz-linear-gradient(-45deg, #000 0%, #fff 100%); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(-45deg, #000 0%, #fff 100%); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(135deg, #000 0%, #fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#fff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
 
 .content {
