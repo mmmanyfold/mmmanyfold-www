@@ -145,6 +145,9 @@ h3 mark {
   width: auto;
   border-radius: .15em;
 }
+.gallery-wrap a img:hover {
+  mix-blend-mode: multiply;
+}
 .gallery-wrap .label {
   position: absolute;
   bottom: 0;
@@ -156,6 +159,16 @@ h3 mark {
   font-size: 0.95em !important;
   border-radius: 0 0 0.15em 0.15em;
   padding: 0.45em 0 0.4em 0;
+}
+.gallery-wrap .soon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  font-style: italic;
+  padding-top: 2em;
 }
 .text-box {
   box-shadow: 4px 5px rgba(47, 25, 22, 0.75);
