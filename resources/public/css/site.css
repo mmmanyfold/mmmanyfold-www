@@ -145,7 +145,7 @@ h3 mark {
   width: auto;
   border-radius: .15em;
 }
-.gallery-wrap img:hover {
+.gallery-wrap a img:hover {
   mix-blend-mode: multiply;
 }
 .gallery-wrap .label {

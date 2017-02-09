@@ -4,10 +4,11 @@
             [re-frame.core :as re-frame]
             [reagent.core :as reagent :refer [atom]]))
 
+(def visibility (reagent/atom "hidden"))
+
 (defn gallery-view []
  (let [showing-1? (reagent/atom false)
-       showing-2? (reagent/atom false)
-       visibility (reagent/atom "hidden")]
+       showing-2? (reagent/atom false)]
   [:div.gallery-wrap
 
     [:div.gallery-section
@@ -20,8 +21,9 @@
           :position :above-right
           :anchor   [:div.gallery-item {:on-mouse-enter (handler-fn (reset! showing-1? true)
                                                                     (reset! showing-2? false))}
-                      [:img {:src "img/gallery/playground.jpg"}]
-                      [:div.label "Playground Coffee Shop"]]
+                      [:a {:href "http://playgroundcoffeeshop.com"}
+                        [:img {:src "img/gallery/playground.jpg"}]
+                        [:div.label "Playground Coffee Shop"]]]
           :popover  [re-com/popover-content-wrapper
                      :backdrop-opacity 0.3
                      :title "project : Playground Coffee Shop"
@@ -35,8 +37,9 @@
           :position :above-right
           :anchor   [:div.gallery-item {:on-mouse-enter (handler-fn (reset! showing-2? true)
                                                                     (reset! showing-1? false))}
-                      [:img {:src "img/gallery/sporting-life.gif"}]
-                      [:div.label "Sporting Life"]]
+                      [:a {:href "http://sportinglife.nyc"}
+                        [:img {:src "img/gallery/sporting-life.gif"}]
+                        [:div.label "Sporting Life"]]]
           :popover  [re-com/popover-content-wrapper
                      :backdrop-opacity 0.3
                      :title "project : Sporting Life"
