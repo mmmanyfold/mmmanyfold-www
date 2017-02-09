@@ -145,7 +145,7 @@ h3 mark {
   width: auto;
   border-radius: .15em;
 }
-.gallery-wrap a img:hover {
+.gallery-wrap img:hover {
   mix-blend-mode: multiply;
 }
 .gallery-wrap .label {
@@ -169,6 +169,17 @@ h3 mark {
   color: white;
   font-style: italic;
   padding-top: 2em;
+}
+.popover-content a {
+  text-decoration: none;
+  color: yellowgreen;
+}
+.popover-content a:hover {
+  color: olivedrab;
+}
+.popover-title {
+  background-color: none;
+  border: none;
 }
 .text-box {
   box-shadow: 4px 5px rgba(47, 25, 22, 0.75);
