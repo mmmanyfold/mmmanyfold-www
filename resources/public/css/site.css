@@ -118,6 +118,9 @@ h3 mark {
   text-decoration: none;
   font-style: italic;
 }
+.gallery-wrap .summary {
+  font-size: 1.5em;
+}
 .gallery-wrap h2 {
   margin-bottom: 0.65em;
 }
@@ -125,20 +128,13 @@ h3 mark {
   margin-bottom: 0.5em;
 }
 .gallery-wrap .gallery-row {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
+  -webkit-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 .gallery-wrap .gallery-item {
   position: relative;
-  height: 200px;
-  margin: 0 1em 1em 0;
-}
-@media (min-width: 1190px) {
-  .gallery-wrap .gallery-item {
-    height: 250px;
-  }
+  height: 250px;
+  margin: 0 1em 1em 0 !important;
 }
 .gallery-wrap img {
   height: 100%;
@@ -171,11 +167,11 @@ h3 mark {
   padding-top: 2em;
 }
 .popover-content a {
-  text-decoration: none;
-  color: yellowgreen;
+  text-decoration: underline;
+  color: olivedrab;
 }
 .popover-content a:hover {
-  color: olivedrab;
+  color: yellowgreen;
 }
 .popover-title {
   background-color: none;

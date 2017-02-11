@@ -128,6 +128,9 @@ h3 mark {
 }
 
 .gallery-wrap {
+  .summary {
+    font-size: 1.5em;
+  }
   h2 {
     margin-bottom: 0.65em;
   }
@@ -135,18 +138,13 @@ h3 mark {
     margin-bottom: 0.5em;
   }
   .gallery-row {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+    -webkit-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
   }
   .gallery-item {
     position: relative;
-    height: 200px;
-    margin: 0 1em 1em 0;
-    @media (min-width: 1190px) {
-      height: 250px;
-    }
+    height: 250px;
+    margin: 0 1em 1em 0 !important;
   }
   img {
     height: 100%;
@@ -183,10 +181,10 @@ h3 mark {
 }
 
 .popover-content a {
-  text-decoration: none;
-  color: yellowgreen;
+  text-decoration: underline;
+  color: olivedrab;
   &:hover {
-    color: olivedrab;
+    color: yellowgreen;
   }
 }
 
