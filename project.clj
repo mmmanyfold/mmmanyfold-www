@@ -18,7 +18,8 @@
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
                                     "test/js"]
 
-  :figwheel {:css-dirs ["resources/public/css"]}
+  :figwheel {:css-dirs ["resources/public/css"]
+             :ring-handler www.handler/dev-handler}
 
   :less {:source-paths ["less"]
          :target-path  "resources/public/css"}
@@ -47,7 +48,7 @@
 
     {:id           "min"
      :source-paths ["src/cljs"]
-     :jar true
+     :jar          true
      :compiler     {:main            mmm.core
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
