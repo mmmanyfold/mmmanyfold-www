@@ -27,7 +27,7 @@
   {:dev
    {:dependencies [[binaryage/devtools "0.8.2"]]
 
-    :plugins      [[lein-figwheel "0.5.7"]
+    :plugins      [[lein-figwheel "0.5.8"]
                    [lein-doo "0.1.7"]]}}
 
 
@@ -58,10 +58,10 @@
      :compiler     {:main          mmm.runner
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
-                    :optimizations :none}}
+                    :optimizations :none}}]}
 
-    :main mmm.server
+  :main mmm.server
 
-    :aot [mmm.server]
+  :aot [mmm.server]
 
-    :prep-tasks [["cljsbuild" "once" "min"] "compile"]]})
+  :prep-tasks [["cljsbuild" "once" "min"] "compile"])
