@@ -1,13 +1,13 @@
 (ns mmm.core
-    (:require [reagent.core :as reagent]
-              [re-frame.core :as re-frame]
-              [re-frisk.core :refer [enable-re-frisk!]]
-              [mmm.events]
-              [mmm.subs]
-              [mmm.routes :as routes]
-              [mmm.views :as views]
-              [mmm.config :as config]
-              [mmm.components.logo :refer [GSAnimationSeq]]))
+  (:require [reagent.core :as reagent]
+            [re-frame.core :as re-frame]
+            [re-frisk.core :refer [enable-re-frisk!]]
+            [mmm.events]
+            [mmm.subs]
+            [mmm.routes :as routes]
+            [mmm.views :as views]
+            [mmm.config :as config]
+            [mmm.components.logo :refer [GSAnimationSeq]]))
 
 (defn dev-setup []
   (when config/debug?
