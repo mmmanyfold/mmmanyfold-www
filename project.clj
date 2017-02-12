@@ -47,6 +47,7 @@
 
     {:id           "min"
      :source-paths ["src/cljs"]
+     :jar true
      :compiler     {:main            mmm.core
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
