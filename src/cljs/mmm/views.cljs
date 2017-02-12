@@ -25,6 +25,7 @@
               [:span [:a {:href "#"} "Gallery"]] "/"
               [:span [:a {:href "#/contact"} "Contact"]] "/"
               [:span [:a {:href "http://blog.mmmanyfold.com"} "Blog"]]]]
-          [:h1 "mmmanyfold"]]
+          [:h1 "mmmanyfold"]
+          [:p.subtitle "is a UX design / web / software development studio by " [:b "Michelle Lim"] " + " [:b "David A. Viramontes-Martinez"]]]
         [:div.page
           [views @active-view]]])))
