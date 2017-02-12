@@ -58,4 +58,10 @@
      :compiler     {:main          mmm.runner
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
-                    :optimizations :none}}]})
+                    :optimizations :none}}
+
+    :main mmm.server
+
+    :aot [mmm.server]
+
+    :prep-tasks [["cljsbuild" "once" "min"] "compile"]]})
