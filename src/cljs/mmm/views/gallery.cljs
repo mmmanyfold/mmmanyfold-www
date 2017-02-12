@@ -4,8 +4,6 @@
             [re-frame.core :as re-frame]
             [reagent.core :as reagent :refer [atom]]))
 
-(def visibility (reagent/atom "hidden"))
-
 (defonce og-popover-states (reduce #(assoc %1 (keyword (str %2)) false) {} (range 1 14)))
 
 (def popover-states (reagent/atom og-popover-states))
