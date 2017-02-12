@@ -8,7 +8,7 @@
                  [re-com "1.0.0"]
                  [secretary "1.2.3"]]
 
-  :plugins [[lein-cljsbuild "1.1.4"]
+  :plugins [[lein-cljsbuild "1.1.5"]
             [lein-less "1.7.5"]]
 
   :min-lein-version "2.5.3"
