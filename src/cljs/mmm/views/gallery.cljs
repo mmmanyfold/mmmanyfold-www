@@ -12,7 +12,7 @@
   (reset! popover-states og-popover-states)
   (swap! popover-states update-in [id] not))
 
-(defn project [id title img credit summary info]
+(defn project [id title img summary info]
   (let [showing? (reagent/atom (id @popover-states))]
     [re-com/popover-anchor-wrapper
      :showing? showing?
@@ -25,7 +25,6 @@
                :width "320px"
                :title (str "project : " title)
                :body [:div
-                      [:p [:b credit]]
                       [:p.summary summary]
                       info]]]))
 
@@ -33,7 +32,7 @@
   [:div.gallery-wrap
 
    [:div.gallery-section
-    [:h2 [:mark "Client Work"]]
+    [:h2 [:mark "Our Work"]]
 
     [re-com/h-box
      :width "100%"
@@ -42,8 +41,7 @@
                 [project :1
                  "Playground Coffee Shop"
                  "img/gallery/playground.jpg"
-                 "Michelle + David"
-                 "Custom web app for Brooklyn coffee shop / venue / consignment."
+                 "Custom website for Brooklyn coffee shop, venue, and consignment store."
                  [:div
                   [:p [:i "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
                   [:p [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]]]]
@@ -51,7 +49,6 @@
                 [project :2
                  "Sporting Life"
                  "img/gallery/sporting-life.gif"
-                 "Michelle"
                  "Custom website for NYC producer Sporting Life."
                  [:div
                   [:p [:i "Github Pages"]]
@@ -60,7 +57,6 @@
                 [project :3
                  "Princess Nokia"
                  "img/gallery/princess-nokia.jpg"
-                 "Michelle + David"
                  "Custom website for NYC artist Princess Nokia."
                  [:div
                   [:p [:i "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
@@ -69,17 +65,23 @@
                 [project :4
                  "Dizzy Magazine"
                  "img/gallery/dizzy.jpg"
-                 "Michelle + David"
                  "Custom website for Dizzy Magazine."
                  [:div
                   [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]
                   [:p [:b [:i "Coming Soon"]]]]]
 
+                [project :7
+                 "OWLET"
+                 "img/gallery/owlet.png"
+                 "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
+                 [:div
+                  [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
+                  [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]]]
+
                 [project :5
                  "Picture Room"
                  "img/gallery/picture-room.png"
-                 "Michelle + David"
-                 "Custom website/online shop for Picture Room, a McNally Jackson Store."
+                 "Custom website/online shop for Picture Room."
                  [:div
                   [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]
                   [:p [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]]]]
@@ -87,43 +89,24 @@
                 [project :6
                  "Letter Racer"
                  "img/gallery/letter-racer.gif"
-                 "Michelle"
                  "Custom website/online shop for the NYC music + art collective."
                  [:div
                   [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]
                   [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]]]]]]
 
-   [:div.gallery-section
-    [:h2 [:mark "Education Design"]]
-
-    [re-com/h-box
-     :width "100%"
-     :class "gallery-row"
-     :children [
-                [project :7
-                 "OWLET"
-                 "img/gallery/owlet.png"
-                 "Michelle + David + Code for Denver"
-                 "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
-                 [:div
-                  [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-                  [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]]]
-
-                [project :8
-                 "Denver Art Museum"
-                 "img/gallery/design-challenge.gif"
-                 "Michelle (Creator/Facilitator)"
-                 "A design summer camp for ages 9-12, reimagined each year."
-                 [:div
-                  [:p [:a {:href "design-challenge.html"} "Design Challenge 2016"]]]]
-
-                [project :9
-                 "Girls in STEM"
-                 "img/gallery/girls-in-stem.jpg"
-                 "Michelle (Program Director/Facilitator)"
-                 "Denver area middle school after-school program introducing girls to women in STEM."
-                 [:div
-                  [:p [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]
+                ; [project :8
+                ;  "Denver Art Museum"
+                ;  "img/gallery/design-challenge.gif"
+                ;  "A design summer camp for ages 9-12, reimagined each year."
+                ;  [:div
+                ;   [:p [:a {:href "design-challenge.html"} "Design Challenge 2016"]]]]
+                ;
+                ; [project :9
+                ;  "Girls in STEM"
+                ;  "img/gallery/girls-in-stem.jpg"
+                ;  "Denver area middle school after-school program introducing girls to women in STEM."
+                ;  [:div
+                ;   [:p [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]
 
    [:div.gallery-section
     [:h2 [:mark "Talks + Performances"]]
@@ -135,7 +118,6 @@
                 [project :10
                  "MoonConf"
                  "img/gallery/moonconf.jpg"
-                 ""
                  "Presented at MoonConf 2016 by Shelby Switzer & David A. Viramontes"
                  [:div
                   [:p "Watch: " [:a {:href "https://youtu.be/tnKPuoWniTg?list=PLWYAdh9hA7geMRCgwDomlHAdwlsno32LU"} "Hacking Web Apps with Clojure(Script) @ Code for Denver"]]
@@ -144,7 +126,6 @@
                 [project :11
                  "Denver Public Schools"
                  "img/gallery/north-hs.gif"
-                 "Michelle + David"
                  [:span
                   [:a {:href "http://blog.mmmanyfold.com/tag/denver-public-schools/"}
                    "Code art demos "]
@@ -155,7 +136,6 @@
                 [project :12
                  "OWL Tech Fair"
                  "img/gallery/owl-tech-fair.jpg"
-                 "Michelle + David"
                  "Audio/visual code art performance + workshop for Denver youth."
                  [:div
                   [:p [:i "Clojure, Shadertone, Sonic Pi"]]
@@ -164,7 +144,6 @@
                 [project :13
                  "Signal-to-Noise Media Lab"
                  "img/gallery/signal-to-noise.gif"
-                 "Michelle + David + Gary Daniels"
                  "Audio/visual code art performance for Denver Startup Week 2016."
                  [:div
                   [:p [:i "Clojure, Shadertone, Sonic Pi"]]
