@@ -9,7 +9,13 @@
                  [secretary "1.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-less "1.7.5"]]
+            [lein-less "1.7.5"]
+            [lein-s3-static-deploy "0.1.0"]]
+
+  :aws {:access-key       ~(System/getenv "AWS_ACCESS_KEY_ID")
+        :secret-key       ~(System/getenv "AWS_SECRET_ACCESS_KEY")
+        :s3-static-deploy {:bucket     "www.mmmanyfold.com"
+                           :local-root "resources/public"}}
 
   :min-lein-version "2.5.3"
 
