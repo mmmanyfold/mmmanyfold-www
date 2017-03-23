@@ -1,4 +1,4 @@
-(ns mmm.views.gallery
+(ns mmm.components.gallery
   (:require [re-com.core :as re-com :refer-macros [handler-fn]]
             [re-com.popover]
             [re-frame.core :as re-frame]
@@ -28,7 +28,7 @@
                       [:p.summary summary]
                       info]]]))
 
-(defn gallery-view []
+(defn gallery-component []
   [:div.gallery-wrap
 
    [:div.gallery-section

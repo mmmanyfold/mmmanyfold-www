@@ -19,7 +19,7 @@
   ;; --------------------
   ;; define routes here
   (defroute "/" []
-    (re-frame/dispatch [:set-active-view :gallery-view]))
+    (re-frame/dispatch [:set-active-view :home-view]))
   (defroute "/about" []
     (re-frame/dispatch [:set-active-view :about-view]))
   (defroute "/contact" []
