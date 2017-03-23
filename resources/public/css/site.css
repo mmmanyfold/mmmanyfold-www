@@ -19,15 +19,22 @@ body {
 .content {
   z-index: 1;
 }
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
 h2 mark {
   background-color: #e3eee6;
   color: #2f1916;
   font-size: 0.85em;
   padding: 2px 10px 2px 6px;
   font-weight: bold;
+  font-style: italic;
 }
 h3 mark {
   font-weight: normal;
+  font-style: italic;
   color: #e3eee6;
   background-color: #2f1916;
   padding: 2px 7px 2px 5px;
