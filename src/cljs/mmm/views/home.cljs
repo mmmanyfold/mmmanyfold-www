@@ -22,10 +22,10 @@
     [:div.text-box
      [:h2 "outcome"]
      [:p "We strive to make our customer and user experiences distinctly more meaningful, efficient – and enjoyable."]]]
-   [:div.process
-    [:h2 "The key to our approach is active listening: we pay close attention to people’s wants and needs, incorporating that into every phase of our creation cycle."]
-    [:div.graphic
-     [:img {:src "img/process-placeholder.png"}]]]
+  ;  [:div.process
+  ;   [:h2 "The key to our approach is active listening: we pay close attention to people’s wants and needs, incorporating that into every phase of our creation cycle."]
+  ;   [:div.graphic
+  ;    [:img {:src "img/process-placeholder.png"}]]]
    [:div.definition.white
     [:h1 "man·y·fold"]
     [:h2 "ˈmenēˌfōld/"]
