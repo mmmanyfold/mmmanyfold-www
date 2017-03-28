@@ -256,3 +256,34 @@ h3 mark {
     margin-bottom: 0.9em;
   }
 }
+
+// Project Gallery
+// ***
+
+.project-gallery {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 2em;
+  img {
+    height: 100%;
+    width: auto;
+  }
+  figure {
+    display: block;
+    float: left;
+    margin: 0.66%;
+    height: 205px;
+    @media (max-width: 1200px) {
+      height: 140px;
+    }
+    @media (max-width: 642px) {
+      height: 89px;
+    }
+    @media (max-width: 375px) {
+      height: 76px;
+    }
+  }
+}

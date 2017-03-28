@@ -235,3 +235,36 @@ h3 mark {
   margin-top: 0.5em;
   margin-bottom: 0.9em;
 }
+.project-gallery {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 2em;
+}
+.project-gallery img {
+  height: 100%;
+  width: auto;
+}
+.project-gallery figure {
+  display: block;
+  float: left;
+  margin: 0.66%;
+  height: 205px;
+}
+@media (max-width: 1200px) {
+  .project-gallery figure {
+    height: 140px;
+  }
+}
+@media (max-width: 642px) {
+  .project-gallery figure {
+    height: 89px;
+  }
+}
+@media (max-width: 375px) {
+  .project-gallery figure {
+    height: 76px;
+  }
+}

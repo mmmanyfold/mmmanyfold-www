@@ -7,7 +7,8 @@
                  [org.clojure/core.async "0.2.391"]
                  [re-com "1.0.0"]
                  [secretary "1.2.3"]
-                 [cljsjs/jquery "2.2.4-0"]]
+                 [cljsjs/jquery "2.2.4-0"]
+                 [cljsjs/photoswipe "4.1.1-0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-less "1.7.5"]
