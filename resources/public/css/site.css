@@ -17,6 +17,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, #685c5a, #fcfcfc);
+  background-size: cover;
 }
 .content {
   z-index: 1;
@@ -108,8 +109,7 @@ h3 mark {
   color: #2f1916;
 }
 .home-wrap .values {
-  padding: 5em 0;
-  border-bottom: 2em solid rgba(89, 75, 74, 0.8);
+  padding: 10em 0;
 }
 .home-wrap .values .text-box {
   align-self: flex-start;
@@ -127,8 +127,8 @@ h3 mark {
   text-align: center;
 }
 .home-wrap .definition {
-  background-color: #2f1916;
-  padding: 2em 4em;
+  background-color: #fcfcfc;
+  padding: 2em 0 3em 4em;
   font-size: 1.5em;
 }
 .home-wrap .definition h1 {
@@ -149,23 +149,30 @@ h3 mark {
   -webkit-justify-content: center;
   justify-content: center;
 }
+.scrolling-gallery {
+  background-color: #594B4A;
+  overflow-x: scroll;
+  overflow-y: visible;
+}
 .gallery-wrap .summary {
   font-size: 1.5em;
 }
 .gallery-wrap h2 {
-  margin-bottom: 0.65em;
+  margin: 0 1em;
+  position: absolute;
 }
 .gallery-wrap .gallery-section {
   margin-bottom: 0.5em;
 }
 .gallery-wrap .gallery-row {
-  -webkit-flex-wrap: wrap !important;
-  flex-wrap: wrap !important;
+  -webkit-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+  padding: 3em 0 1.5em;
 }
 .gallery-wrap .gallery-item {
   position: relative;
   height: 250px;
-  margin: 0 1em 1em 0 !important;
+  margin: 0.5em !important;
   cursor: pointer;
 }
 .gallery-wrap img {

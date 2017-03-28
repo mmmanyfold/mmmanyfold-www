@@ -1,4 +1,4 @@
-(ns mmm.components.gallery
+(ns mmm.components.projects
   (:require [re-com.core :as re-com :refer-macros [handler-fn]]
             [re-com.popover]
             [re-frame.core :as re-frame]
@@ -28,7 +28,7 @@
                       [:p.summary summary]
                       info]]]))
 
-(defn gallery-component []
+(defn projects-component []
   [:div.gallery-wrap
 
    [:div.gallery-section
@@ -92,7 +92,7 @@
                  "Custom website/online shop for the NYC music + art collective."
                  [:div
                   [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]
-                  [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]]]]]]
+                  [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]]]]]]])
 
                 ; [project :8
                 ;  "Denver Art Museum"
@@ -107,44 +107,3 @@
                 ;  "Denver area middle school after-school program introducing girls to women in STEM."
                 ;  [:div
                 ;   [:p [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]
-
-   [:div.gallery-section
-    [:h2 [:mark "Talks + Performances"]]
-
-    [re-com/h-box
-     :width "100%"
-     :class "gallery-row"
-     :children [
-                [project :10
-                 "MoonConf"
-                 "img/gallery/moonconf.jpg"
-                 "Presented at MoonConf 2016 by Shelby Switzer & David A. Viramontes"
-                 [:div
-                  [:p "Watch: " [:a {:href "https://youtu.be/tnKPuoWniTg?list=PLWYAdh9hA7geMRCgwDomlHAdwlsno32LU"} "Hacking Web Apps with Clojure(Script) @ Code for Denver"]]
-                  [:p "We ♥ " [:a {:href "http://moonconf.org/"} "MoonConf"]]]]
-
-                [project :11
-                 "Denver Public Schools"
-                 "img/gallery/north-hs.gif"
-                 [:span
-                  [:a {:href "http://blog.mmmanyfold.com/tag/denver-public-schools/"}
-                   "Code art demos "]
-                  "in Denver area public schools."]
-                 [:div
-                  [:p [:i "Clojure, mmmanyfold API, Giphy API, Facebook API, Indico, VVVV"]]]]
-
-                [project :12
-                 "OWL Tech Fair"
-                 "img/gallery/owl-tech-fair.jpg"
-                 "Audio/visual code art performance + workshop for Denver youth."
-                 [:div
-                  [:p [:i "Clojure, Shadertone, Sonic Pi"]]
-                  [:p [:a {:href "http://blog.mmmanyfold.com/2017/02/06/sonic-pi-shadertone-owl-tech-fair/"} "Photos"]]]]
-
-                [project :13
-                 "Signal-to-Noise Media Lab"
-                 "img/gallery/signal-to-noise.gif"
-                 "Audio/visual code art performance for Denver Startup Week 2016."
-                 [:div
-                  [:p [:i "Clojure, Shadertone, Sonic Pi"]]
-                  [:p [:a {:href "https://www.denverstartupweek.org/panel-picker/2399-an-amalgamation-of-art-science-and-technology"} "An Amalgamation of Art, Science, and Technology @ Signal-to-Noise"]]]]]]]])
