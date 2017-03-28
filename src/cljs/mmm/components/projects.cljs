@@ -3,6 +3,7 @@
             [re-com.popover]
             [re-frame.core :as re-frame]
             [cljsjs.photoswipe]
+            [cljsjs.photoswipe-ui-default]
             [reagent.core :as reagent :refer [atom]]))
 
 (defonce og-popover-states (reduce #(assoc %1 (keyword (str %2)) false) {} (range 1 14)))
