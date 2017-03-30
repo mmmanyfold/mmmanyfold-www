@@ -1,31 +1,20 @@
 (ns mmm.components.projects
   (:require [re-com.core :as re-com :refer-macros [handler-fn]]
-            [re-com.popover]
             [re-frame.core :as re-frame]
             [cljsjs.photoswipe]
             [cljsjs.photoswipe-ui-default]
             [reagent.core :as reagent :refer [atom]]))
 
-(defonce og-popover-states (reduce #(assoc %1 (keyword (str %2)) false) {} (range 1 14)))
-
-(def popover-states (reagent/atom og-popover-states))
-
-(defn set-popover-state [id]
-  (reset! popover-states og-popover-states)
-  (swap! popover-states update-in [id] not))
-
-(defn project [id title img summary info]
-  (let [showing? (reagent/atom (id @popover-states))]
-    [re-com/box
-     :child [:figure.gallery-item
-             {:item-prop  "associatedMedia"
-              :item-scope "true"
-              :item-type  "http://schema.org/ImageObject"}
-             [:a {:on-click  (handler-fn (set-popover-state id))
-                  :item-prop "contentUrl"
-                  :data-size "800x600"}
-              [:img {:src img :item-prop "thumbnail"}]
-              [:div.label title]]]]))
+(defn project [id title img summary info size]
+  [:figure.gallery-item
+   {:item-prop  "associatedMedia"
+    :item-scope "true"
+    :item-type  "http://schema.org/ImageObject"}
+   [:a {:item-prop "contentUrl"
+        :data-size size}
+    [:img {:src img :item-prop "thumbnail"}]]
+   [:figcaption {:item-prop "caption description"}
+    [:div.label title]]])
 
 (defn full-screen-gallery []
   [:div.activity-image-gallery-wrap
@@ -80,7 +69,8 @@
                        "Custom website for Brooklyn coffee shop, venue, and consignment store."
                        [:div
                         [:p [:i "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
-                        [:p [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]]]]
+                        [:p [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]]
+                        "600x800"]]
 
                       [project :2
                        "Sporting Life"
@@ -88,7 +78,8 @@
                        "Custom website for NYC producer Sporting Life."
                        [:div
                         [:p [:i "Github Pages"]]
-                        [:p [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]]]]
+                        [:p [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]]
+                        "600x800"]]
 
                       [project :3
                        "Princess Nokia"
@@ -96,7 +87,8 @@
                        "Custom website for NYC artist Princess Nokia."
                        [:div
                         [:p [:i "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
-                        [:p [:a {:href "http://princessnokia.org"} "princessnokia.org"]]]]
+                        [:p [:a {:href "http://princessnokia.org"} "princessnokia.org"]]
+                        "600x800"]]
 
                       [project :4
                        "Dizzy Magazine"
@@ -104,7 +96,8 @@
                        "Custom website for Dizzy Magazine."
                        [:div
                         [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]
-                        [:p [:b [:i "Coming Soon"]]]]]
+                        [:p [:b [:i "Coming Soon"]]]
+                        "600x800"]]
 
                       [project :7
                        "OWLET"
@@ -112,7 +105,8 @@
                        "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
                        [:div
                         [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-                        [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]]]
+                        [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]
+                        "600x800"]]
 
                       [project :5
                        "Picture Room"
@@ -120,7 +114,8 @@
                        "Custom website/online shop for Picture Room."
                        [:div
                         [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]
-                        [:p [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]]]]
+                        [:p [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]]
+                        "600x800"]]
 
                       [project :6
                        "Letter Racer"
@@ -128,7 +123,8 @@
                        "Custom website/online shop for the NYC music + art collective."
                        [:div
                         [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]
-                        [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]]]]]
+                        [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]
+                        "600x800"]]]]
 
           (full-screen-gallery)]]])}))
 
