@@ -5,16 +5,18 @@
             [cljsjs.photoswipe-ui-default]
             [reagent.core :as reagent :refer [atom]]))
 
-(defn project [id title img summary info size]
-  [:figure.gallery-item
-   {:item-prop  "associatedMedia"
-    :item-scope "true"
-    :item-type  "http://schema.org/ImageObject"}
-   [:a {:item-prop "contentUrl"
-        :data-size size}
-    [:img {:src img :item-prop "thumbnail"}]]
-   [:figcaption {:item-prop "caption description"}
-    [:div.label title]]])
+(defn project [title img summary info size]
+  [re-com/box
+   :child
+   [:figure.gallery-item
+    {:item-prop  "associatedMedia"
+     :item-scope "true"
+     :item-type  "http://schema.org/ImageObject"}
+    [:a {:item-prop "contentUrl"
+         :data-size size}
+     [:img {:src img :item-prop "thumbnail"}]]
+    [:figcaption {:item-prop "caption description"}
+     [:div.label title]]]])
 
 (defn full-screen-gallery []
   [:div.activity-image-gallery-wrap
@@ -62,83 +64,82 @@
           [re-com/h-box
            :width "100%"
            :class "gallery-row"
-           :children [
-                      [project :1
+           :children [[project
                        "Playground Coffee Shop"
                        "img/gallery/playground.jpg"
                        "Custom website for Brooklyn coffee shop, venue, and consignment store."
                        [:div
                         [:p [:i "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
-                        [:p [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]]
-                        "600x800"]]
+                        [:p [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]]]
+                       "600x800"]
 
-                      [project :2
+                      [project
                        "Sporting Life"
                        "img/gallery/sporting-life.gif"
                        "Custom website for NYC producer Sporting Life."
                        [:div
                         [:p [:i "Github Pages"]]
-                        [:p [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]]
-                        "600x800"]]
+                        [:p [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]]]
+                       "600x800"]
 
-                      [project :3
+                      [project
                        "Princess Nokia"
                        "img/gallery/princess-nokia.jpg"
                        "Custom website for NYC artist Princess Nokia."
                        [:div
                         [:p [:i "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
-                        [:p [:a {:href "http://princessnokia.org"} "princessnokia.org"]]
-                        "600x800"]]
+                        [:p [:a {:href "http://princessnokia.org"} "princessnokia.org"]]]
+                       "600x800"]
 
-                      [project :4
+                      [project
                        "Dizzy Magazine"
                        "img/gallery/dizzy.jpg"
                        "Custom website for Dizzy Magazine."
                        [:div
                         [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]
-                        [:p [:b [:i "Coming Soon"]]]
-                        "600x800"]]
+                        [:p [:b [:i "Coming Soon"]]]]
+                       "600x800"]
 
-                      [project :7
+                      [project
                        "OWLET"
                        "img/gallery/owlet.png"
                        "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
                        [:div
                         [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-                        [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]
-                        "600x800"]]
+                        [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]]
+                       "600x800"]
 
-                      [project :5
+                      [project
                        "Picture Room"
                        "img/gallery/picture-room.png"
                        "Custom website/online shop for Picture Room."
                        [:div
                         [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]
-                        [:p [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]]
-                        "600x800"]]
+                        [:p [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]]]
+                       "600x800"]
 
-                      [project :6
+                      [project
                        "Letter Racer"
                        "img/gallery/letter-racer.gif"
                        "Custom website/online shop for the NYC music + art collective."
                        [:div
                         [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]
-                        [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]
-                        "600x800"]]]]
+                        [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]]
+                       "600x800"]]]
 
           (full-screen-gallery)]]])}))
 
 
-                ; [project :8
-                ;  "Denver Art Museum"
-                ;  "img/gallery/design-challenge.gif"
-                ;  "A design summer camp for ages 9-12, reimagined each year."
-                ;  [:div
-                ;   [:p [:a {:href "design-challenge.html"} "Design Challenge 2016"]]]]
-                ;
-                ; [project :9
-                ;  "Girls in STEM"
-                ;  "img/gallery/girls-in-stem.jpg"
-                ;  "Denver area middle school after-school program introducing girls to women in STEM."
-                ;  [:div
-                ;   [:p [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]
+; [project :8
+;  "Denver Art Museum"
+;  "img/gallery/design-challenge.gif"
+;  "A design summer camp for ages 9-12, reimagined each year."
+;  [:div
+;   [:p [:a {:href "design-challenge.html"} "Design Challenge 2016"]]]]
+;
+; [project :9
+;  "Girls in STEM"
+;  "img/gallery/girls-in-stem.jpg"
+;  "Denver area middle school after-school program introducing girls to women in STEM."
+;  [:div
+;   [:p [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]
