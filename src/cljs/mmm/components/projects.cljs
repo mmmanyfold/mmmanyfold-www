@@ -98,7 +98,7 @@
               "img/gallery/dizzy.jpg"
               "Custom website for Dizzy Magazine."
               [:div.info
-               [:a {:href "http://www.dizzymagazine.com"}]
+               [:a {:href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
                [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]]
               "221"
               "286"]
@@ -118,7 +118,7 @@
               "img/gallery/picture-room.png"
               "Custom website/online shop for Picture Room."
               [:div.info
-               [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]
+               [:a {:href "https://pictureroom.shop"} "pictureroom.shop"]
                [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]]
               "665"
               "525"]
