@@ -10,8 +10,12 @@ body {
   margin: 0;
   height: 100%;
   font-family: Quicksand;
-  font-size: 1.2em;
   font-weight: 300;
+}
+@media screen and (min-width: 500px) {
+  body {
+    font-size: 1.1em;
+  }
 }
 #bg {
   z-index: -1;
@@ -24,6 +28,15 @@ body {
 .content {
   z-index: 1;
 }
+h1 {
+  font-size: 2.25em;
+  margin: 0.1em 0;
+}
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 3em;
+  }
+}
 h1,
 h2,
 h3 {
@@ -32,7 +45,6 @@ h3 {
 h2 mark {
   background-color: #e3eee6;
   color: #2f1916;
-  font-size: 0.85em;
   padding: 2px 10px 2px 6px;
   font-weight: bold;
   font-style: italic;
@@ -43,23 +55,26 @@ h3 mark {
   color: #e3eee6;
   background-color: #2f1916;
   padding: 2px 7px 2px 5px;
-  font-size: 0.8em;
 }
 .header {
   font-weight: 400;
-  padding: 1.75em 2.5em 1em 2.5em;
+  padding: 0.5em 0.75em 0 0.75em;
+}
+@media screen and (min-width: 500px) {
+  .header {
+    padding: 1.75em 2.5em 1em 2.5em;
+  }
 }
 .header h1 {
   color: #f2f2f2;
+  font-family: "helvetica", sans-serif;
   font-weight: bold;
   font-style: italic;
   letter-spacing: -0.05em;
-  font-size: 3.3em;
-  margin-top: 0.1em;
   text-shadow: 2px 2px rgba(47, 25, 22, 0.75);
 }
 .header .subtitle {
-  margin-left: 0.5em;
+  margin: 0 0 0 0.5em;
 }
 .header h3 {
   margin-top: 0;
@@ -72,12 +87,11 @@ h3 mark {
   background-color: #e3eee6;
   color: #2f1916;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 1em;
-  padding: 1px 0;
+  margin-top: 0.25em;
+  padding: 3px 0;
 }
 .header nav span {
-  padding: 0 13px;
+  padding: 0 10px;
 }
 .header nav a {
   color: #2f1916;
@@ -94,13 +108,26 @@ h3 mark {
   font-style: italic;
 }
 .home-wrap .greet {
-  font-size: 1.5em;
   text-align: center;
   font-weight: 300;
-  padding: 3.5em 0 5.75em 0;
+  padding: 3em 0;
 }
 .home-wrap .greet h1 {
-  font-size: 2.5em;
+  font-size: 2em;
+}
+@media screen and (min-width: 500px) {
+  .home-wrap .greet h1 {
+    font-size: 4.5em;
+  }
+}
+.home-wrap .greet p {
+  font-size: 1.1em;
+  margin: 0;
+}
+@media screen and (min-width: 500px) {
+  .home-wrap .greet p {
+    font-size: 2em;
+  }
 }
 .home-wrap .greet a {
   text-decoration: underline;
@@ -109,23 +136,48 @@ h3 mark {
 .home-wrap .greet a:hover {
   color: #2f1916;
 }
-.home-wrap .values {
-  padding-top: 10em;
+@media screen and (min-width: 500px) {
+  .home-wrap .greet {
+    padding: 4.5em 0 8em 0;
+  }
 }
-.home-wrap .values img {
-  margin: 0.75em;
+.home-wrap .values {
+  padding-top: 5em;
+}
+@media screen and (max-width: 499px) {
+  .home-wrap .values {
+    padding-top: 1em;
+  }
+}
+@media screen and (min-width: 500px) {
+  .home-wrap .values img {
+    margin: 0.75em;
+  }
 }
 .home-wrap .values .text-box {
-  font-size: 1.2em;
+  font-size: 1.5em;
   align-self: flex-start;
   text-align: center;
   width: 12.3em;
   margin: 0.75em;
 }
+.home-wrap .values .text-box h2 {
+  margin: 0.25em 0;
+}
 .home-wrap .process {
   width: 75%;
   margin: 0 auto;
-  padding: 5em 0 10em 0;
+  padding: 3.5em 0 7.5em 0;
+  font-style: italic;
+}
+@media screen and (max-width: 499px) {
+  .home-wrap .process {
+    padding-bottom: 6em;
+    width: 85%;
+  }
+}
+.home-wrap .process h2 {
+  font-weight: bold;
 }
 .home-wrap .process .graphic {
   margin: 3em 0;
@@ -133,14 +185,19 @@ h3 mark {
 }
 .home-wrap .definition {
   background-color: #f2f2f2;
-  padding: 2em 0 3em 4em;
+  padding: 3em 0 3em 4em;
   font-size: 1.5em;
+}
+@media screen and (max-width: 499px) {
+  .home-wrap .definition {
+    padding: 2.75em 1em 3em 1.5em;
+    font-size: 1em;
+  }
 }
 .home-wrap .definition h1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 .home-wrap .definition h2 {
-  font-size: 1.5em;
   margin: 0;
   margin-bottom: 1em;
 }
@@ -157,10 +214,21 @@ h3 mark {
 .scrolling-gallery {
   background-color: #594B4A;
   overflow-x: scroll;
-  height: 360px;
+  height: 240px;
+}
+@media screen and (min-width: 500px) {
+  .scrolling-gallery {
+    height: 350px;
+  }
 }
 .scrolling-gallery h2 {
   margin: 0 1em;
+}
+@media screen and (max-width: 499px) {
+  .scrolling-gallery h2 {
+    margin: 0;
+    font-size: 1.25em;
+  }
 }
 .scrolling-gallery mark {
   position: absolute;
@@ -168,18 +236,24 @@ h3 mark {
 .scrolling-gallery .title {
   margin: 0 0 0.5em 0;
 }
-.scrolling-gallery .summary,
-.scrolling-gallery .info a {
-  font-size: 1.5em;
-}
 .scrolling-gallery .gallery-row {
   display: inline-flex;
   padding-top: 3em;
 }
+@media screen and (max-width: 499px) {
+  .scrolling-gallery .gallery-row {
+    padding-top: 2em;
+  }
+}
 .scrolling-gallery .gallery-item {
   position: relative;
-  height: 250px;
+  height: 175px;
   margin: 0.5em !important;
+}
+@media screen and (min-width: 500px) {
+  .scrolling-gallery .gallery-item {
+    height: 250px;
+  }
 }
 .scrolling-gallery img {
   height: 100%;
@@ -194,7 +268,7 @@ h3 mark {
   color: #e3eee6;
   background-color: #2f1916;
   font-weight: normal;
-  font-size: 0.95em !important;
+  text-align: center;
   border-radius: 0 0 0.15em 0.15em;
   padding: 0.45em 0 0.4em 0;
 }
@@ -220,43 +294,29 @@ h3 mark {
   padding: 1em;
   width: 70%;
 }
-@media (max-width: 1070px) {
+@media screen and (max-width: 1070px) {
   .about {
     width: 90%;
   }
 }
 .about h3 {
-  font-size: 1.25em;
   font-style: normal;
   font-weight: bold;
   margin-top: 0.5em;
   margin-bottom: 0.9em;
 }
-.project-gallery img {
+.project-gallery img,
+.talks-gallery img {
   height: 100%;
   width: auto;
 }
-.project-gallery figcaption {
+.project-gallery figcaption,
+.talks-gallery figcaption {
   display: none;
 }
-.project-gallery figure {
+.project-gallery figure,
+.talks-gallery figure {
   display: block;
   float: left;
   margin: 0.66%;
-  height: 205px;
-}
-@media (max-width: 1200px) {
-  .project-gallery figure {
-    height: 140px;
-  }
-}
-@media (max-width: 642px) {
-  .project-gallery figure {
-    height: 89px;
-  }
-}
-@media (max-width: 375px) {
-  .project-gallery figure {
-    height: 76px;
-  }
 }

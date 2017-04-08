@@ -52,12 +52,12 @@
 (defn talks-component []
   (reagent/create-class
     {:component-did-mount
-     #(js/initPhotoSwipeFromDOM ".project-gallery")
+     #(js/initPhotoSwipeFromDOM ".talks-gallery")
      :reagent-render
      (fn []
        [:div.scrolling-gallery
          [:h2 [:mark "Talks + Performances"]]
-         [:div.project-gallery
+         [:div.talks-gallery
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}

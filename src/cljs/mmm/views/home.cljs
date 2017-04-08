@@ -23,7 +23,7 @@
      [:h2 "better software"]
      [:p "Let's make user experiences distinctly more meaningful, efficient – and enjoyable."]]]
    [:div.process
-    [:h2 "The key to our approach is active listening; we pay close attention to people’s wants and needs in every phase of our creation cycle."]]
+    [:h2 "The key to our approach is active listening; we pay close attention to users' wants and needs in every phase of our creation cycle."]]
   ; [:div.graphic
   ;  [:img {:src "img/process-placeholder.png"}]]]
    [talks-component]
