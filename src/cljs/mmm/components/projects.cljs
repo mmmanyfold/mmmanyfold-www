@@ -5,21 +5,27 @@
             [cljsjs.photoswipe-ui-default]
             [reagent.core :as reagent :refer [atom]]))
 
-(defn project [title img summary info size]
-  [re-com/box
-   :child
+(defn project [title img summary info width height]
+  ; [re-com/box
+  ;  :child
    [:figure.gallery-item
     {:item-prop  "associatedMedia"
      :item-scope "true"
      :item-type  "http://schema.org/ImageObject"}
-    [:a {:item-prop "contentUrl"
-         :data-size size}
-     [:img {:src img :item-prop "thumbnail"}]]
-    [:figcaption {:item-prop "caption description"}
-     [:div.label title]]]])
+    [:a {:href img
+         :item-prop "contentUrl"
+         :data-size (str width "x" height)}
+     [:img {:src img :item-prop "thumbnail"}]
+     [:div.label title]]
+    [:figcaption {:item-prop "caption description"
+                  :width (str width "px")}
+     [:div [:h2.title title]
+           [:p.summary summary]
+           info]]])
+
 
 (defn full-screen-gallery []
-  [:div.activity-image-gallery-wrap
+  [:div
    [:div.pswp {:tabIndex "-1" :role "dialog" :aria-hidden "true"}
     [:div.pswp__bg]
     [:div.pswp__scroll-wrap
@@ -51,95 +57,95 @@
      #(js/initPhotoSwipeFromDOM ".project-gallery")
      :reagent-render
      (fn []
-       [:div.gallery-wrap
-
-        [:div.gallery-section
-
+       [:div.scrolling-gallery
          [:h2 [:mark "Our Work"]]
-
          [:div.project-gallery
-          {:item-scope "true"
-           :item-type  "http://schema.org/ImageGallery"}
+           [:div.gallery-row
+             {:item-scope "true"
+              :item-type  "http://schema.org/ImageGallery"}
+             [project
+              "Playground Coffee Shop"
+              "img/gallery/playground.jpg"
+              "Custom website for Brooklyn coffee shop, venue, and consignment store."
+              [:div.info
+               [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
+               [:p [:i "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]]
+              "553"
+              "400"]
 
-          [re-com/h-box
-           :width "100%"
-           :class "gallery-row"
-           :children [[project
-                       "Playground Coffee Shop"
-                       "img/gallery/playground.jpg"
-                       "Custom website for Brooklyn coffee shop, venue, and consignment store."
-                       [:div
-                        [:p [:i "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
-                        [:p [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]]]
-                       "600x800"]
+             [project
+              "Sporting Life"
+              "img/gallery/sporting-life.gif"
+              "Custom website for NYC producer Sporting Life."
+              [:div.info
+               [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]
+               [:p [:i "Github Pages"]]]
+              "640"
+              "429"]
 
-                      [project
-                       "Sporting Life"
-                       "img/gallery/sporting-life.gif"
-                       "Custom website for NYC producer Sporting Life."
-                       [:div
-                        [:p [:i "Github Pages"]]
-                        [:p [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]]]
-                       "600x800"]
+             [project
+              "Princess Nokia"
+              "img/gallery/princess-nokia.jpg"
+              "Custom website for NYC artist Princess Nokia."
+              [:div.info
+               [:a {:href "http://princessnokia.org"} "princessnokia.org"]
+               [:p [:i "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]]
+              "425"
+              "405"]
 
-                      [project
-                       "Princess Nokia"
-                       "img/gallery/princess-nokia.jpg"
-                       "Custom website for NYC artist Princess Nokia."
-                       [:div
-                        [:p [:i "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
-                        [:p [:a {:href "http://princessnokia.org"} "princessnokia.org"]]]
-                       "600x800"]
+             [project
+              "Dizzy Magazine"
+              "img/gallery/dizzy.jpg"
+              "Custom website for Dizzy Magazine."
+              [:div.info
+               [:a {:href "http://www.dizzymagazine.com"}]
+               [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]]
+              "221"
+              "286"]
 
-                      [project
-                       "Dizzy Magazine"
-                       "img/gallery/dizzy.jpg"
-                       "Custom website for Dizzy Magazine."
-                       [:div
-                        [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]
-                        [:p [:b [:i "Coming Soon"]]]]
-                       "600x800"]
+             [project
+              "OWLET"
+              "img/gallery/owlet.png"
+              "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
+              [:div.info
+               [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
+               [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]]
+              "588"
+              "588"]
 
-                      [project
-                       "OWLET"
-                       "img/gallery/owlet.png"
-                       "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
-                       [:div
-                        [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-                        [:p [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]]]
-                       "600x800"]
+             [project
+              "Picture Room"
+              "img/gallery/picture-room.png"
+              "Custom website/online shop for Picture Room."
+              [:div.info
+               [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]
+               [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]]
+              "665"
+              "525"]
 
-                      [project
-                       "Picture Room"
-                       "img/gallery/picture-room.png"
-                       "Custom website/online shop for Picture Room."
-                       [:div
-                        [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]
-                        [:p [:a {:href "http://pictureroom.mcnallyjacksonstore.com"} "pictureroom.mcnallyjacksonstore.com"]]]
-                       "600x800"]
+             [project
+              "Letter Racer"
+              "img/gallery/letter-racer.gif"
+              "Custom website/online shop for the NYC music + art collective."
+              [:div.info
+               [:a {:href "http://letterracer.com"} "letterracer.com"]
+               [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]]
+              "640"
+              "500"]]
 
-                      [project
-                       "Letter Racer"
-                       "img/gallery/letter-racer.gif"
-                       "Custom website/online shop for the NYC music + art collective."
-                       [:div
-                        [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]
-                        [:p [:a {:href "http://letterracer.com"} "letterracer.com"]]]
-                       "600x800"]]]
-
-          (full-screen-gallery)]]])}))
+           (full-screen-gallery)]])}))
 
 
 ; [project :8
 ;  "Denver Art Museum"
 ;  "img/gallery/design-challenge.gif"
 ;  "A design summer camp for ages 9-12, reimagined each year."
-;  [:div
-;   [:p [:a {:href "design-challenge.html"} "Design Challenge 2016"]]]]
+;  [:div.info
+;   [:a {:href "design-challenge.html"} "Design Challenge 2016"]]]]
 ;
 ; [project :9
 ;  "Girls in STEM"
 ;  "img/gallery/girls-in-stem.jpg"
 ;  "Denver area middle school after-school program introducing girls to women in STEM."
-;  [:div
-;   [:p [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]
+;  [:div.info
+;   [:a {:href "http://gstemnams.weebly.com/"} "GSTEM @ North Arvada"]]]]]]]

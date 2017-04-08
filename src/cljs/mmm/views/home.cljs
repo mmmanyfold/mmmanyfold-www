@@ -9,8 +9,7 @@
    [:div.greet.white
     [:h1 "Let's collaborate."]
     [:p "say " [:a {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"]]]
-   [:div.scrolling-gallery
-    [projects-component]]
+   [projects-component]
    [:div.values.flex-row.white
     [:div.text-box
      [:h2 "innovation"]
@@ -25,10 +24,10 @@
      [:p "We strive to make our client and user experiences distinctly more meaningful, efficient – and enjoyable."]]]
    [:div.scrolling-gallery
     [talks-component]]
-  ;  [:div.process
-  ;   [:h2 "The key to our approach is active listening: we pay close attention to people’s wants and needs, incorporating that into every phase of our creation cycle."]
-  ;   [:div.graphic
-  ;    [:img {:src "img/process-placeholder.png"}]]]
+   [:div.process
+    [:h2 "The key to our approach is active listening: we pay close attention to people’s wants and needs, incorporating that into every phase of our creation cycle."]]
+    ; [:div.graphic
+    ;  [:img {:src "img/process-placeholder.png"}]]]
    [:div.definition
     [:h1 "man·y·fold"]
     [:h2 "ˈmenēˌfōld/"]

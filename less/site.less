@@ -167,41 +167,43 @@ h3 mark {
 .scrolling-gallery {
   background-color: #594B4A;
   overflow-x: scroll;
-  overflow-y: visible;
-}
-
-.gallery-wrap {
-  .summary {
-    font-size: 1.5em;
-  }
+  height: 360px;
   h2 {
     margin: 0 1em;
+  }
+  mark {
     position: absolute;
   }
-  .gallery-section {
-    margin-bottom: 0.5em;
+  .title {
+    margin: 0 0 0.5em 0;
   }
+  .summary, .info a {
+    font-size: 1.5em;
+  }
+  // .gallery-section {
+  //   margin-bottom: 0.5em;
+  // }
   .gallery-row {
-    -webkit-flex-wrap: nowrap !important;
-    flex-wrap: nowrap !important;
-    padding: 3em 0 1.5em;
+    display: inline-flex;
+    padding-top: 3em;
   }
   .gallery-item {
+    // display: inline-block;
     position: relative;
     height: 250px;
     margin: 0.5em !important;
-    cursor: pointer;
+    // cursor: pointer;
   }
   img {
     height: 100%;
     width: auto;
     border-radius: .15em;
   }
-  a img {
-    &:hover {
-      mix-blend-mode: multiply;
-    }
-  }
+  // a img {
+  //   &:hover {
+  //     mix-blend-mode: multiply;
+  //   }
+  // }
   .label {
     position: absolute;
     bottom: 0;
@@ -214,15 +216,9 @@ h3 mark {
     border-radius: 0 0 0.15em 0.15em;
     padding: 0.45em 0 0.4em 0;
   }
-  .soon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
+  .pswp__caption__center {
     text-align: center;
-    color: white;
-    font-style: italic;
-    padding-top: 2em;
+    max-width: 500px;
   }
 }
 
@@ -261,15 +257,18 @@ h3 mark {
 // ***
 
 .project-gallery {
-  width: 100%;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  margin-bottom: 2em;
+  // width: 100%;
+  // display: -webkit-flex;
+  // display: flex;
+  // -webkit-flex-flow: row wrap;
+  // flex-flow: row wrap;
+  // margin-bottom: 2em;
   img {
     height: 100%;
     width: auto;
+  }
+  figcaption {
+    display: none;
   }
   figure {
     display: block;

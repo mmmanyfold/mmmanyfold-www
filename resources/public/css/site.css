@@ -152,38 +152,36 @@ h3 mark {
 .scrolling-gallery {
   background-color: #594B4A;
   overflow-x: scroll;
-  overflow-y: visible;
+  height: 360px;
 }
-.gallery-wrap .summary {
-  font-size: 1.5em;
-}
-.gallery-wrap h2 {
+.scrolling-gallery h2 {
   margin: 0 1em;
+}
+.scrolling-gallery mark {
   position: absolute;
 }
-.gallery-wrap .gallery-section {
-  margin-bottom: 0.5em;
+.scrolling-gallery .title {
+  margin: 0 0 0.5em 0;
 }
-.gallery-wrap .gallery-row {
-  -webkit-flex-wrap: nowrap !important;
-  flex-wrap: nowrap !important;
-  padding: 3em 0 1.5em;
+.scrolling-gallery .summary,
+.scrolling-gallery .info a {
+  font-size: 1.5em;
 }
-.gallery-wrap .gallery-item {
+.scrolling-gallery .gallery-row {
+  display: inline-flex;
+  padding-top: 3em;
+}
+.scrolling-gallery .gallery-item {
   position: relative;
   height: 250px;
   margin: 0.5em !important;
-  cursor: pointer;
 }
-.gallery-wrap img {
+.scrolling-gallery img {
   height: 100%;
   width: auto;
   border-radius: .15em;
 }
-.gallery-wrap a img:hover {
-  mix-blend-mode: multiply;
-}
-.gallery-wrap .label {
+.scrolling-gallery .label {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -195,15 +193,9 @@ h3 mark {
   border-radius: 0 0 0.15em 0.15em;
   padding: 0.45em 0 0.4em 0;
 }
-.gallery-wrap .soon {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+.scrolling-gallery .pswp__caption__center {
   text-align: center;
-  color: white;
-  font-style: italic;
-  padding-top: 2em;
+  max-width: 500px;
 }
 .popover-content a {
   text-decoration: underline;
@@ -235,17 +227,12 @@ h3 mark {
   margin-top: 0.5em;
   margin-bottom: 0.9em;
 }
-.project-gallery {
-  width: 100%;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  margin-bottom: 2em;
-}
 .project-gallery img {
   height: 100%;
   width: auto;
+}
+.project-gallery figcaption {
+  display: none;
 }
 .project-gallery figure {
   display: block;
