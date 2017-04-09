@@ -21,8 +21,7 @@
             [:a.logo {:href "#"}
               [:img {:src "img/logo-graydient.png"}]]
             [:nav
-              ; [:span [:a {:href "#/about"} "About"]] "/"
-              [:span [:a {:href "http://blog.mmmanyfold.com"} "Blog"]]]]
+              [:span [:a {:href "http://blog.mmmanyfold.com" :target "_blank"} "Blog"]]]]
           [:h1 "mmmanyfold"]
           [:p.subtitle "is a " [:b "web + app "] "development studio by " [:b "Michelle Lim"] " + " [:b "David A. Viramontes Martínez"]]]
         [:div.page
