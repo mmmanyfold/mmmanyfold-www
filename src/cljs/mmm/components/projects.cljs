@@ -17,9 +17,9 @@
      [:div.image-label title]]
     [:figcaption {:item-prop "caption description"
                   :width (str width "px")}
-     [:span [:h2.title title]
+     [:div [:h2.title title
             [:p.summary summary]
-            info]]])
+            info]]]])
 
 (defn full-screen-gallery []
   [:div.pswp {:tabIndex "-1" :role "dialog" :aria-hidden "true"}

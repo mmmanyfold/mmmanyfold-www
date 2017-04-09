@@ -139,9 +139,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         // define options (if needed)
         options = {
             history: false,
-            // isClickableElement: function(el) {
-            //     return el.tagName === 'A';
-            // },
             bgOpacity: 0.95,
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
