@@ -187,17 +187,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // Pass data to PhotoSwipe and initialize it
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-        gallery.listen('imageLoadComplete', function(index, item) {
-            const infoMarkUp = item.title;
-            console.log(infoMarkUp);
-            const parent = document.querySelector('.pswp');
-            const infoMount = parent.querySelector('.pswp__caption__center');
-            infoMount.innerHTML = '<div><a href="http://google.com">testx</a><span></span></div>';
-            // if(index === 0) {
-            // item = {};
-            // item.html = '<div>Dynamically generated HTML ' + Math.random() + '</div>';
-            // }
-        });
         gallery.init();
     };
 

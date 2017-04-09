@@ -21,7 +21,6 @@
             [:p.summary summary]
             info]]])
 
-
 (defn full-screen-gallery []
   [:div.pswp {:tabIndex "-1" :role "dialog" :aria-hidden "true"}
    [:div.pswp__bg]
@@ -65,7 +64,8 @@
               "img/gallery/playground.jpg"
               "Custom website for Brooklyn coffee shop, venue, and consignment store."
               [:div.info
-               [:a {:href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
+               [:a {:class "rabbit"
+                    :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
                [:p [:i "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]]
               "553"
               "400"]
@@ -75,7 +75,8 @@
               "img/gallery/sporting-life.gif"
               "Custom website for NYC producer Sporting Life."
               [:div.info
-               [:a {:href "http://sportinglife.nyc"} "sportinglife.nyc"]
+               [:a {:class "rabbit"
+                    :href "http://sportinglife.nyc"} "sportinglife.nyc"]
                [:p [:i "Github Pages"]]]
               "640"
               "429"]
@@ -85,7 +86,8 @@
               "img/gallery/princess-nokia.jpg"
               "Custom website for NYC artist Princess Nokia."
               [:div.info
-               [:a {:href "http://princessnokia.org"} "princessnokia.org"]
+               [:a {:class "rabbit"
+                    :href "http://princessnokia.org"} "princessnokia.org"]
                [:p [:i "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]]
               "425"
               "405"]
@@ -95,7 +97,8 @@
               "img/gallery/dizzy.jpg"
               "Custom website for Dizzy Magazine."
               [:div.info
-               [:a {:href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
+               [:a {:class "rabbit"
+                    :href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
                [:p [:i "mmmanyfold API, Clojure(script), re-frame, AWS"]]]
               "221"
               "286"]
@@ -105,7 +108,8 @@
               "img/gallery/owlet.png"
               "Web platform designed for middle schoolers to explore creative tech via self-guided activities."
               [:div.info
-               [:a {:href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
+               [:a {:class "rabbit"
+                    :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
                [:p [:i "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]]
               "588"
               "588"]
@@ -115,7 +119,8 @@
               "img/gallery/picture-room.png"
               "Custom website/online shop for Picture Room."
               [:div.info
-               [:a {:href "https://pictureroom.shop"} "pictureroom.shop"]
+               [:a {:class "rabbit"
+                    :href "https://pictureroom.shop"} "pictureroom.shop"]
                [:p [:i "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]]
               "665"
               "525"]
@@ -125,7 +130,8 @@
               "img/gallery/letter-racer.gif"
               "Custom website/online shop for the NYC music + art collective."
               [:div.info
-               [:a {:href "http://letterracer.com"} "letterracer.com"]
+               [:a {:class "rabbit"
+                    :href "http://letterracer.com"} "letterracer.com"]
                [:p [:i "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]]
               "640"
               "500"]]
