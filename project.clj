@@ -6,7 +6,9 @@
                  [re-frisk "0.3.2"]
                  [org.clojure/core.async "0.2.391"]
                  [re-com "1.0.0"]
-                 [secretary "1.2.3"]]
+                 [secretary "1.2.3"]
+                 [cljsjs/jquery "2.2.4-0"]
+                 [cljsjs/photoswipe "4.1.1-0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-less "1.7.5"]
@@ -24,8 +26,7 @@
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
                                     "test/js"]
 
-  :figwheel {:css-dirs     ["resources/public/css"]
-             :ring-handler www.handler/dev-handler}
+  :figwheel {:css-dirs     ["resources/public/css"]}
 
   :less {:source-paths ["less"]
          :target-path  "resources/public/css"}
