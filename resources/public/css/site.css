@@ -113,7 +113,7 @@ h3 mark {
   padding: 3em 0;
 }
 .home-wrap .greet h1 {
-  font-size: 2em;
+  font-size: 2.15em;
 }
 @media screen and (min-width: 500px) {
   .home-wrap .greet h1 {
@@ -142,7 +142,7 @@ h3 mark {
   }
 }
 .home-wrap .values {
-  padding-top: 5em;
+  padding-top: 4em;
 }
 @media screen and (max-width: 499px) {
   .home-wrap .values {
@@ -167,7 +167,7 @@ h3 mark {
 .home-wrap .process {
   width: 75%;
   margin: 0 auto;
-  padding: 3.5em 0 7.5em 0;
+  padding: 3.5em 0 7em 0;
   font-style: italic;
 }
 @media screen and (max-width: 499px) {
@@ -184,6 +184,7 @@ h3 mark {
   text-align: center;
 }
 .home-wrap .definition {
+  font-weight: 400;
   background-color: #f2f2f2;
   padding: 3em 0 3em 4em;
   font-size: 1.5em;
@@ -211,6 +212,15 @@ h3 mark {
   -webkit-justify-content: center;
   justify-content: center;
 }
+h2.section-label {
+  margin: 0 1em;
+}
+@media screen and (max-width: 499px) {
+  h2.section-label {
+    margin: 0;
+    font-size: 1.25em;
+  }
+}
 .scrolling-gallery {
   background-color: #594B4A;
   overflow-x: scroll;
@@ -219,15 +229,6 @@ h3 mark {
 @media screen and (min-width: 500px) {
   .scrolling-gallery {
     height: 350px;
-  }
-}
-.scrolling-gallery h2 {
-  margin: 0 1em;
-}
-@media screen and (max-width: 499px) {
-  .scrolling-gallery h2 {
-    margin: 0;
-    font-size: 1.25em;
   }
 }
 .scrolling-gallery mark {
@@ -260,7 +261,7 @@ h3 mark {
   width: auto;
   border-radius: .15em;
 }
-.scrolling-gallery .label {
+.scrolling-gallery .image-label {
   position: absolute;
   bottom: 0;
   left: 0;

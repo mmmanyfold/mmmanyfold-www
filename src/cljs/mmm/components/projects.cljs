@@ -16,7 +16,7 @@
          :item-prop "contentUrl"
          :data-size (str width "x" height)}
      [:img {:src img :item-prop "thumbnail"}]
-     [:div.label title]]
+     [:div.image-label title]]
     [:figcaption {:item-prop "caption description"
                   :width (str width "px")}
      [:div [:h2.title title]
@@ -58,7 +58,7 @@
      :reagent-render
      (fn []
        [:div.scrolling-gallery
-         [:h2 [:mark "Our Work"]]
+         [:h2.section-label [:mark "Our Work"]]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"
