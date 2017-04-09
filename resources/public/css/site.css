@@ -165,7 +165,7 @@ h3 mark {
   margin: 0.25em 0;
 }
 .home-wrap .process {
-  width: 75%;
+  width: 77%;
   margin: 0 auto;
   padding: 3.5em 0 7em 0;
   font-style: italic;
@@ -277,6 +277,10 @@ h2.section-label {
   text-align: center;
   max-width: 500px;
 }
+.scrolling-gallery .tech {
+  font-size: 0.75em;
+  font-style: italic;
+}
 .popover-content a {
   text-decoration: underline;
   color: olivedrab;
@@ -320,4 +324,155 @@ h2.section-label {
   display: block;
   float: left;
   margin: 0.66%;
+}
+/*This is coded CSS rainbow*/
+a.rabbit {
+  text-decoration: none;
+  color: crimson;
+}
+.rabbit:hover {
+  -webkit-animation: rainbow 1s infinite;
+  -ms-animation: rainbow 1s infinite;
+  -o-animation: rainbow 1s infinite;
+  animation: rainbow 1s infinite;
+}
+@-webkit-keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+@-ms-keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
 }
