@@ -65,7 +65,7 @@
              [:h2
               [:p "Audio/visual code art performance + workshop for Denver youth."]
               [:a {:class "rabbit"
-                   :href "http://blog.mmmanyfold.com/2017/02/06/sonic-pi-shadertone-owl-tech-fair/"}
+                   :href "https://blog.mmmanyfold.com/2016/04/26/sonic-pi-shadertone-owl-tech-fair/"}
                 "Photos"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
              "400"
