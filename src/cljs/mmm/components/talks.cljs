@@ -54,7 +54,7 @@
      :reagent-render
      (fn []
        [:div.scrolling-gallery
-         [:h2.section-label [:mark "Talks + Performances"]]
+         [:h2.section-label "talks + performances"]
          [:div.talks-gallery
            [:div.gallery-row
              {:item-scope "true"

@@ -53,11 +53,23 @@
      :reagent-render
      (fn []
        [:div.scrolling-gallery
-         [:h2.section-label [:mark "Our Work"]]
+         [:h2.section-label "our work"]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}
+
+             [project
+              "Sporting Life"
+              "img/gallery/sporting-life.gif"
+              [:h2
+               [:p "Custom website for NYC producer Sporting Life."]
+               [:a {:class "rabbit"
+                    :href "http://sportinglife.nyc"} "sportinglife.nyc"]
+               [:p.tech "Github Pages"
+                [:br] "Video by Georgia Studio."]]
+              "640"
+              "429"]
 
              [project
               "Picture Room"
@@ -81,18 +93,6 @@
                [:p.tech "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
               "553"
               "400"]
-
-             [project
-              "Sporting Life"
-              "img/gallery/sporting-life.gif"
-              [:h2
-               [:p "Custom website for NYC producer Sporting Life."]
-               [:a {:class "rabbit"
-                    :href "http://sportinglife.nyc"} "sportinglife.nyc"]
-               [:p.tech "Github Pages"
-                [:br] "Video by Georgia Studio."]]
-              "640"
-              "429"]
 
              [project
               "Princess Nokia"
@@ -149,7 +149,7 @@
                [:a {:class "rabbit"
                     :href "http://thesecretcircle.net"} "thesecretcircle.net"]
                [:p.tech "Github Pages, npm"
-                [:br] "Art by Brian (Narwhals of Sound)"]]
+                [:br] "Art by Brian (Narwhals of Sound)."]]
               "500"
               "400"]]
 
