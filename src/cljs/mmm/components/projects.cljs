@@ -58,6 +58,19 @@
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}
+
+             [project
+              "Picture Room"
+              "img/gallery/picture-room.png"
+              [:h2
+               [:p "Custom website/online shop for Picture Room."]
+               [:a {:class "rabbit"
+                    :href "https://pictureroom.shop"} "pictureroom.shop"]
+               [:p.tech "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"
+                [:br] "Graphic design by Benjamin Critton."]]
+              "665"
+              "525"]
+
              [project
               "Playground Coffee Shop"
               "img/gallery/playground.jpg"
@@ -76,7 +89,8 @@
                [:p "Custom website for NYC producer Sporting Life."]
                [:a {:class "rabbit"
                     :href "http://sportinglife.nyc"} "sportinglife.nyc"]
-               [:p.tech "Github Pages"]]
+               [:p.tech "Github Pages"
+                [:br] "Video by Georgia Studio."]]
               "640"
               "429"]
 
@@ -87,9 +101,21 @@
                [:p "Custom website for NYC artist Princess Nokia."]
                [:a {:class "rabbit"
                     :href "http://princessnokia.org"} "princessnokia.org"]
-               [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
+               [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"
+                [:br] "Art by Destiny Frasqueri."]]
               "425"
               "405"]
+
+             [project
+              "OWLET"
+              "img/gallery/owlet.png"
+              [:h2
+               [:p "Web platform designed for middle schoolers to explore creative tech via self-guided activities. Made in collaboration with Code for Denver."]
+               [:a {:class "rabbit"
+                    :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
+               [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
+              "588"
+              "588"]
 
              [project
               "Dizzy Magazine"
@@ -98,31 +124,10 @@
                [:p "Custom website for Dizzy Magazine."]
                [:a {:class "rabbit"
                     :href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
-               [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"]]
+               [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"
+                [:br] "Graphic design by Arvid Logan and Milah Libin."]]
               "221"
               "286"]
-
-             [project
-              "OWLET"
-              "img/gallery/owlet.png"
-              [:h2
-               [:p "Web platform designed for middle schoolers to explore creative tech via self-guided activities."]
-               [:a {:class "rabbit"
-                    :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
-               [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-              "588"
-              "588"]
-
-             [project
-              "Picture Room"
-              "img/gallery/picture-room.png"
-              [:h2
-               [:p "Custom website/online shop for Picture Room."]
-               [:a {:class "rabbit"
-                    :href "https://pictureroom.shop"} "pictureroom.shop"]
-               [:p.tech "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"]]
-              "665"
-              "525"]
 
              [project
               "Letter Racer"
@@ -131,8 +136,21 @@
                [:p "Custom website/online shop for the NYC music + art collective."]
                [:a {:class "rabbit"
                     :href "http://letterracer.com"} "letterracer.com"]
-               [:p.tech "Shopify, Cart.js, Jekyll, Github Pages, AWS"]]
+               [:p.tech "Shopify, Cart.js, Jekyll, Github Pages, AWS"
+                [:br] "Graphic design by Arvid Logan and Reuben Sinder."]]
               "640"
-              "500"]]
+              "500"]
+
+             [project
+              "Secret Circle"
+              "img/gallery/secret-circle.gif"
+              [:h2
+               [:p "Custom launchpad for the Secret Circle."]
+               [:a {:class "rabbit"
+                    :href "http://thesecretcircle.net"} "thesecretcircle.net"]
+               [:p.tech "Github Pages, npm"
+                [:br] "Art by Brian (Narwhals of Sound)"]]
+              "500"
+              "400"]]
 
            (full-screen-gallery)]])}))
