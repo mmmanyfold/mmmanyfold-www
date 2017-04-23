@@ -11,8 +11,7 @@
     [:p "say " [:a {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"]]]
    [projects-component]
    [:div
-    [:h2.section-label {:style {:text-align "right"}} [:mark "Our Philosophy"]]
-    [:div.values.flex-row.white
+    [:div.values.flex-row
       [:div.text-box
        [:h2 "innovation"]
        [:p "We use frameworks that give us and our clients more freedom, power and flexibility."]]
