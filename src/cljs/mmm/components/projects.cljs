@@ -151,6 +151,17 @@
                [:p.tech "Github Pages, npm"
                 [:br] "Art by Brian (Narwhals of Sound)."]]
               "500"
-              "400"]]
+              "400"]
+
+            [project
+             "COPA-SMS"
+             "img/gallery/copa.gif"
+             [:h2
+              [:p "Copa new-member onboarding service via SMS with automatic user exports and archiving features."]
+              [:a {:class "rabbit"
+                   :href "https://coloradopeoplesalliance.org/"} "coloradopeoplesalliance.org"]
+              [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
+             "384"
+             "406"]]
 
            (full-screen-gallery)]])}))
