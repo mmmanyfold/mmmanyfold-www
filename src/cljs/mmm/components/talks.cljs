@@ -112,6 +112,16 @@
                 "Event details"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
              "640"
-             "454"]]
+             "454"]
+            [talk
+             "She Started It!"
+             "img/gallery/she-started-it.jpg"
+             [:h2
+              [:p "Panel discussion with Shelly Sousa, Maria Popo, and Michelle Lim about women in tech leadership after a screening of "
+               [:a {:class "rabbit"
+                    :href "http://www.shestarteditfilm.com/"} "She Started It!"]]
+              [:p.tech "Hosted by Women in Cable Telecommunications and Girls in STEM"]]
+             "507"
+             "500"]]
 
            (full-screen-gallery)]])}))
