@@ -78,7 +78,7 @@
                [:p "Custom website/online shop for Picture Room."]
                [:a {:class "rabbit"
                     :href "https://pictureroom.shop"} "pictureroom.shop"]
-               [:p.tech "Lightspeed eCom, Github Pages, mmmanyfold API, Facebook Graph API"
+               [:p.tech "Lightspeed eCom, mmmanyfold API, Facebook Graph API"
                 [:br] "Graphic design by Benjamin Critton."]]
               "665"
               "525"]
@@ -157,7 +157,10 @@
              "COPA-SMS"
              "img/gallery/copa.gif"
              [:h2
-              [:p "SMS onboarding service for Colorado People's Alliance (COPA) text alerts. With automatic user exports (.csv) and archiving features."]
+              [:p "SMS onboarding service for "
+                [:a {:class "rabbit"
+                     :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
+                " (COPA) text alerts. With automatic user exports and archiving features."]
               [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
              "384"
              "406"]]
