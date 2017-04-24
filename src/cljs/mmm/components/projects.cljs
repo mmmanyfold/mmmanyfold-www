@@ -157,9 +157,7 @@
              "COPA-SMS"
              "img/gallery/copa.gif"
              [:h2
-              [:p "Copa new-member onboarding service via SMS with automatic user exports and archiving features."]
-              [:a {:class "rabbit"
-                   :href "https://coloradopeoplesalliance.org/"} "coloradopeoplesalliance.org"]
+              [:p "SMS onboarding service for Colorado People's Alliance (COPA) text alerts. With automatic user exports (.csv) and archiving features."]
               [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
              "384"
              "406"]]
