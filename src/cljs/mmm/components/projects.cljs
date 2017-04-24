@@ -151,6 +151,15 @@
                [:p.tech "Github Pages, npm"
                 [:br] "Art by Brian (Narwhals of Sound)."]]
               "500"
-              "400"]]
+              "400"]
+
+            [project
+             "COPA-SMS"
+             "img/gallery/copa.gif"
+             [:h2
+              [:p "SMS onboarding service for Colorado People's Alliance (COPA) text alerts. With automatic user exports (.csv) and archiving features."]
+              [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
+             "384"
+             "406"]]
 
            (full-screen-gallery)]])}))
