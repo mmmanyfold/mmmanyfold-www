@@ -245,7 +245,7 @@ h2.gallery-label {
 .scrolling-gallery .gallery-item {
   position: relative;
   height: 175px;
-  margin: 0 0.5em !important;
+  margin: 0 0.95em !important;
 }
 @media screen and (min-width: 500px) {
   .scrolling-gallery .gallery-item {

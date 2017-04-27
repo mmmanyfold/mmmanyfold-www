@@ -130,16 +130,27 @@
               "405"]
 
             [project
-              "Dizzy Magazine"
-              "img/gallery/dizzy.jpg"
+              "COPA-SMS"
+              "img/gallery/copa.gif"
               [:h2
-               [:p "Custom website for Dizzy Magazine."]
+               [:p "SMS onboarding service for "
+                [:a {:class "rabbit"
+                     :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
+                " (COPA) text alerts. With automatic user exports and archiving features."]
+               [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
+              "384"
+              "406"]
+
+            [project
+              "Girls in STEM"
+              "img/gallery/gstem.png"
+              [:h2
+               [:p "Custom Squarespace site for Girls in STEM Denver."]
                [:a {:class "rabbit"
-                    :href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
-               [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"
-                [:br] "Graphic design by Arvid Logan and Milah Libin."]]
-              "221"
-              "286"]
+                    :href "http://gstemdenver.org"} "gstemdenver.org"]
+               [:p.tech "Squarespace, mmmanyfold API"]]
+              "300"
+              "294"]
 
             [project
               "Letter Racer"
@@ -154,15 +165,15 @@
               "500"]
 
             [project
-              "COPA-SMS"
-              "img/gallery/copa.gif"
+              "Dizzy Magazine"
+              "img/gallery/dizzy.jpg"
               [:h2
-               [:p "SMS onboarding service for "
-                [:a {:class "rabbit"
-                     :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
-                " (COPA) text alerts. With automatic user exports and archiving features."]
-               [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
-              "384"
-              "406"]]
+               [:p "Custom website for Dizzy Magazine."]
+               [:a {:class "rabbit"
+                    :href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
+               [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"
+                [:br] "Graphic design by Arvid Logan and Milah Libin."]]
+              "221"
+              "286"]]
 
           (full-screen-gallery)]])}))
