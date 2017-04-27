@@ -53,8 +53,8 @@
      #(js/initPhotoSwipeFromDOM ".talks-gallery")
      :reagent-render
      (fn []
-       [:div.scrolling-gallery
-         [:h2.section-label "talks + performances"]
+       [:div#style-3.scrolling-gallery
+         [:h2.gallery-label "talks + performances"]
          [:div.talks-gallery
            [:div.gallery-row
              {:item-scope "true"
