@@ -156,13 +156,13 @@
             [project
               "COPA-SMS"
               "img/gallery/copa.gif"
-              [:h2]
-              [:p "SMS onboarding service for "
+              [:h2
+               [:p "SMS onboarding service for "
                 [:a {:class "rabbit"
                      :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
                 " (COPA) text alerts. With automatic user exports and archiving features."]
-              [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]
+               [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
               "384"
               "406"]]
 
-           (full-screen-gallery)]])}))
+          (full-screen-gallery)]])}))
