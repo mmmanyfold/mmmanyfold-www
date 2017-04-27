@@ -23,6 +23,6 @@
             [:nav
               [:span [:a {:href "http://blog.mmmanyfold.com" :target "_blank"} "Blog"]]]]
           [:h1 "mmmanyfold"]
-          [:p.subtitle "a " [:b "web + app "] "development studio"]]
+          [:p.subtitle "web + app dev studio"]]
         [:div.page
           [views @active-view]]])))
