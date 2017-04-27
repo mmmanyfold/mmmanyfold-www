@@ -2,17 +2,19 @@
 
 @brown: #2f1916;
 @brown-trans: rgba(89,75,74,0.8);
+@white: #fff;
+@black: #000;
 
 html {
   height: 100%;
 }
 
 .white {
-  color: white;
+  color: @white;
 }
 
 body {
-  color: @brown;
+  color: @white;
   margin: 0;
   height: 100%;
   @media screen and (min-width: 500px) {
@@ -36,6 +38,11 @@ body {
 
 .content {
   z-index: 1;
+  background-image:
+          linear-gradient(to bottom,
+          rgba(255,0,0,0.5),
+          rgba(0,0,255,0.5)),
+          url('../img/dragon-fold-purple_animated.svg');
 }
 h1 {
   font-size: 2.25em;
@@ -58,7 +65,7 @@ h3 mark {
   font-weight: normal;
   font-style: italic;
   color: #e3eee6;
-  background-color: @brown;
+  background-color: @white;
   padding: 2px 7px 2px 5px;
 }
 
@@ -175,7 +182,7 @@ h3 mark {
       width: 85%;
     }
     h2 {
-      color: @brown;
+      color: @white;
       font-weight: bold;
     }
     font-style: italic;
@@ -186,7 +193,6 @@ h3 mark {
   }
   .definition {
     font-weight: 400;
-    background-color: #f2f2f2;
     @media screen and (max-width: 499px) {
       padding: 2.75em 1em 3em 1.5em;
       font-size: 1em;
@@ -224,7 +230,7 @@ h2.section-label {
 }
 
 .scrolling-gallery {
-  background-color: #594B4A;
+  background-color: @black;
   overflow-x: scroll;
   height: 240px;
   @media screen and (min-width: 500px) {
@@ -258,8 +264,8 @@ h2.section-label {
     bottom: 0;
     left: 0;
     width: 100%;
-    color: #e3eee6;
-    background-color: #261620;
+    color: @black;
+    background-color: @white;
     font-weight: normal;
     text-align: center;
     border-radius: 0 0 0.15em 0.15em;

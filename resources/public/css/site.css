@@ -3,10 +3,10 @@ html {
   height: 100%;
 }
 .white {
-  color: white;
+  color: #ffffff;
 }
 body {
-  color: #2f1916;
+  color: #ffffff;
   margin: 0;
   height: 100%;
   font-family: Quicksand;
@@ -27,6 +27,7 @@ body {
 }
 .content {
   z-index: 1;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('../img/dragon-fold-purple_animated.svg');
 }
 h1 {
   font-size: 2.25em;
@@ -51,7 +52,7 @@ h3 mark {
   font-weight: normal;
   font-style: italic;
   color: #e3eee6;
-  background-color: #2f1916;
+  background-color: #ffffff;
   padding: 2px 7px 2px 5px;
 }
 .header {
@@ -183,7 +184,7 @@ h3 mark {
   }
 }
 .home-wrap .process h2 {
-  color: #2f1916;
+  color: #ffffff;
   font-weight: bold;
 }
 .home-wrap .process .graphic {
@@ -192,7 +193,6 @@ h3 mark {
 }
 .home-wrap .definition {
   font-weight: 400;
-  background-color: #f2f2f2;
   padding: 3em 0 3em 4em;
   font-size: 1.5em;
 }
@@ -232,7 +232,7 @@ h2.section-label {
   }
 }
 .scrolling-gallery {
-  background-color: #594B4A;
+  background-color: #000000;
   overflow-x: scroll;
   height: 240px;
 }
@@ -273,8 +273,8 @@ h2.section-label {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: #e3eee6;
-  background-color: #261620;
+  color: #000000;
+  background-color: #ffffff;
   font-weight: normal;
   text-align: center;
   border-radius: 0 0 0.15em 0.15em;
