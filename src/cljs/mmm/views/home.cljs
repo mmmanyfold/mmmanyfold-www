@@ -13,20 +13,18 @@
    [:div
     [:div.values.flex-row
       [:div.text-box
-       [:h2 "innovation"]
-       [:p "We use frameworks that give us and our clients more freedom, power and flexibility."]]
-      [:div [:img {:src "img/logo-plus.png"}]]
-      [:div.text-box
        [:h2 "inspiration"]
        [:p "We’re inspired by creative people across geographic and sector boundaries."]]
+      [:div [:img {:src "img/logo-plus.png"}]]
+      [:div.text-box
+       [:h2 "innovation"]
+       [:p "We use frameworks that give us and our clients more freedom, power and flexibility."]]
       [:div [:img {:src "img/logo-equals.png"}]]
       [:div.text-box
        [:h2 "better software"]
-       [:p "We want to make user experiences distinctly more meaningful, efficient – and enjoyable."]]]
-    [:div.process
-     [:h2 "The key to our approach is active listening; we pay close attention to our users' wants and needs in every phase of our creation cycle."]]]
-  ; [:div.graphic
-  ;  [:img {:src "img/process-placeholder.png"}]]]
+       [:p "We strive to make user experiences distinctly more meaningful, efficient – and enjoyable."]]]]
+    ; [:div.process
+    ;  [:h2 "The key to our approach is active listening; we pay close attention to our users' wants and needs in every phase of our creation cycle."]]]
    [talks-component]
    [:div.definition
     [:h1 "man·y·fold"]

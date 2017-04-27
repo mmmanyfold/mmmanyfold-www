@@ -52,14 +52,14 @@
      #(js/initPhotoSwipeFromDOM ".project-gallery")
      :reagent-render
      (fn []
-       [:div.scrolling-gallery
-         [:h2.section-label "our work"]
+       [:div#style-3.scrolling-gallery
+         [:h2.gallery-label "our work"]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}
 
-             [project
+            [project
               "Sporting Life"
               "img/gallery/sporting-life.gif"
               [:h2
@@ -71,7 +71,7 @@
               "640"
               "429"]
 
-             [project
+            [project
               "Picture Room"
               "img/gallery/picture-room.png"
               [:h2
@@ -83,18 +83,41 @@
               "665"
               "525"]
 
-             [project
-              "Playground Coffee Shop"
-              "img/gallery/playground.jpg"
+            [project
+              "Secret Circle"
+              "img/gallery/secret-circle.gif"
               [:h2
-               [:p "Custom website for Brooklyn coffee shop, venue, and consignment store."]
+               [:p "Custom launchpad for the Secret Circle."]
                [:a {:class "rabbit"
-                    :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
-               [:p.tech "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
-              "553"
+                    :href "http://thesecretcircle.net"} "thesecretcircle.net"]
+               [:p.tech "Github Pages"
+                [:br] "Art by Brian Blomerth."]]
+              "500"
               "400"]
 
-             [project
+            [project
+             "Playground Coffee Shop"
+             "img/gallery/playground.jpg"
+             [:h2
+              [:p "Custom website for Brooklyn coffee shop, venue, and consignment store."]
+              [:a {:class "rabbit"
+                   :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
+              [:p.tech "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
+             "553"
+             "400"]
+
+            [project
+              "OWLET"
+              "img/gallery/owlet.png"
+              [:h2
+               [:p "Web platform designed for middle schoolers to explore creative tech via self-guided activities. Made in collaboration with Code for Denver."]
+               [:a {:class "rabbit"
+                    :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
+               [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
+              "588"
+              "588"]
+
+            [project
               "Princess Nokia"
               "img/gallery/princess-nokia.jpg"
               [:h2
@@ -106,18 +129,7 @@
               "425"
               "405"]
 
-             [project
-              "OWLET"
-              "img/gallery/owlet.png"
-              [:h2
-               [:p "Web platform designed for middle schoolers to explore creative tech via self-guided activities. Made in collaboration with Code for Denver."]
-               [:a {:class "rabbit"
-                    :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
-               [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-              "588"
-              "588"]
-
-             [project
+            [project
               "Dizzy Magazine"
               "img/gallery/dizzy.jpg"
               [:h2
@@ -129,7 +141,7 @@
               "221"
               "286"]
 
-             [project
+            [project
               "Letter Racer"
               "img/gallery/letter-racer.gif"
               [:h2
@@ -141,28 +153,16 @@
               "640"
               "500"]
 
-             [project
-              "Secret Circle"
-              "img/gallery/secret-circle.gif"
-              [:h2
-               [:p "Custom launchpad for the Secret Circle."]
-               [:a {:class "rabbit"
-                    :href "http://thesecretcircle.net"} "thesecretcircle.net"]
-               [:p.tech "Github Pages, npm"
-                [:br] "Art by Brian (Narwhals of Sound)."]]
-              "500"
-              "400"]
-
             [project
-             "COPA-SMS"
-             "img/gallery/copa.gif"
-             [:h2
+              "COPA-SMS"
+              "img/gallery/copa.gif"
+              [:h2]
               [:p "SMS onboarding service for "
                 [:a {:class "rabbit"
                      :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
                 " (COPA) text alerts. With automatic user exports and archiving features."]
-              [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
-             "384"
-             "406"]]
+              [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]
+              "384"
+              "406"]]
 
            (full-screen-gallery)]])}))
