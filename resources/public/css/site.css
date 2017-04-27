@@ -27,7 +27,7 @@ body {
 }
 .content {
   z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('../img/dragon-fold-purple_animated.svg');
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('../img/dragon-fold_animated.svg');
 }
 h1 {
   font-size: 2.25em;
