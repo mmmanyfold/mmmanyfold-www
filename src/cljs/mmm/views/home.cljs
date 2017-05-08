@@ -23,17 +23,21 @@
       [:div.text-box
        [:h2 "better software"]
        [:p "We strive to make user experiences distinctly more meaningful, efficient – and enjoyable."]]]]
-    ; [:div.process
-    ;  [:h2 "The key to our approach is active listening; we pay close attention to our users' wants and needs in every phase of our creation cycle."]]]
    [talks-component]
-   [:div.definition
-    [:h1 "man·y·fold"]
-    [:h2 "ˈmenēˌfōld/"]
-    [:i "adverb"]
-    [:ol
-      [:li "by many times."]
-      [:li "\"the impact would be multiplied manyfold\""]]
-    [:i "adjective"]
-    [:ol
-     [:li "involving multiplication by many times."]
-     [:li "\"the manyfold increase in ideas\""]]]])
+   [:div.flex-row.footer
+     [:div.definition
+      [:h1 "man·y·fold"]
+      [:h2 "ˈmenēˌfōld/"]
+      [:i "adverb"]
+      [:ol
+        [:li "by many times."]
+        [:li "\"the impact would be multiplied manyfold\""]]
+      [:i "adjective"]
+      [:ol
+       [:li "involving multiplication by many times."]
+       [:li "\"the manyfold increase in ideas\""]]]
+     [:div.about
+      [:h1 "About"]
+      [:h2 "We build websites, apps, and learning experiences."]
+      [:h2 "Our mission is to turn ideas into well-crafted digital products through creative collaboration."]
+      [:h2 "mmmanyfold is x + y + all of our collaborators + co-conspirators."]]]])
