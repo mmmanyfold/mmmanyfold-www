@@ -1,5 +1,5 @@
 (ns mmm.server
-  (:require [playground-coffeeshop.handler :refer [handler]]
+  (:require [mmm.handler :refer [handler]]
             [config.core :refer [env]]
             [ring.adapter.jetty :refer [run-jetty]])
   (:gen-class))
