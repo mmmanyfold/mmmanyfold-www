@@ -77,7 +77,7 @@
               [:h2
                [:p "Custom website/online shop for Picture Room."]
                [:a {:class "rabbit"
-                    :href "https://pictureroom.shop"} "pictureroom.shop"]
+                    :href "https://www.pictureroom.shop"} "pictureroom.shop"]
                [:p.tech "Lightspeed eCom, mmmanyfold API, Facebook Graph API"
                 [:br] "Graphic design by Benjamin Critton."]]
               "665"
