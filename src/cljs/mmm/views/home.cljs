@@ -40,4 +40,8 @@
       [:h1 "About"]
       [:h2 "We build websites, apps, and learning experiences."]
       [:h2 "Our mission is to turn ideas into well-crafted digital products through creative collaboration."]
-      [:h2 "mmmanyfold is x + y + all of our collaborators + co-conspirators."]]]])
+      [:h2 "mmmanyfold is "
+       [:a.rabbit {:href "https://github.com/eemshi" :target "_blank"} "MSL"]
+       " + "
+       [:a.rabbit {:href "https://github.com/dviramontes" :target "_blank"} "DAVM"]
+       " + all of our collaborators + co-conspirators."]]]])

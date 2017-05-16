@@ -40,6 +40,13 @@ h2 {
   font-weight: 400;
   padding: 2px 8px 2px 6px;
 }
+a {
+  text-decoration: underline;
+  color: white;
+}
+a:hover {
+  color: #0a0608;
+}
 .header {
   font-weight: 400;
   padding: 0.5em 0.75em 0 0.75em;
@@ -120,13 +127,6 @@ h2 {
   .home-wrap .greet p {
     font-size: 2em;
   }
-}
-.home-wrap .greet a {
-  text-decoration: underline;
-  color: white;
-}
-.home-wrap .greet a:hover {
-  color: #0a0608;
 }
 @media screen and (min-width: 500px) {
   .home-wrap .greet {
@@ -299,6 +299,10 @@ h2.gallery-label {
   text-align: center;
   max-width: 500px;
 }
+.scrolling-gallery .pswp__caption__center a.rabbit {
+  text-decoration: none;
+  color: crimson;
+}
 .scrolling-gallery .tech {
   font-size: 0.75em;
   font-style: italic;
@@ -319,10 +323,6 @@ h2.gallery-label {
   margin: 0.66%;
 }
 /*This is coded CSS rainbow*/
-a.rabbit {
-  text-decoration: none;
-  color: crimson;
-}
 .rabbit:hover {
   -webkit-animation: rainbow 1s infinite;
   -ms-animation: rainbow 1s infinite;
