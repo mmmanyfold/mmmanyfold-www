@@ -49,6 +49,12 @@ h2 {
   padding: 2px 8px 2px 6px;
 }
 
+a {
+  text-decoration: underline;
+  color: white;
+  &:hover { color: @blackish }
+}
+
 .header {
   font-weight: 400;
   padding: 0.5em 0.75em 0 0.75em;
@@ -122,11 +128,6 @@ h2 {
       }
       margin: 0;
     }
-    a {
-      text-decoration: underline;
-      color: white;
-      &:hover { color: @blackish }
-    }
     padding: 3em 0 3.75em 0;
     @media screen and (min-width: 500px) {
       padding: 4.5em 0 8em 0;
@@ -176,17 +177,33 @@ h2 {
     }
   }
   .definition {
+    width: 45%;
     font-weight: 400;
-    @media screen and (max-width: 499px) {
-      padding: 2.75em 1em 3em 1.5em;
-      font-size: 1em;
-    }
-    padding: 4em 0 3em 4em;
+    padding: 4em 0 3em 5%;
     font-size: 1.5em;
     h1 { font-size: 2.5em; }
     h2 {
       margin: 0;
       margin-bottom: 1em;
+    }
+    @media screen and (max-width: 499px) {
+      padding: 2.75em 1em 3em 1.5em;
+      font-size: 1em;
+    }
+    @media screen and (max-width: 1133px) {
+      width: 100%;
+    }
+  }
+  .about {
+    background-color: rgba(0,0,0,0.75);
+    width: 36%;
+    padding: 2%;
+    margin: 0 5%;
+    h2 { font-weight: 300 }
+    @media screen and (max-width: 1133px) {
+      width: 100%;
+      padding: 2em;
+      margin-bottom: 3em;
     }
   }
 }
@@ -200,6 +217,11 @@ h2 {
    align-items: center;
    -webkit-justify-content: center;
    justify-content: center;
+}
+
+.footer {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 h2.gallery-label {
@@ -258,6 +280,10 @@ h2.gallery-label {
   .pswp__caption__center {
     text-align: center;
     max-width: 500px;
+    a.rabbit {
+      text-decoration: none;
+      color: crimson;
+    }
   }
   .tech {
     font-size: 0.75em;
@@ -284,11 +310,6 @@ h2.gallery-label {
 }
 
 /*This is coded CSS rainbow*/
-
-a.rabbit {
-  text-decoration: none;
-  color: crimson;
-}
 
 .rabbit:hover {
 -webkit-animation:rainbow 1s infinite;

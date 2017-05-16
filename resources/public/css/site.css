@@ -40,6 +40,13 @@ h2 {
   font-weight: 400;
   padding: 2px 8px 2px 6px;
 }
+a {
+  text-decoration: underline;
+  color: white;
+}
+a:hover {
+  color: #0a0608;
+}
 .header {
   font-weight: 400;
   padding: 0.5em 0.75em 0 0.75em;
@@ -121,13 +128,6 @@ h2 {
     font-size: 2em;
   }
 }
-.home-wrap .greet a {
-  text-decoration: underline;
-  color: white;
-}
-.home-wrap .greet a:hover {
-  color: #0a0608;
-}
 @media screen and (min-width: 500px) {
   .home-wrap .greet {
     padding: 4.5em 0 8em 0;
@@ -181,15 +181,10 @@ h2 {
   text-align: center;
 }
 .home-wrap .definition {
+  width: 45%;
   font-weight: 400;
-  padding: 4em 0 3em 4em;
+  padding: 4em 0 3em 5%;
   font-size: 1.5em;
-}
-@media screen and (max-width: 499px) {
-  .home-wrap .definition {
-    padding: 2.75em 1em 3em 1.5em;
-    font-size: 1em;
-  }
 }
 .home-wrap .definition h1 {
   font-size: 2.5em;
@@ -197,6 +192,33 @@ h2 {
 .home-wrap .definition h2 {
   margin: 0;
   margin-bottom: 1em;
+}
+@media screen and (max-width: 499px) {
+  .home-wrap .definition {
+    padding: 2.75em 1em 3em 1.5em;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1133px) {
+  .home-wrap .definition {
+    width: 100%;
+  }
+}
+.home-wrap .about {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 36%;
+  padding: 2%;
+  margin: 0 5%;
+}
+.home-wrap .about h2 {
+  font-weight: 300;
+}
+@media screen and (max-width: 1133px) {
+  .home-wrap .about {
+    width: 100%;
+    padding: 2em;
+    margin-bottom: 3em;
+  }
 }
 .flex-row {
   display: -webkit-flex;
@@ -207,6 +229,10 @@ h2 {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+.footer {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 h2.gallery-label {
   color: white;
@@ -273,6 +299,10 @@ h2.gallery-label {
   text-align: center;
   max-width: 500px;
 }
+.scrolling-gallery .pswp__caption__center a.rabbit {
+  text-decoration: none;
+  color: crimson;
+}
 .scrolling-gallery .tech {
   font-size: 0.75em;
   font-style: italic;
@@ -293,10 +323,6 @@ h2.gallery-label {
   margin: 0.66%;
 }
 /*This is coded CSS rainbow*/
-a.rabbit {
-  text-decoration: none;
-  color: crimson;
-}
 .rabbit:hover {
   -webkit-animation: rainbow 1s infinite;
   -ms-animation: rainbow 1s infinite;
