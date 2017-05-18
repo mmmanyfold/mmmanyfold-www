@@ -64,7 +64,7 @@
              "img/gallery/owl-tech-fair.jpg"
              [:h2
               [:p "Audio/visual code art performance + workshop for Denver youth."]
-              [:a {:class "rabbit"
+              [:a {:class "rabbit rainbow"
                    :href "https://blog.mmmanyfold.com/2016/04/26/sonic-pi-shadertone-owl-tech-fair/"}
                 "Photos"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
@@ -74,10 +74,10 @@
              "MoonConf"
              "img/gallery/moonconf.png"
              [:h2
-              [:p "Watch: " [:a {:class "rabbit"
+              [:p "Watch: " [:a {:class "rabbit rainbow"
                                  :href "https://youtu.be/tnKPuoWniTg?list=PLWYAdh9hA7geMRCgwDomlHAdwlsno32LU"} "Hacking Web Apps with Clojure(Script) @ Code for Denver"]]
               [:p "Presented at MoonConf 2016 by Shelby Switzer & David A. Viramontes"]
-              [:p "We ♥ " [:a {:class "rabbit"
+              [:p "We ♥ " [:a {:class "rabbit rainbow"
                                :href "http://moonconf.org/"} "MoonConf"]]]
              "277"
              "163"]
@@ -85,7 +85,7 @@
              "Code for Denver"
              "img/gallery/lisp.png"
              [:h2
-              [:p [:a {:class "rabbit"
+              [:p [:a {:class "rabbit rainbow"
                        :href "https://codefordenver.github.io/tutorials/intro-to-cljs/"}
                     "Intro to Clojure(script)"]]
               [:p "Presented at Code for Denver by Michelle Lim & Tyler Perkins"]]
@@ -95,7 +95,7 @@
              "Denver Public Schools"
              "img/gallery/north-hs.gif"
              [:h2
-              [:p [:a {:class "rabbit"
+              [:p [:a {:class "rabbit rainbow"
                        :href "http://blog.mmmanyfold.com/tag/denver-public-schools/"}
                    "Code art demos "]
                  "in Denver area public schools."]
@@ -107,7 +107,7 @@
              "img/gallery/signal-to-noise.gif"
              [:h2
               [:p "Audio/visual code art performance during Denver Startup Week 2016."]
-              [:a {:class "rabbit"
+              [:a {:class "rabbit rainbow"
                    :href "https://www.denverstartupweek.org/panel-picker/2399-an-amalgamation-of-art-science-and-technology"}
                 "Event details"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
@@ -118,7 +118,7 @@
              "img/gallery/she-started-it.jpg"
              [:h2
               [:p "Panel discussion with Shelly Sousa, Maria Popo, and Michelle Lim about women in tech leadership after a screening of "
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://www.shestarteditfilm.com/"} "She Started It!"]]
               [:p.tech "Hosted by Women in Cable Telecommunications and Girls in STEM"]]
              "507"

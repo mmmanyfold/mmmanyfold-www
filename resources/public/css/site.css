@@ -299,7 +299,7 @@ h2.gallery-label {
   text-align: center;
   max-width: 500px;
 }
-.scrolling-gallery .pswp__caption__center a.rabbit {
+.scrolling-gallery .pswp__caption__center a.rainbow {
   text-decoration: none;
   color: crimson;
 }
@@ -323,7 +323,7 @@ h2.gallery-label {
   margin: 0.66%;
 }
 /*This is coded CSS rainbow*/
-.rabbit:hover {
+.rainbow:hover {
   -webkit-animation: rainbow 1s infinite;
   -ms-animation: rainbow 1s infinite;
   -o-animation: rainbow 1s infinite;

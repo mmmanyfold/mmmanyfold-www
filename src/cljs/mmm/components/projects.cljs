@@ -64,7 +64,7 @@
               "img/gallery/sporting-life.gif"
               [:h2
                [:p "Custom website for NYC producer Sporting Life."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://sportinglife.nyc"} "sportinglife.nyc"]
                [:p.tech "Github Pages"
                 [:br] "Video by Georgia Studio."]]
@@ -76,7 +76,7 @@
               "img/gallery/picture-room.png"
               [:h2
                [:p "Custom website/online shop for Picture Room."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "https://www.pictureroom.shop"} "pictureroom.shop"]
                [:p.tech "Lightspeed eCom, mmmanyfold API, Facebook Graph API"
                 [:br] "Graphic design by Benjamin Critton."]]
@@ -88,7 +88,7 @@
               "img/gallery/secret-circle.gif"
               [:h2
                [:p "Custom launchpad for the Secret Circle."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://thesecretcircle.net"} "thesecretcircle.net"]
                [:p.tech "Github Pages"
                 [:br] "Art by Brian Blomerth."]]
@@ -100,7 +100,7 @@
              "img/gallery/playground.jpg"
              [:h2
               [:p "Custom website for Brooklyn coffee shop, venue, and consignment store."]
-              [:a {:class "rabbit"
+              [:a {:class "rabbit rainbow"
                    :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
               [:p.tech "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
              "553"
@@ -111,7 +111,7 @@
               "img/gallery/owlet.png"
               [:h2
                [:p "Web platform designed for middle schoolers to explore creative tech via self-guided activities. Made in collaboration with Code for Denver."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
                [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
               "588"
@@ -122,7 +122,7 @@
               "img/gallery/princess-nokia.jpg"
               [:h2
                [:p "Custom website for NYC artist Princess Nokia."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://princessnokia.org"} "princessnokia.org"]
                [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"
                 [:br] "Art by Destiny Frasqueri."]]
@@ -134,7 +134,7 @@
               "img/gallery/copa.gif"
               [:h2
                [:p "SMS onboarding service for "
-                [:a {:class "rabbit"
+                [:a {:class "rabbit rainbow"
                      :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
                 " (COPA) text alerts. With automatic user exports and archiving features."]
                [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
@@ -146,7 +146,7 @@
               "img/gallery/gstem.png"
               [:h2
                [:p "Custom Squarespace site for Girls in STEM Denver."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://gstemdenver.org"} "gstemdenver.org"]
                [:p.tech "Squarespace, mmmanyfold API"]]
               "300"
@@ -157,7 +157,7 @@
               "img/gallery/letter-racer.gif"
               [:h2
                [:p "Custom website/online shop for the NYC music + art collective."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://letterracer.com"} "letterracer.com"]
                [:p.tech "Shopify, Cart.js, Jekyll, Github Pages, AWS"
                 [:br] "Graphic design by Arvid Logan and Reuben Sinder."]]
@@ -169,7 +169,7 @@
               "img/gallery/dizzy.jpg"
               [:h2
                [:p "Custom website for Dizzy Magazine."]
-               [:a {:class "rabbit"
+               [:a {:class "rabbit rainbow"
                     :href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
                [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"
                 [:br] "Graphic design by Arvid Logan and Milah Libin."]]
