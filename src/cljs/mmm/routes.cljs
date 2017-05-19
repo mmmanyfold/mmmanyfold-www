@@ -20,7 +20,7 @@
                    (fn [e]
                      (let [path (.getPath (.parse Uri (.-href (.-target e))))
                            title (.-title (.-target e))]
-                       (when (= "rabbit" (.-className (.-target e)))
+                       (when (= "rabbit rainbow" (.-className (.-target e)))
                          (js/window.open (.-href (.-target e)) "_blank"))
                        (when (secretary/locate-route path)
                          (. history (setToken path title))))))))
