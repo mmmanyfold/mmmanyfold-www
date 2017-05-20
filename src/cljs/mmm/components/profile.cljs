@@ -1,8 +1,8 @@
 (ns mmm.components.profile)
 
-(defn project [{:keys [href title imageUrl href description]}]
+(defn project [{:keys [title imageUrl description url]}]
   [:div.fl.w-50.w-25-m.w-20-l.pa2
-   [:a.db.link.dim.tc {:href href}
+   [:a.db.link.dim.tc.rabbit {:href url :target "_blank"}
     [:img.w-100.db.outline.black-10 {:src imageUrl}]
     [:dl.mt2.f6.lh-copy.bg-purple
      [:dt.clip "title"]

@@ -5,12 +5,12 @@
 (defonce query "
   {
     allProjects {
-      id imageUrl title description
+      id imageUrl title description url
     }
   }")
 
 (defn davm-view []
-  (rf/dispatch [:get-project-data query])
+  (rf/dispatch [:get-project-data :davm query])
   (let [profile-list (rf/subscribe [:project-list])]
    (fn []
      [profile/component :davm @profile-list])))

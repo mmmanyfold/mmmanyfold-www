@@ -21,7 +21,7 @@
 
 (rf/reg-event-fx
   :get-project-data
-  (fn [{db :db} [_ query]]
+  (fn [{db :db} [_ user query]]
     ;; TODO: add loading state...
     {:db         db
      :http-xhrio {:method          :post
@@ -30,10 +30,10 @@
                   :params          {:query query}
                   :uri             graphql-endpoint
                   :response-format (ajax/json-response-format {:keywords? true})
-                  :on-success      [:get-project-data-success]}}))
+                  :on-success      [:get-project-data-success user]}}))
 
 (rf/reg-event-db
   :get-project-data-success
-  (fn [db [_ {data :data}]]
+  (fn [db [_ user & [{data :data}]]]
     (let [projects (:allProjects data)]
-      (assoc-in db [:profiles :davm :projects] projects))))
+      (assoc-in db [:profiles user :projects] projects))))
