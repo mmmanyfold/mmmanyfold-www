@@ -20,7 +20,7 @@
     (assoc db :active-view active-view)))
 
 (rf/reg-event-fx
-  :get-project-data
+  :get-profile-data
   (fn [{db :db} [_ user query]]
     ;; TODO: add loading state...
     {:db         db
@@ -30,10 +30,13 @@
                   :params          {:query query}
                   :uri             graphql-endpoint
                   :response-format (ajax/json-response-format {:keywords? true})
-                  :on-success      [:get-project-data-success user]}}))
+                  :on-success      [:get-profile-data-success user]}}))
 
 (rf/reg-event-db
-  :get-project-data-success
+  :get-profile-data-success
+  (rf/path [:profiles])
   (fn [db [_ user & [{data :data}]]]
-    (let [projects (:allProjects data)]
-      (assoc-in db [:profiles user :projects] projects))))
+    (let [{:keys [allProjects Collaborator]} data]
+      (-> db
+        (assoc-in [user] (merge (db user) Collaborator))
+        (assoc-in [user :projects] allProjects)))))
