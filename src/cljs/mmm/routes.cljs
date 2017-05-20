@@ -33,10 +33,10 @@
 
   (defroute "/" []
     (re-frame/dispatch [:set-active-view :home-view]))
-  (defroute "/about" []
-    (re-frame/dispatch [:set-active-view :about-view]))
   (defroute "/contact" []
     (re-frame/dispatch [:set-active-view :contact-view]))
+  (defroute "/david" []
+            (re-frame/dispatch [:set-active-view :david-view]))
 
   ;; --------------------
   (hook-browser-navigation!))

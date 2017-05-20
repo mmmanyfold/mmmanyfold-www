@@ -303,6 +303,9 @@ div.gallery-filter .filter-title :hover {
   display: inline-flex;
   padding-top: 66px;
 }
+.scrolling-gallery .gallery-row img {
+  max-width: inherit;
+}
 @media screen and (max-width: 499px) {
   .scrolling-gallery .gallery-row {
     padding-top: 2.5em;
@@ -528,4 +531,126 @@ div.gallery-filter .filter-title :hover {
 #style-3::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 10px;
+}
+.profile .outline {
+  outline: 1px solid;
+}
+.profile .cf:before,
+.profile .cf:after {
+  content: " ";
+  display: table;
+}
+.profile .cf:after {
+  clear: both;
+}
+.profile .cf {
+  *zoom: 1;
+}
+.profile .db {
+  display: block;
+}
+.profile .fl {
+  float: left;
+  _display: inline;
+}
+.profile .fw4 {
+  font-weight: 400;
+}
+.profile .lh-copy {
+  line-height: 1.5;
+}
+.profile .link {
+  text-decoration: none;
+  transition: color 0.15s ease-in;
+}
+.profile .link:link,
+.profile .link:visited {
+  transition: color 0.15s ease-in;
+}
+.profile .link:hover {
+  transition: color 0.15s ease-in;
+}
+.profile .link:active {
+  transition: color 0.15s ease-in;
+}
+.profile .link:focus {
+  transition: color 0.15s ease-in;
+  outline: 1px dotted currentColor;
+}
+.profile .w-50 {
+  width: 50%;
+}
+.profile .w-100 {
+  width: 100%;
+}
+.profile .black-10 {
+  color: rgba(0, 0, 0, 0.1);
+}
+.profile .black {
+  color: #000;
+}
+.profile .gray {
+  color: #777;
+}
+.profile .pa2 {
+  padding: .5rem;
+}
+.profile .pa3 {
+  padding: 1rem;
+}
+.profile .ml0 {
+  margin-left: 0;
+}
+.profile .mt2 {
+  margin-top: .5rem;
+}
+.profile .mv0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.profile .tc {
+  text-align: center;
+}
+.profile .ttu {
+  text-transform: uppercase;
+}
+.profile .f3 {
+  font-size: 1.5rem;
+}
+.profile .f6 {
+  font-size: .875rem;
+}
+.profile .truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile .clip {
+  position: fixed !important;
+  _position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.profile .dim {
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+}
+.profile .dim:hover,
+.profile .dim:focus {
+  opacity: .5;
+  transition: opacity 0.15s ease-in;
+}
+.profile .dim:active {
+  opacity: .8;
+  transition: opacity 0.15s ease-out;
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .profile .w-25-m {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 60em) {
+  .profile .w-20-l {
+    width: 20%;
+  }
 }

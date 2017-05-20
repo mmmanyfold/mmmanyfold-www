@@ -1,4 +1,5 @@
 (ns mmm.db)
 
 (def default-db
-  {:active-view nil})
+  {:active-view nil
+   :view-title "mmmanyfold"})
