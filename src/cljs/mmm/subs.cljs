@@ -1,12 +1,17 @@
 (ns mmm.subs
-  (:require [re-frame.core :as re-frame]))
+  (:require [re-frame.core :as rf]))
 
-(re-frame/reg-sub
+(rf/reg-sub
   :view-title
   (fn [db]
     (:view-title db)))
 
-(re-frame/reg-sub
+(rf/reg-sub
   :active-view
   (fn [db _]
     (:active-view db)))
+
+(rf/reg-sub
+  :project-list
+  (fn [db _]
+    (get-in db [:profiles :davm :projects])))

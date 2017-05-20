@@ -2,4 +2,7 @@
 
 (def default-db
   {:active-view nil
-   :view-title "mmmanyfold"})
+   :view-title  "mmmanyfold"
+   :profiles    {:davm {:projects []}
+                 :elle {:projects []}}})
+

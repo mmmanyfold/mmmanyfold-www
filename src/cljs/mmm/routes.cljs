@@ -1,11 +1,11 @@
 (ns mmm.routes
-    (:require-macros [secretary.core :refer [defroute]])
-    (:require [secretary.core :as secretary]
-              [goog.events :as events]
-              [goog.history.EventType :as EventType]
-              [re-frame.core :as re-frame])
-    (:import goog.history.Html5History
-      goog.Uri))
+  (:require-macros [secretary.core :refer [defroute]])
+  (:require [secretary.core :as secretary]
+            [goog.events :as events]
+            [goog.history.EventType :as EventType]
+            [re-frame.core :as rf])
+  (:import goog.history.Html5History
+           goog.Uri))
 
 (defn hook-browser-navigation! []
   (let [history (doto (Html5History.)
@@ -32,11 +32,13 @@
   ;; define routes here
 
   (defroute "/" []
-    (re-frame/dispatch [:set-active-view :home-view]))
+            (rf/dispatch [:set-active-view :home-view]))
+
   (defroute "/contact" []
-    (re-frame/dispatch [:set-active-view :contact-view]))
+            (rf/dispatch [:set-active-view :contact-view]))
+
   (defroute "/david" []
-            (re-frame/dispatch [:set-active-view :david-view]))
+            (rf/dispatch [:set-active-view :davm-view]))
 
   ;; --------------------
   (hook-browser-navigation!))

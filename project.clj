@@ -10,7 +10,10 @@
                  [cljsjs/jquery "2.2.4-0"]
                  [cljsjs/photoswipe "4.1.1-0"]
                  [compojure "1.6.0"]
-                 [ring "1.6.0"]]
+                 [ring "1.6.0"]
+                 [cljs-ajax "0.6.0"]
+                 [day8.re-frame/http-fx "0.1.3"]
+                 [adzerk/env "0.4.0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-less "1.7.5"]
