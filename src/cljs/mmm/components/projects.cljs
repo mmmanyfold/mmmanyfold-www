@@ -80,8 +80,8 @@
                     :href "https://www.pictureroom.shop"} "pictureroom.shop"]
                [:p.tech "Lightspeed eCom, mmmanyfold API, Facebook Graph API"
                 [:br] "Graphic design by Benjamin Critton."]]
-              "665"
-              "525"]
+              "543"
+              "429"]
 
             [project
               "Secret Circle"
@@ -90,7 +90,7 @@
                [:p "Custom launchpad for the Secret Circle."]
                [:a {:class "rabbit rainbow"
                     :href "http://thesecretcircle.net"} "thesecretcircle.net"]
-               [:p.tech "Github Pages"
+               [:p.tech "jQuery, Github Pages"
                 [:br] "Art by Brian Blomerth."]]
               "500"
               "400"]
@@ -107,6 +107,17 @@
              "400"]
 
             [project
+              "Tony Seltzer"
+              "img/gallery/tony-seltzer.gif"
+              [:h2
+               [:p "Custom website for Tony Seltzer's \"Remember the Memories\" tape release."]
+               [:a {:class "rabbit rainbow"
+                    :href "http://tonyseltzer.letterracer.com"} "tonyseltzer.letterracer.com"]
+               [:p.tech "jQuery, three.js, Github Pages"]]
+              "480"
+              "412"]
+
+            [project
               "OWLET"
               "img/gallery/owlet.png"
               [:h2
@@ -114,8 +125,8 @@
                [:a {:class "rabbit rainbow"
                     :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
                [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
-              "588"
-              "588"]
+              "429"
+              "429"]
 
             [project
               "Princess Nokia"
@@ -161,8 +172,8 @@
                     :href "http://letterracer.com"} "letterracer.com"]
                [:p.tech "Shopify, Cart.js, Jekyll, Github Pages, AWS"
                 [:br] "Graphic design by Arvid Logan and Reuben Sinder."]]
-              "640"
-              "500"]
+              "549"
+              "429"]
 
             [project
               "Dizzy Magazine"
