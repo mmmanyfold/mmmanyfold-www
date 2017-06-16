@@ -57,6 +57,7 @@
      (fn []
        [:div#style-3.scrolling-gallery
          [:h2.gallery-label "our work"]
+         [:span.gallery-filter "filter by: \u00A0\u00A0[ art/music ] \u00A0\u00A0[ businesses ] \u00A0\u00A0[ online shops ] \u00A0\u00A0[ nonprofits ] \u00A0\u00A0[ education ]"]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"

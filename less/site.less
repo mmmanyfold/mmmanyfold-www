@@ -235,19 +235,31 @@ h2.gallery-label {
   }
 }
 
+span.gallery-filter {
+  position: absolute;
+  margin-left: 2.3em;
+  margin-top: 340px;
+  color: rgba(255,255,255,0.5);
+  @media screen and (max-width: 499px) {
+    margin-left: 12px;
+    margin-top: 230px;
+    font-size: 1em;
+  }
+}
+
 .scrolling-gallery {
   background-color: @blackish;
   overflow-x: scroll;
-  height: 240px;
+  height: 290px;
   @media screen and (min-width: 500px) {
-    height: 365px;
+    height: 405px;
   }
   .title {
     margin: 0 0 0.5em 0;
   }
   .gallery-row {
     display: inline-flex;
-    padding-top: 3.75em;
+    padding-top: 66px;
     @media screen and (max-width: 499px) {
       padding-top: 2.5em;
     }
