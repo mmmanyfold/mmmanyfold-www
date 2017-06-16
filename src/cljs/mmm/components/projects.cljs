@@ -5,20 +5,23 @@
             [cljsjs.photoswipe-ui-default]
             [reagent.core :as reagent :refer [atom]]))
 
-(defn project [title img summary width height]
- [:figure.gallery-item
-  {:item-prop  "associatedMedia"
-   :item-scope "true"
-   :item-type  "http://schema.org/ImageObject"}
-  [:a {:href img
-       :item-prop "contentUrl"
-       :data-size (str width "x" height)}
-   [:img {:src img :item-prop "thumbnail"}]
-   [:div.image-label title]]
-  [:figcaption {:item-prop "caption description"
-                :width (str width "px")}
-   [:div [:h1.title title]
-         summary]]])
+(def filter-by (atom :music-art))
+
+(defn project [title img summary width height filters]
+ (when (contains? filters @filter-by)
+   [:figure.gallery-item
+    {:item-prop  "associatedMedia"
+     :item-scope "true"
+     :item-type  "http://schema.org/ImageObject"}
+    [:a {:href img
+         :item-prop "contentUrl"
+         :data-size (str width "x" height)}
+     [:img {:src img :item-prop "thumbnail"}]
+     [:div.image-label title]]
+    [:figcaption {:item-prop "caption description"
+                  :width (str width "px")}
+     [:div [:h1.title title]
+           summary]]]))
 
 (defn full-screen-gallery []
   [:div.pswp {:tabIndex "-1" :role "dialog" :aria-hidden "true"}
@@ -69,7 +72,8 @@
                [:p.tech "Github Pages"
                 [:br] "Video by Georgia Studio."]]
               "640"
-              "429"]
+              "429"
+              #{:music-art}]
 
             [project
               "Picture Room"
@@ -81,7 +85,8 @@
                [:p.tech "Lightspeed eCom, mmmanyfold API, Facebook Graph API"
                 [:br] "Graphic design by Benjamin Critton."]]
               "543"
-              "429"]
+              "429"
+              #{:business :online-shop}]
 
             [project
               "Secret Circle"
@@ -93,7 +98,8 @@
                [:p.tech "jQuery, Github Pages"
                 [:br] "Art by Brian Blomerth."]]
               "500"
-              "400"]
+              "400"
+             #{:music-art}]
 
             [project
              "Playground Coffee Shop"
@@ -104,7 +110,8 @@
                    :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
               [:p.tech "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
              "553"
-             "400"]
+             "400"
+             #{:business}]
 
             [project
               "Tony Seltzer"
@@ -115,7 +122,8 @@
                     :href "http://tonyseltzer.letterracer.com"} "tonyseltzer.letterracer.com"]
                [:p.tech "jQuery, three.js, Github Pages"]]
               "480"
-              "412"]
+              "412"
+             #{:music-art}]
 
             [project
               "OWLET"
@@ -126,7 +134,8 @@
                     :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
                [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
               "429"
-              "429"]
+              "429"
+             #{:education}]
 
             [project
               "Princess Nokia"
@@ -138,7 +147,8 @@
                [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"
                 [:br] "Art by Destiny Frasqueri."]]
               "425"
-              "405"]
+              "405"
+             #{:music-art}]
 
             [project
               "COPA-SMS"
@@ -150,7 +160,8 @@
                 " (COPA) text alerts. With automatic user exports and archiving features."]
                [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
               "384"
-              "406"]
+              "406"
+             #{:nonprofit}]
 
             [project
               "Girls in STEM"
@@ -161,7 +172,8 @@
                     :href "http://gstemdenver.org"} "gstemdenver.org"]
                [:p.tech "Squarespace, mmmanyfold API"]]
               "300"
-              "294"]
+              "294"
+             #{:nonprofit}]
 
             [project
               "Letter Racer"
@@ -173,7 +185,8 @@
                [:p.tech "Shopify, Cart.js, Jekyll, Github Pages, AWS"
                 [:br] "Graphic design by Arvid Logan and Reuben Sinder."]]
               "549"
-              "429"]
+              "429"
+             #{:music-art}]
 
             [project
               "Dizzy Magazine"
@@ -185,6 +198,7 @@
                [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"
                 [:br] "Graphic design by Arvid Logan and Milah Libin."]]
               "221"
-              "286"]]
+              "286"
+             #{:music-art}]]
 
           (full-screen-gallery)]])}))
