@@ -5,10 +5,17 @@
             [cljsjs.photoswipe-ui-default]
             [reagent.core :as reagent :refer [atom]]))
 
-(def filter-by (atom :music-art))
+(def filter-by (atom :all))
+
+(defn filter-button [title & [display-name]]
+  (let [n (if display-name display-name (name title))]
+    [:div.filter-button
+     [:a.filter-title {:on-click #(reset! filter-by title)}
+      [:p (str "[ " n " ]")]]]))
 
 (defn project [title img summary width height filters]
- (when (contains? filters @filter-by)
+ (let [filters (conj filters :all)]
+  (when (contains? filters @filter-by)
    [:figure.gallery-item
     {:item-prop  "associatedMedia"
      :item-scope "true"
@@ -21,7 +28,7 @@
     [:figcaption {:item-prop "caption description"
                   :width (str width "px")}
      [:div [:h1.title title]
-           summary]]]))
+           summary]]])))
 
 (defn full-screen-gallery []
   [:div.pswp {:tabIndex "-1" :role "dialog" :aria-hidden "true"}
@@ -57,7 +64,14 @@
      (fn []
        [:div#style-3.scrolling-gallery
          [:h2.gallery-label "our work"]
-         [:span.gallery-filter "filter by: \u00A0\u00A0[ art/music ] \u00A0\u00A0[ businesses ] \u00A0\u00A0[ online shops ] \u00A0\u00A0[ nonprofits ] \u00A0\u00A0[ education ]"]
+         [:div.gallery-filter.flex-row
+          "filter by: "
+          [filter-button :nonprofit]
+          [filter-button :business]
+          [filter-button :online-shop "online shop"]
+          [filter-button :music-art "music/art"]
+          [filter-button :education]
+          [filter-button :all]]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"
@@ -136,7 +150,7 @@
                [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
               "429"
               "429"
-             #{:education}]
+             #{:education :nonprofit}]
 
             [project
               "Princess Nokia"
@@ -174,7 +188,7 @@
                [:p.tech "Squarespace, mmmanyfold API"]]
               "300"
               "294"
-             #{:nonprofit}]
+             #{:nonprofit :education}]
 
             [project
               "Letter Racer"
@@ -187,7 +201,7 @@
                 [:br] "Graphic design by Arvid Logan and Reuben Sinder."]]
               "549"
               "429"
-             #{:music-art}]
+             #{:music-art :online-shop :business}]
 
             [project
               "Dizzy Magazine"
