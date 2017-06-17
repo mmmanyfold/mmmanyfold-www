@@ -246,14 +246,54 @@ h2.gallery-label {
     font-size: 1.4em;
   }
 }
+div.gallery-filter {
+  position: absolute;
+  margin-left: 2.3em;
+  margin-top: 345px;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 790px) {
+  div.gallery-filter {
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 660px) {
+  div.gallery-filter {
+    font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 499px) {
+  div.gallery-filter {
+    margin-left: 12px;
+    margin-top: 235px;
+    font-size: 0.9em;
+  }
+}
+div.gallery-filter .filter-button {
+  margin-left: 15px;
+}
+div.gallery-filter p {
+  margin: 0;
+}
+div.gallery-filter .filter-title {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  cursor: pointer;
+}
+div.gallery-filter .filter-title :hover {
+  color: white;
+}
 .scrolling-gallery {
   background-color: #0a0608;
   overflow-x: scroll;
-  height: 240px;
+  height: 290px;
 }
 @media screen and (min-width: 500px) {
   .scrolling-gallery {
-    height: 365px;
+    height: 400px;
   }
 }
 .scrolling-gallery .title {
@@ -261,7 +301,7 @@ h2.gallery-label {
 }
 .scrolling-gallery .gallery-row {
   display: inline-flex;
-  padding-top: 3.75em;
+  padding-top: 66px;
 }
 @media screen and (max-width: 499px) {
   .scrolling-gallery .gallery-row {
