@@ -21,6 +21,8 @@
             [:a.logo {:href "#"}
               [:img {:src "img/logo-graydient.png"}]]
             [:nav
+              [:span [:a {:href "http://apps.mmmanyfold.com" :target "_blank"} "Apps"]]
+              "|"
               [:span [:a {:href "http://blog.mmmanyfold.com" :target "_blank"} "Blog"]]]]
           [:h1 "mmmanyfold"]
           [:p.subtitle "web + app dev studio"]]
