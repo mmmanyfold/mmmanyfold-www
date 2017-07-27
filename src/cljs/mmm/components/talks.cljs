@@ -53,23 +53,25 @@
      #(js/initPhotoSwipeFromDOM ".talks-gallery")
      :reagent-render
      (fn []
-       [:div#style-3.scrolling-gallery
+       [:div#style-3.scrolling-gallery.talks
          [:h2.gallery-label "talks + performances"]
          [:div.talks-gallery
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}
             [talk
-             "OWL Tech Fair"
-             "img/gallery/owl-tech-fair.jpg"
+             "Denver Public Library"
+             "img/gallery/lovelace.jpg"
              [:h2
-              [:p "Audio/visual code art performance + workshop for Denver youth."]
+              [:p "We were invited to chat about the graphic novel "
+                [:i "The Thrilling Adventures of Lovelace & Babbage"]
+                ", gender & the tech world, local adventures, etc..."]
               [:a {:class "rabbit rainbow"
-                   :href "https://blog.mmmanyfold.com/2016/04/26/sonic-pi-shadertone-owl-tech-fair/"}
-                "Photos"]
-              [:p.tech "Clojure, Shadertone, Sonic Pi"]]
-             "400"
-             "430"]
+                   :href "https://www.facebook.com/events/1491965867492861/"}
+                "Event Details"]
+              [:p.tech "Hosted by Warm Cookies of the Revolution"]]
+             "996"
+             "1120"]
             [talk
              "MoonConf"
              "img/gallery/moonconf.png"
@@ -92,11 +94,22 @@
              "252"
              "211"]
             [talk
+             "OWL Tech Fair"
+             "img/gallery/owl-tech-fair.jpg"
+             [:h2
+              [:p "Audio/visual code art performance + workshop for Denver youth."]
+              [:a {:class "rabbit rainbow"
+                   :href "https://medium.com/mmmanyfold/sonic-pi-shadertone-owl-tech-fair-b43c0a743e95"}
+                "Photos"]
+              [:p.tech "Clojure, Shadertone, Sonic Pi"]]
+             "400"
+             "430"]
+            [talk
              "Denver Public Schools"
              "img/gallery/north-hs.gif"
              [:h2
               [:p [:a {:class "rabbit rainbow"
-                       :href "http://blog.mmmanyfold.com/tag/denver-public-schools/"}
+                       :href "https://medium.com/mmmanyfold/denver-public-schools-339ebc11221d"}
                    "Code art demos "]
                  "in Denver area public schools."]
               [:p.tech "Clojure, mmmanyfold API, Giphy API, Facebook API, Indico, VVVV"]]
@@ -108,7 +121,7 @@
              [:h2
               [:p "Audio/visual code art performance during Denver Startup Week 2016."]
               [:a {:class "rabbit rainbow"
-                   :href "https://www.denverstartupweek.org/panel-picker/2399-an-amalgamation-of-art-science-and-technology"}
+                   :href "https://medium.com/mmmanyfold/signal-to-noise-96c78c33ef97"}
                 "Event details"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
              "640"
