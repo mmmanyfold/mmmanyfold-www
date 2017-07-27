@@ -186,8 +186,8 @@
                [:a {:class "rabbit rainbow"
                     :href "http://gstemdenver.org"} "gstemdenver.org"]
                [:p.tech "Squarespace, mmmanyfold API"]]
-              "300"
-              "294"
+              "264"
+              "242"
              #{:nonprofit :education}]
 
             [project
