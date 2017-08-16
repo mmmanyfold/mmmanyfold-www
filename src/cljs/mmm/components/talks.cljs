@@ -99,7 +99,7 @@
              [:h2
               [:p "Audio/visual code art performance + workshop for Denver youth."]
               [:a {:class "rabbit rainbow"
-                   :href "https://medium.com/mmmanyfold/sonic-pi-shadertone-owl-tech-fair-b43c0a743e95"}
+                   :href "https://blog.mmmanyfold.com/sonic-pi-shadertone-owl-tech-fair-b43c0a743e95"}
                 "Photos"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
              "400"
@@ -109,7 +109,7 @@
              "img/gallery/north-hs.gif"
              [:h2
               [:p [:a {:class "rabbit rainbow"
-                       :href "https://medium.com/mmmanyfold/denver-public-schools-339ebc11221d"}
+                       :href "https://blog.mmmanyfold.com/denver-public-schools-339ebc11221d"}
                    "Code art demos "]
                  "in Denver area public schools."]
               [:p.tech "Clojure, mmmanyfold API, Giphy API, Facebook API, Indico, VVVV"]]
@@ -121,7 +121,7 @@
              [:h2
               [:p "Audio/visual code art performance during Denver Startup Week 2016."]
               [:a {:class "rabbit rainbow"
-                   :href "https://medium.com/mmmanyfold/signal-to-noise-96c78c33ef97"}
+                   :href "https://blog.mmmanyfold.com/signal-to-noise-96c78c33ef97"}
                 "Event details"]
               [:p.tech "Clojure, Shadertone, Sonic Pi"]]
              "640"
