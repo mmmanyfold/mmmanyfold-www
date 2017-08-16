@@ -111,7 +111,7 @@
                [:a {:class "rabbit rainbow"
                     :href "http://thesecretcircle.net"} "thesecretcircle.net"]
                [:p.tech "jQuery, Github Pages"
-                [:br] "Art by Brian Blomerth."]]
+                [:br] "Artwork by Brian Blomerth."]]
               "500"
               "400"
              #{:music-art}]
@@ -135,7 +135,8 @@
                [:p "Custom website for Tony Seltzer's \"Remember the Memories\" tape release."]
                [:a {:class "rabbit rainbow"
                     :href "http://tonyseltzer.letterracer.com"} "tonyseltzer.letterracer.com"]
-               [:p.tech "jQuery, three.js, Github Pages"]]
+               [:p.tech "jQuery, three.js, Github Pages"
+                [:br] "Artwork by NSP."]]
               "480"
               "412"
              #{:music-art}]
@@ -156,23 +157,25 @@
               "Princess Nokia"
               "img/gallery/princess-nokia.jpg"
               [:h2
-               [:p "Custom website for NYC artist Princess Nokia."]
-               [:a {:class "rabbit rainbow"
-                    :href "http://princessnokia.org"} "princessnokia.org"]
-               [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"
-                [:br] "Art by Destiny Frasqueri."]]
+               [:p "Custom website for the original self-release and free download of Princess Nokia's album "
+                [:i "1992"]
+                " (1st release)."]
+               [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
               "425"
               "405"
              #{:music-art}]
 
             [project
-              "COPA-SMS"
+              "SMS Onboarding"
               "img/gallery/copa.gif"
               [:h2
-               [:p "SMS onboarding service for "
+               [:p "SMS onboarding service for text alerts from "
                 [:a {:class "rabbit rainbow"
-                     :href "https://coloradopeoplesalliance.org/"} "Colorado People's Alliance"]
-                " (COPA) text alerts. With automatic user exports and archiving features."]
+                     :href "https://coloradopeoplesalliance.org"} "Colorado People's Alliance"]
+                " (COPA) and "
+                [:a {:class "rabbit rainbow"
+                     :href "https://coloradopeoplesaction.org"} "Colorado People's Action"]
+                " (CPA). With automatic user exports and archiving features."]
                [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
               "384"
               "406"
