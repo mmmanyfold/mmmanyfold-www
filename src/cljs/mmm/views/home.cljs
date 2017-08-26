@@ -43,5 +43,5 @@
       [:h2 "mmmanyfold is "
        [:a.rainbow {:href "https://github.com/eemshi" :target "_blank"} "MSL"]
        " + "
-       [:a.rainbow {:href "https://github.com/dviramontes" :target "_blank"} "DAVM"]
+       [:a {:href "/david"} "DAVM"]
        " + all of our collaborators + co-conspirators."]]]])
