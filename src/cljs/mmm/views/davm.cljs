@@ -6,7 +6,7 @@
 (def query "
   {
     allProjects {
-      id imageUrl title description url type
+      id imageUrl title description url type content
     }
     Collaborator(initials: \"davm\") {
       github, name, twitter

@@ -22,9 +22,20 @@
      [:dt.clip "desc"]
      [:dd.ml0.gray.truncate.w-100.bg-light-green description]]]])
 
+(defn embed-player [{:keys [title description content]}]
+  [:div.fl.w-50.w-25-m.w-20-l.pa2
+   [:a.db.link.dim.tc.rabbit {:href url :target "_blank"}
+    [:div {:dangerouslySetInnerHTML {:__html content}}]
+    [:dl.mt2.f6.lh-copy.bg-purple
+     [:dt.clip "title"]
+     [:dd.ml0.black.truncate.w-100.bg-light-green title]
+     [:dt.clip "desc"]
+     [:dd.ml0.gray.truncate.w-100.bg-light-green description]]]])
+
 (defn project [details]
       (case (:type details)
             "embed" [embed details]
+            "embed-player" [embed-player details]
             "external" [external details]
             :default [external details]))
 
