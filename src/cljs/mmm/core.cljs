@@ -5,9 +5,8 @@
             [mmm.events]
             [mmm.subs]
             [mmm.routes :as routes]
-            [mmm.views :as views]
-            [mmm.config :as config]
-            [mmm.components.logo :refer [GSAnimationSeq]]))
+            [mmm.views.main :as main]
+            [mmm.config :as config]))
 
 (defn dev-setup []
   (when config/debug?
@@ -17,8 +16,7 @@
 
 (defn mount-root []
   (re-frame/clear-subscription-cache!)
-  ;(GSAnimationSeq) ;; draw mmm logo
-  (reagent/render [views/main-view]
+  (reagent/render [main/view]
                   (.getElementById js/document "app")))
 
 (defn ^:export init []

@@ -1,13 +1,22 @@
 (ns mmm.subs
-    (:require-macros [reagent.ratom :refer [reaction]])
-    (:require [re-frame.core :as re-frame]))
+  (:require [re-frame.core :as rf]))
 
-(re-frame/reg-sub
- :name
- (fn [db]
-   (:name db)))
+(rf/reg-sub
+  :view-titles
+  (fn [db]
+    (:view-titles db)))
 
-(re-frame/reg-sub
- :active-view
- (fn [db _]
-   (:active-view db)))
+(rf/reg-sub
+  :active-view
+  (fn [db _]
+    (:active-view db)))
+
+(rf/reg-sub
+  :project-list
+  (fn [db _]
+    (get-in db [:profiles :davm :projects])))
+
+(rf/reg-sub
+  :content-css-class
+  (fn [db _]
+      (get-in db [:content-css-class])))
