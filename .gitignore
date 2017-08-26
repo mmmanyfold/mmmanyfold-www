@@ -9,3 +9,5 @@ pom.xml.asc
 /.nrepl-port
 out/
 figwheel_server.log
+.idea/
+www.iml

@@ -2,7 +2,8 @@
 
 (def default-db
   {:active-view nil
-   :view-title  "mmmanyfold"
+   :view-titles {:title    "mmmanyfold"
+                 :subtitle "web + app dev studio"}
    :profiles    {:davm {:github   nil
                         :twitter  nil
                         :name     nil

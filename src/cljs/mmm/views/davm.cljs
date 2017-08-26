@@ -23,6 +23,8 @@
     intials))
 
 (defn davm-view []
+  (rf/dispatch [:set-titles "David A. Viramontes Martinez"
+                            "Advanced Beginner / Clojure(Script) & JavaScript Programmer"])
   (rf/dispatch [:get-profile-data :davm query])
   (let [profile-list (rf/subscribe [:project-list])]
     (fn []

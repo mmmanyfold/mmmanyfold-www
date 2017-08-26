@@ -40,3 +40,9 @@
       (-> db
         (assoc-in [user] (merge (db user) Collaborator))
         (assoc-in [user :projects] allProjects)))))
+
+(rf/reg-event-db
+  :set-titles
+  (rf/path [:view-titles])
+  (fn [db [_ new-title new-subtitle]]
+      (assoc db :title new-title :subtitle new-subtitle)))
