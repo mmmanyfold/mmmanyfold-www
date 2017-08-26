@@ -3,17 +3,19 @@
 (defn external [{:keys [title imageUrl description url]}]
   [:div.fl.w-50.w-25-m.w-20-l.pa2
    [:a.db.link.dim.tc.rabbit {:href url :target "_blank"}
-    [:img.w-100.db.outline.black-10 {:src imageUrl}]
+    (if-not (empty? imageUrl)
+      [:img.w-100.db.outline.black-10 {:src imageUrl}]
+      [:div.space-invader])
     [:dl.mt2.f6.lh-copy.bg-purple
      [:dt.clip "title"]
      [:dd.ml0.black.truncate.w-100.bg-light-green title]
      [:dt.clip "desc"]
      [:dd.ml0.gray.truncate.w-100.bg-light-green description]]]])
 
-(defn embed [{:keys [title imageUrl description url]}]
+(defn embed [{:keys [title description url]}]
   [:div.fl.w-50.w-25-m.w-20-l.pa2
    [:a.db.link.dim.tc.rabbit {:href url :target "_blank"}
-    [:iframe.embed {:src url :frame-border 0}]
+    [:iframe.embed {:src url :frame-border 0 :scrolling "no"}]
     [:dl.mt2.f6.lh-copy.bg-purple
      [:dt.clip "title"]
      [:dd.ml0.black.truncate.w-100.bg-light-green title]
