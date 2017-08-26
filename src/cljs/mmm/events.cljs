@@ -46,3 +46,8 @@
   (rf/path [:view-titles])
   (fn [db [_ new-title new-subtitle]]
       (assoc db :title new-title :subtitle new-subtitle)))
+
+(rf/reg-event-db
+  :set-css-content-class
+  (fn [db [_ new-class]]
+      (assoc db :content-css-class new-class)))

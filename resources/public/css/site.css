@@ -17,9 +17,14 @@ body {
     font-size: 1.1em;
   }
 }
-.content {
+.default-content {
   z-index: 1;
   background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('../img/dragon-fold_animated.svg');
+}
+.davm-content {
+  z-index: 1;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('../img/dragon-fold_animated.svg');
+  background-image: linear-gradient(to bottom, rgba(10, 10, 0, 0.65), rgba(10, 10, 100, 0.15)), url('../img/dragon-fold_animated.svg');
 }
 h1 {
   font-size: 2.25em;
@@ -531,6 +536,12 @@ div.gallery-filter .filter-title :hover {
 #style-3::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 10px;
+}
+iframe.embed {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .profile .outline {
   outline: 1px solid;

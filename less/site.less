@@ -22,12 +22,26 @@ body {
   font-weight: 300;
 }
 
-.content {
+
+// default background content class
+// ***
+// modified by :content-css-class in re-frame
+
+.default-content {
   z-index: 1;
   background-image:
           linear-gradient(to bottom,
           rgba(255,0,0,0.5),
           rgba(0,0,255,0.5)),
+          url('../img/dragon-fold_animated.svg');
+}
+
+.davm-content {
+  .default-content;
+  background-image:
+          linear-gradient(to bottom,
+          rgba(10,10,0,0.65),
+          rgba(10,10,100,0.15)),
           url('../img/dragon-fold_animated.svg');
 }
 
@@ -434,6 +448,16 @@ animation:rainbow 1s infinite;
 {
 	background-color: white;
   border-radius: 10px;
+}
+
+// profiles styles
+// ***
+
+iframe.embed {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 

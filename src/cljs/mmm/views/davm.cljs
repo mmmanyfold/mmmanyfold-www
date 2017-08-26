@@ -3,26 +3,27 @@
             [mmm.components.profile :as profile]
             [re-frame.core :as rf]))
 
-(defonce query "
+(def query "
   {
     allProjects {
-      id imageUrl title description url
+      id imageUrl title description url type
     }
     Collaborator(initials: \"davm\") {
       github, name, twitter
     }
   }")
 
-(defn profile-query [intials]
+(defn profile-query [initials]
   (format
     "query {
       Collaborator(initials: \"%s\") {
         github, name, twitter
       }
     }"
-    intials))
+    initials))
 
 (defn davm-view []
+  (rf/dispatch [:set-css-content-class "davm-content"])
   (rf/dispatch [:set-titles "David A. Viramontes Martinez"
                             "Advanced Beginner / Clojure(Script) & JavaScript Programmer"])
   (rf/dispatch [:get-profile-data :davm query])

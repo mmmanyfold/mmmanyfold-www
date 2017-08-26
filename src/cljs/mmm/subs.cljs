@@ -15,3 +15,8 @@
   :project-list
   (fn [db _]
     (get-in db [:profiles :davm :projects])))
+
+(rf/reg-sub
+  :content-css-class
+  (fn [db _]
+      (get-in db [:content-css-class])))

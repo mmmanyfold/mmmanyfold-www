@@ -14,7 +14,7 @@
 
 (defn view []
   (let [{:keys [title subtitle]} @(rf/subscribe [:view-titles])]
-       [:div.content
+       [:div {:class @(rf/subscribe [:content-css-class])}
         [:div.header
          [:div
           [:a.logo {:href "/"}
