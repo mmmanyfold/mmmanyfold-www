@@ -9,5 +9,8 @@
                         :twitter  nil
                         :name     nil
                         :projects []}
-                 :elle {:projects []}}})
+                 :elle {:github   nil
+                        :twitter  nil
+                        :name     nil
+                        :projects []}}})
 
