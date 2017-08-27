@@ -673,6 +673,3 @@ iframe.embed {
     width: 20%;
   }
 }
-img {
-  max-width: inherit !important;
-}

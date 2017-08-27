@@ -12,8 +12,8 @@
      [:dt.clip "desc"]
      [:dd.ml0.gray.truncate.w-100.bg-light-green description]]]])
 
-(defn embed [{:keys [title description url]}]
-  [:div.fl.w-50.w-25-m.w-20-l.pa2
+(defn embed-url [{:keys [title description url]}]
+  [:div.fl.w-50.w-25-m.w-50-l.pa2
    [:a.db.link.dim.tc.rabbit {:href url :target "_blank"}
     [:iframe.embed {:src url :frame-border 0 :scrolling "no"}]
     [:dl.mt2.f6.lh-copy.bg-purple
@@ -22,8 +22,8 @@
      [:dt.clip "desc"]
      [:dd.ml0.gray.truncate.w-100.bg-light-green description]]]])
 
-(defn embed-player [{:keys [title description content]}]
-  [:div.fl.w-50.w-25-m.w-20-l.pa2
+(defn embed-code [{:keys [title description content url]}]
+  [:div.fl.w-50.w-25-m.w-40-l.pa2
    [:a.db.link.dim.tc.rabbit {:href url :target "_blank"}
     [:div {:dangerouslySetInnerHTML {:__html content}}]
     [:dl.mt2.f6.lh-copy.bg-purple
@@ -34,8 +34,8 @@
 
 (defn project [details]
       (case (:type details)
-            "embed" [embed details]
-            "embed-player" [embed-player details]
+            "embed-url" [embed-url details]
+            "embed-code" [embed-code details]
             "external" [external details]
             :default [external details]))
 
