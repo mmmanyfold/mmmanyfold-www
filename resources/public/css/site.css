@@ -72,6 +72,7 @@ a:hover {
   font-style: italic;
   letter-spacing: -0.025em;
   text-shadow: 2px 2px rgba(47, 25, 22, 0.8);
+  margin: 0.1em 0;
 }
 .header .subtitle {
   font-size: 1.15em;
@@ -117,18 +118,18 @@ a:hover {
 .home-wrap .greet {
   text-align: center;
   font-weight: 300;
-  padding: 3em 0 3.75em 0;
+  padding: 2em 0 3.75em 0;
 }
 .home-wrap .greet h1 {
-  font-size: 2.15em;
+  font-size: 2.5em;
 }
 @media screen and (min-width: 500px) {
   .home-wrap .greet h1 {
-    font-size: 4.5em;
+    font-size: 5em;
   }
 }
 .home-wrap .greet p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0;
 }
 @media screen and (min-width: 500px) {
@@ -138,7 +139,7 @@ a:hover {
 }
 @media screen and (min-width: 500px) {
   .home-wrap .greet {
-    padding: 4.5em 0 8em 0;
+    padding: 1.5em 0 8em 0;
   }
 }
 .home-wrap .values {
