@@ -6,6 +6,7 @@
 (defn home-view []
   (fn []
     (rf/dispatch [:set-css-content-class "default-content"])
+    (rf/dispatch [:set-titles "mmmanyfold" "web + app dev studio"])
     [:div.home-wrap
      [:div.greet.white
       [:h1 "Let's collaborate."]
