@@ -65,7 +65,7 @@
              [:h2
               [:p "We were invited to chat about the graphic novel "
                 [:i "The Thrilling Adventures of Lovelace & Babbage"]
-                ", gender & the tech world, local adventures, etc..."]
+                ", gender in the tech, and local adventures..."]
               [:a {:class "rabbit rainbow"
                    :href "https://www.facebook.com/events/1491965867492861/"}
                 "Event Details"]
@@ -101,7 +101,7 @@
               [:a {:class "rabbit rainbow"
                    :href "https://blog.mmmanyfold.com/sonic-pi-shadertone-owl-tech-fair-b43c0a743e95"}
                 "Photos"]
-              [:p.tech "Clojure, Shadertone, Sonic Pi"]]
+              [:p.tech "Tech: Clojure, Shadertone, Sonic Pi"]]
              "400"
              "430"]
             [talk
@@ -112,7 +112,7 @@
                        :href "https://blog.mmmanyfold.com/denver-public-schools-339ebc11221d"}
                    "Code art demos "]
                  "in Denver area public schools."]
-              [:p.tech "Clojure, mmmanyfold API, Giphy API, Facebook API, Indico, VVVV"]]
+              [:p.tech "Tech: Clojure, mmmanyfold API, Giphy API, Facebook API, Indico, VVVV"]]
              "268"
              "298"]
             [talk
@@ -123,7 +123,7 @@
               [:a {:class "rabbit rainbow"
                    :href "https://blog.mmmanyfold.com/signal-to-noise-96c78c33ef97"}
                 "Event details"]
-              [:p.tech "Clojure, Shadertone, Sonic Pi"]]
+              [:p.tech "Tech: Clojure, Shadertone, Sonic Pi"]]
              "640"
              "454"]
             [talk

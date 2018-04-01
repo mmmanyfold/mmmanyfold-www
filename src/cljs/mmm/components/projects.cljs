@@ -71,12 +71,25 @@
           [filter-button :online-shop "online shop"]
           [filter-button :music-art "music/art"]
           [filter-button :education]
+          [filter-button :mobile-only "mobile-only"]
           [filter-button :all]]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}
-
+            [project
+              "Equalizer"
+              "img/gallery/equalizer.png"
+              [:h2
+               [:p "A mobile app that helps new fathers understand and achieve equally shared parenting."]
+               [:a {:class "rabbit rainbow"
+                    :href "https://github.com/mmmanyfold/equalizer/blob/master/README.md"} "See demo"]
+               [:p.tech "Tech: React Native, Expo"
+                [:br] "Concept design by Rocío Almanza Guien"
+                [:br] "Graphic design by Sabrina Almanza Guien"]]
+              "777"
+              "680"
+              #{:mobile-only :education}]
             [project
               "Sporting Life"
               "img/gallery/sporting-life.gif"
@@ -84,12 +97,11 @@
                [:p "Custom website for NYC producer Sporting Life."]
                [:a {:class "rabbit rainbow"
                     :href "http://sportinglife.nyc"} "sportinglife.nyc"]
-               [:p.tech "Github Pages"
-                [:br] "Video by Georgia Studio."]]
+               [:p.tech "Tech: Github Pages"
+                [:br] "Video by Georgia Studio"]]
               "640"
               "429"
               #{:music-art}]
-
             [project
               "Picture Room"
               "img/gallery/picture-room.png"
@@ -97,8 +109,8 @@
                [:p "Custom website/online shop for Picture Room."]
                [:a {:class "rabbit rainbow"
                     :href "https://www.pictureroom.shop"} "pictureroom.shop"]
-               [:p.tech "Lightspeed eCom, mmmanyfold API, Facebook Graph API"
-                [:br] "Graphic design by Benjamin Critton."]]
+               [:p.tech "Tech: Lightspeed eCom, mmmanyfold API, Facebook Graph API"
+                [:br] "Graphic design by Benjamin Critton"]]
               "543"
               "429"
               #{:business :online-shop}]
@@ -110,23 +122,11 @@
                [:p "Custom launchpad for the Secret Circle."]
                [:a {:class "rabbit rainbow"
                     :href "http://thesecretcircle.net"} "thesecretcircle.net"]
-               [:p.tech "jQuery, Github Pages"
-                [:br] "Artwork by Brian Blomerth."]]
+               [:p.tech "Tech: jQuery, Github Pages"
+                [:br] "Art by Brian Blomerth"]]
               "500"
               "400"
-             #{:music-art}]
-
-            [project
-             "Playground Coffee Shop"
-             "img/gallery/playground.jpg"
-             [:h2
-              [:p "Custom website for Brooklyn coffee shop, venue, and consignment store."]
-              [:a {:class "rabbit rainbow"
-                   :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
-              [:p.tech "mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
-             "553"
-             "400"
-             #{:business}]
+              #{:music-art}]
 
             [project
               "Tony Seltzer"
@@ -135,11 +135,24 @@
                [:p "Custom website for Tony Seltzer's \"Remember the Memories\" tape release."]
                [:a {:class "rabbit rainbow"
                     :href "http://tonyseltzer.letterracer.com"} "tonyseltzer.letterracer.com"]
-               [:p.tech "jQuery, three.js, Github Pages"
-                [:br] "Artwork by NSP."]]
+               [:p.tech "Tech: jQuery, three.js, Github Pages"
+                [:br] "Art by NSP"]]
               "480"
               "412"
-             #{:music-art}]
+              #{:music-art}]
+
+            [project
+              "This Machine Has A Soul"
+              "img/gallery/future-machine.png"
+              [:h2
+               [:p "Custom website for Denver participatory budgeting pilot + community art project organized by Warm Cookies of the Revolution."]
+               [:a {:class "rabbit rainbow"
+                    :href "http://thismachinehasasoul.com"} "thismachinehasasoul.com"]
+               [:p.tech "Tech: Clojure(script), re-frame, Node.js, GraphQL, AWS, Contentful"
+                [:br] "Logo by MATTER studio"]]
+              "680"
+              "381"
+              #{:nonprofit :music-art}]
 
             [project
               "OWLET"
@@ -148,10 +161,10 @@
                [:p "Web platform designed for middle schoolers to explore creative tech via self-guided activities. Made in collaboration with Code for Denver."]
                [:a {:class "rabbit rainbow"
                     :href "http://owlet.codefordenver.org"} "owlet.codefordenver.org"]
-               [:p.tech "Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
+               [:p.tech "Tech: Owlet API, Clojure(script), re-frame, PostgreSQL, Contentful, Auth0, Firebase, AWS"]]
               "429"
               "429"
-             #{:education :nonprofit}]
+              #{:education :nonprofit}]
 
             [project
               "Princess Nokia"
@@ -160,10 +173,11 @@
                [:p "Custom website for the original self-release and free download of Princess Nokia's album "
                 [:i "1992"]
                 " (1st release)."]
-               [:p.tech "mmmanyfold API, Clojure, Node.js, React.js, AWS"]]
+               [:p.tech "Tech: mmmanyfold API, Clojure, Node.js, React.js, AWS"
+                [:br] "Art by Destiny Frasqueri"]]
               "425"
               "405"
-             #{:music-art}]
+              #{:music-art}]
 
             [project
               "SMS Onboarding"
@@ -176,47 +190,32 @@
                 [:a {:class "rabbit rainbow"
                      :href "https://coloradopeoplesaction.org"} "Colorado People's Action"]
                 " (CPA). With automatic user exports and archiving features."]
-               [:p.tech "Twilio, AWS Lambda, Node.js, Mailgun"]]
+               [:p.tech "Tech: Twilio, AWS Lambda, Node.js, Mailgun"]]
               "384"
               "406"
-             #{:nonprofit}]
-
-            [project
-              "Girls in STEM"
-              "img/gallery/gstem.png"
-              [:h2
-               [:p "Custom Squarespace site for Girls in STEM Denver."]
-               [:a {:class "rabbit rainbow"
-                    :href "http://gstemdenver.org"} "gstemdenver.org"]
-               [:p.tech "Squarespace, mmmanyfold API"]]
-              "264"
-              "242"
-             #{:nonprofit :education}]
+              #{:nonprofit :mobile-only}]
 
             [project
               "Letter Racer"
-              "img/gallery/letter-racer.gif"
+              "img/gallery/letterracer.png"
               [:h2
                [:p "Custom website/online shop for the NYC music + art collective."]
-               [:a {:class "rabbit rainbow"
-                    :href "http://letterracer.com"} "letterracer.com"]
-               [:p.tech "Shopify, Cart.js, Jekyll, Github Pages, AWS"
-                [:br] "Graphic design by Arvid Logan and Reuben Sinder."]]
-              "549"
-              "429"
-             #{:music-art :online-shop :business}]
+               [:p.tech "Tech: Shopify, Cart.js, Jekyll, Github Pages, AWS"
+                [:br] "Graphic design by Arvid Logan & Reuben Sinder."]]
+              "810"
+              "771"
+              #{:music-art :online-shop :business}]
 
             [project
-              "Dizzy Magazine"
-              "img/gallery/dizzy.jpg"
+              "Playground Coffee Shop"
+              "img/gallery/playground.jpg"
               [:h2
-               [:p "Custom website for Dizzy Magazine."]
+               [:p "Custom website for Brooklyn coffee shop, venue, and consignment store."]
                [:a {:class "rabbit rainbow"
-                    :href "http://www.dizzymagazine.com"} "dizzymagazine.com"]
-               [:p.tech "mmmanyfold API, Clojure(script), re-frame, AWS"
-                [:br] "Graphic design by Arvid Logan and Milah Libin."]]
-              "221"
-              "286"
-             #{:music-art}]]
+                    :href "http://playgroundcoffeeshop.com"} "playgroundcoffeeshop.com"]
+               [:p.tech "Tech: mmmanyfold API, Clojure(script), re-frame, Mailgun, Contentful, AWS"]]
+              "553"
+              "400"
+              #{:business}]]
 
           (full-screen-gallery)]])}))

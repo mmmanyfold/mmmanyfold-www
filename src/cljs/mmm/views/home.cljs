@@ -16,15 +16,15 @@
       [:div.values.flex-row
         [:div.text-box
          [:h2 "inspiration"]
-         [:p "We’re inspired by creative people across geographic and sector boundaries."]]
+         [:p "we’re inspired by creative people across geographic and sector boundaries"]]
         [:div [:img {:src "img/logo-plus.png"}]]
         [:div.text-box
          [:h2 "innovation"]
-         [:p "We use frameworks that give us and our clients more freedom, power and flexibility."]]
+         [:p "we use frameworks that give us and our clients more freedom, power and flexibility"]]
         [:div [:img {:src "img/logo-equals.png"}]]
         [:div.text-box
          [:h2 "better software"]
-         [:p "We strive to make user experiences distinctly more meaningful, efficient – and enjoyable."]]]]
+         [:p "we want to make user experiences distinctly more meaningful, efficient & enjoyable"]]]]
      [talks-component]
      [:div.flex-row.footer
        [:div.definition
@@ -46,4 +46,4 @@
          [:a.rainbow {:href "https://github.com/eemshi" :target "_blank"} "MSL"]
          " + "
          [:a.rainbow {:href "/david"} "DAVM"]
-         " + all of our collaborators + co-conspirators."]]]]))
+         " + all of our collaborators."]]]]))

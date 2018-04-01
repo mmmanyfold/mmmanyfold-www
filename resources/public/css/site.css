@@ -240,8 +240,8 @@ a:hover {
   justify-content: center;
 }
 .footer {
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
 h2.gallery-label {
   color: white;
@@ -357,7 +357,6 @@ div.gallery-filter .filter-title :hover {
 }
 .scrolling-gallery .tech {
   font-size: 0.75em;
-  font-style: italic;
 }
 .talks {
   height: 240px;
