@@ -24,7 +24,7 @@
         [:div [:img {:src "img/logo-equals.png"}]]
         [:div.text-box
          [:h2 "better software"]
-         [:p "we want to make user experiences distinctly more meaningful, efficient & enjoyable"]]]]
+         [:p "we strive to make user experiences distinctly more meaningful, efficient – and enjoyable"]]]]
      [talks-component]
      [:div.flex-row.footer
        [:div.definition
@@ -39,7 +39,7 @@
          [:li "involving multiplication by many times."]
          [:li "\"the manyfold increase in ideas\""]]]
        [:div.about
-        [:h1 "About"]
+        [:h1 "About us"]
         [:h2 "We build websites, apps, and learning experiences."]
         [:h2 "Our mission is to turn ideas into well-crafted digital products through creative collaboration."]
         [:h2 "mmmanyfold is "
