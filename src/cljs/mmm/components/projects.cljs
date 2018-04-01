@@ -79,7 +79,7 @@
               :item-type  "http://schema.org/ImageGallery"}
             [project
               "Equalizer"
-              "img/gallery/equalizer.png"
+              "img/gallery/equalizer3.png"
               [:h2
                [:p "A mobile app that helps new fathers understand and achieve equally shared parenting."]
                [:a {:class "rabbit rainbow"
@@ -87,7 +87,7 @@
                [:p.tech "Tech: React Native, Expo"
                 [:br] "Concept design by Rocío Almanza Guien"
                 [:br] "Graphic design by Sabrina Almanza Guien"]]
-              "777"
+              "1134"
               "680"
               #{:mobile-only :education}]
             [project
@@ -201,7 +201,7 @@
               [:h2
                [:p "Custom website/online shop for the NYC music + art collective."]
                [:p.tech "Tech: Shopify, Cart.js, Jekyll, Github Pages, AWS"
-                [:br] "Graphic design by Arvid Logan & Reuben Sinder."]]
+                [:br] "Graphic design by Arvid Logan & Reuben Sinder"]]
               "810"
               "771"
               #{:music-art :online-shop :business}]
