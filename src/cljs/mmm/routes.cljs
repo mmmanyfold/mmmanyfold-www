@@ -40,5 +40,8 @@
   (defroute "/david" []
             (rf/dispatch [:set-active-view :davm-view]))
 
+  (defroute "/project-scoper" []
+            (rf/dispatch [:set-active-view :project-scoper-view]))
+
   ;; --------------------
   (hook-browser-navigation!))

@@ -10,7 +10,7 @@
 (defn filter-button [title & [display-name]]
   (let [n (if display-name display-name (name title))]
     [:div.filter-button
-     [:a.filter-title {:on-click #(reset! filter-by title)}
+     [:a.filter-title.rainbow {:on-click #(reset! filter-by title)}
       [:p (str "[ " n " ]")]]]))
 
 (defn project [title img summary width height filters]
@@ -63,7 +63,7 @@
      :reagent-render
      (fn []
        [:div#style-3.scrolling-gallery
-         [:h2.gallery-label "our work"]
+         [:h2.gallery-label "dev work"]
          [:div.gallery-filter.flex-row
           "filter by: "
           [filter-button :nonprofit]
@@ -71,7 +71,7 @@
           [filter-button :online-shop "online shop"]
           [filter-button :music-art "music/art"]
           [filter-button :education]
-          [filter-button :mobile-only "mobile-only"]
+          [filter-button :mobile-app "mobile app"]
           [filter-button :all]]
          [:div.project-gallery
            [:div.gallery-row
@@ -89,7 +89,7 @@
                 [:br] "Graphic design by Sabrina Almanza Guien"]]
               "1134"
               "680"
-              #{:mobile-only :education}]
+              #{:mobile-app :education}]
             [project
               "Sporting Life"
               "img/gallery/sporting-life.gif"
@@ -193,7 +193,7 @@
                [:p.tech "Tech: Twilio, AWS Lambda, Node.js, Mailgun"]]
               "384"
               "406"
-              #{:nonprofit :mobile-only}]
+              #{:nonprofit :mobile-app}]
 
             [project
               "Letter Racer"
