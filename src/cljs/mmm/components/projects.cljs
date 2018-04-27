@@ -71,25 +71,13 @@
           [filter-button :online-shop "online shop"]
           [filter-button :music-art "music/art"]
           [filter-button :education]
-          [filter-button :mobile-app "mobile app"]
+          [filter-button :mobile "mobile"]
           [filter-button :all]]
          [:div.project-gallery
            [:div.gallery-row
              {:item-scope "true"
               :item-type  "http://schema.org/ImageGallery"}
-            [project
-              "Equalizer"
-              "img/gallery/equalizer3.png"
-              [:h2
-               [:p "A mobile app that helps new fathers understand and achieve equally shared parenting."]
-               [:a {:class "rabbit rainbow"
-                    :href "https://github.com/mmmanyfold/equalizer/blob/master/README.md"} "See demo"]
-               [:p.tech "Tech: React Native, Expo"
-                [:br] "Concept design by Rocío Almanza Guien"
-                [:br] "Graphic design by Sabrina Almanza Guien"]]
-              "1134"
-              "680"
-              #{:mobile-app :education}]
+
             [project
               "Sporting Life"
               "img/gallery/sporting-life.gif"
@@ -102,6 +90,7 @@
               "640"
               "429"
               #{:music-art}]
+
             [project
               "Picture Room"
               "img/gallery/picture-room.png"
@@ -114,19 +103,6 @@
               "543"
               "429"
               #{:business :online-shop}]
-
-            [project
-              "Secret Circle"
-              "img/gallery/secret-circle.gif"
-              [:h2
-               [:p "Custom launchpad for the Secret Circle."]
-               [:a {:class "rabbit rainbow"
-                    :href "http://thesecretcircle.net"} "thesecretcircle.net"]
-               [:p.tech "Tech: jQuery, Github Pages"
-                [:br] "Art by Brian Blomerth"]]
-              "500"
-              "400"
-              #{:music-art}]
 
             [project
               "Tony Seltzer"
@@ -167,17 +143,18 @@
               #{:education :nonprofit}]
 
             [project
-              "Princess Nokia"
-              "img/gallery/princess-nokia.jpg"
+              "Equalizer"
+              "img/gallery/equalizer3.png"
               [:h2
-               [:p "Custom website for the original self-release and free download of Princess Nokia's album "
-                [:i "1992"]
-                " (1st release)."]
-               [:p.tech "Tech: mmmanyfold API, Clojure, Node.js, React.js, AWS"
-                [:br] "Art by Destiny Frasqueri"]]
-              "425"
-              "405"
-              #{:music-art}]
+               [:p "A mobile app that helps new fathers understand and achieve equally shared parenting."]
+               [:a {:class "rabbit rainbow"
+                    :href "https://github.com/mmmanyfold/equalizer/blob/master/README.md"} "See demo"]
+               [:p.tech "Tech: React Native, Expo"
+                [:br] "Concept design by Rocío Almanza Guien"
+                [:br] "Graphic design by Sabrina Almanza Guien"]]
+              "1134"
+              "680"
+              #{:mobile :education}]
 
             [project
               "SMS Onboarding"
@@ -193,13 +170,15 @@
                [:p.tech "Tech: Twilio, AWS Lambda, Node.js, Mailgun"]]
               "384"
               "406"
-              #{:nonprofit :mobile-app}]
+              #{:nonprofit :mobile}]
 
             [project
               "Letter Racer"
               "img/gallery/letterracer.png"
               [:h2
-               [:p "Custom website/online shop for the NYC music + art collective."]
+               [:p "Custom website/online shop for NYC music + art collective."]
+               [:a {:class "rabbit rainbow"
+                    :href "http://letterracer.com/archive/"} "letterracer.com"]
                [:p.tech "Tech: Shopify, Cart.js, Jekyll, Github Pages, AWS"
                 [:br] "Graphic design by Arvid Logan & Reuben Sinder"]]
               "810"

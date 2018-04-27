@@ -13,19 +13,10 @@
      ;  [:p "say " [:a {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"]]]
      [projects-component]
      [:div.flex-row.footer
-       [:div.definition
-        [:h1 "man·y·fold"]
-        [:h2 "ˈmenēˌfōld/"]
-        [:i "adverb"]
-        [:ol
-          [:li "by many times."]
-          [:li "\"the impact would be multiplied manyfold\""]]
-        [:i "adjective"]
-        [:ol
-         [:li "involving multiplication by many times."]
-         [:li "\"the manyfold increase in ideas\""]]]
+       [:div.dragon-fold
+        [:img {:src "img/dragon-fold-header-animated.svg"}]]
        [:div.about
-        [:h1 "we build websites, apps, and learning experiences"]
+        [:h1 "we build websites, apps, & learning experiences"]
         [:h2 "Our mission is to turn ideas into well-crafted digital products through creative collaboration."]
         [:h2 "Say " [:a.rainbow {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"] " !"]]]
         ; [:h2 "mmmanyfold is "

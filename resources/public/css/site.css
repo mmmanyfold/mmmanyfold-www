@@ -14,6 +14,14 @@ body {
     font-size: 1.1em;
   }
 }
+.page {
+  margin-top: 3em;
+}
+@media screen and (max-width: 1133px) {
+  .page {
+    margin-top: 4em;
+  }
+}
 .davm-content {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
 }
@@ -22,7 +30,7 @@ body {
 }
 h1 {
   font-weight: 400;
-  font-size: 2.2em;
+  font-size: 2.5em;
 }
 h2,
 h3 {
@@ -51,11 +59,14 @@ header .img-wrapper .logo:hover {
   opacity: 0.9;
 }
 header h1 {
+  font-weight: 300;
+  margin-top: 0.5em;
   margin-bottom: 0;
 }
 header p {
-  margin-top: 0.5em;
+  margin-top: 0.3em;
   font-weight: 500;
+  font-size: 1.2em;
 }
 .nav {
   z-index: 10;
@@ -99,37 +110,21 @@ header p {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-.footer .definition {
+.footer .dragon-fold {
   width: 42.5%;
   margin-left: 5%;
-  font-weight: 400;
   padding: 3em 0;
-  font-size: 1.5em;
 }
-.footer .definition h1 {
-  font-size: 2.5em;
-  margin-top: 0;
-}
-.footer .definition h2 {
-  margin: 0;
-  margin-bottom: 1em;
-}
-@media screen and (max-width: 499px) {
-  .footer .definition {
-    padding: 2.75em 1em 3em 1.5em;
-    font-size: 1em;
-  }
-}
-@media screen and (max-width: 1133px) {
-  .footer .definition {
-    width: 100%;
+@media screen and (max-width: 980px) {
+  .footer .dragon-fold {
+    display: none;
   }
 }
 .footer .about {
   color: #f8f8f8;
   background-color: rgba(0, 0, 0, 0.85);
   width: 42.5%;
-  margin: 0 5%;
+  margin: 5%;
   padding: 1.5em;
 }
 .footer .about h1 {
@@ -140,15 +135,17 @@ header p {
   font-weight: 300;
   font-size: 1.1em;
 }
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 980px) {
   .footer .about {
     width: 100%;
     padding: 2em;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 700px) {
   .footer .about h1 {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
   .footer .about h2 {
     font-size: 1.4em;
@@ -157,12 +154,12 @@ header p {
 h2.gallery-label {
   color: white;
   position: absolute;
-  margin: 0.22em 1em;
+  margin: 0.35em 1em;
   font-size: 1.8em;
 }
 @media screen and (max-width: 499px) {
   h2.gallery-label {
-    margin: 0.15em 0.25em;
+    margin: 0.27em 0.25em;
     font-size: 1.4em;
   }
 }
@@ -193,6 +190,11 @@ div.gallery-filter {
     font-size: 0.9em;
   }
 }
+@media screen and (max-width: 400px) {
+  div.gallery-filter {
+    display: none;
+  }
+}
 div.gallery-filter .filter-button {
   margin-left: 15px;
 }
@@ -208,17 +210,15 @@ div.gallery-filter .filter-title {
   background-color: #0a0608;
   overflow-x: scroll;
   height: 290px;
-  margin: 3em 0;
 }
 @media screen and (min-width: 500px) {
   .scrolling-gallery {
     height: 400px;
   }
 }
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 400px) {
   .scrolling-gallery {
-    margin-bottom: 0;
-    margin-top: 4em;
+    height: 240px;
   }
 }
 .scrolling-gallery .title {
