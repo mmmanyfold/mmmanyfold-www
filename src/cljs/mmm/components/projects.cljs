@@ -105,6 +105,19 @@
               #{:business :online-shop}]
 
             [project
+             "This Machine Has A Soul"
+             "img/gallery/installation_small.png"
+             [:h2
+              [:p "Custom website for Denver participatory budgeting pilot + community art project organized by Warm Cookies of the Revolution."]
+              [:a {:class "rabbit rainbow"
+                   :href "http://thismachinehasasoul.com"} "thismachinehasasoul.com"]
+              [:p.tech "Tech: Clojure(script), re-frame, Node.js, GraphQL, AWS, Contentful"
+               [:br] "Logo by MATTER studio"]]
+             "680"
+             "381"
+             #{:nonprofit :music-art}]
+
+            [project
               "Tony Seltzer"
               "img/gallery/tony-seltzer.gif"
               [:h2
@@ -116,19 +129,6 @@
               "480"
               "412"
               #{:music-art}]
-
-            [project
-              "This Machine Has A Soul"
-              "img/gallery/future-machine.png"
-              [:h2
-               [:p "Custom website for Denver participatory budgeting pilot + community art project organized by Warm Cookies of the Revolution."]
-               [:a {:class "rabbit rainbow"
-                    :href "http://thismachinehasasoul.com"} "thismachinehasasoul.com"]
-               [:p.tech "Tech: Clojure(script), re-frame, Node.js, GraphQL, AWS, Contentful"
-                [:br] "Logo by MATTER studio"]]
-              "680"
-              "381"
-              #{:nonprofit :music-art}]
 
             [project
               "OWLET"

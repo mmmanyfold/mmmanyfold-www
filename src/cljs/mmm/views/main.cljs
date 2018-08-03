@@ -25,7 +25,8 @@
          [:div.img-wrapper
           [:a.logo {:href "/"}
            [:img {:src "img/logo-graydient-invert.png"}]]]
-         [:h1 title]
+         ;[:h1 title]
+         [:img.logo-text {:src "img/text-logo.png"}]
          [:p.subtitle subtitle]]
         [:div.page
          [views @(rf/subscribe [:active-view])]]]))
