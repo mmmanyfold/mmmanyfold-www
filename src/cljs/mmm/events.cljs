@@ -51,3 +51,29 @@
   :set-css-content-class
   (fn [db [_ new-class]]
       (assoc db :content-css-class new-class)))
+
+(rf/reg-event-fx
+  :get-contentful-data
+  (fn [{db :db} [_ db-key query]]
+    (when-not (db-key db)
+      (let [endpoint "http://localhost:8000/___graphql/"
+            space-id "x84uyf33pmv4"]
+        {:db         db
+         :http-xhrio {:method          :post
+                      :format          (ajax/json-request-format)
+                      :params          {:query query}
+                      :uri             (str endpoint space-id)
+                      :response-format (ajax/json-response-format {:keywords? true})
+                      :on-failure      [:get-contentful-data-failed]
+                      :on-success      [:get-contentful-data-success db-key]}}))))
+
+(rf/reg-event-db
+  :get-contentful-data-failed
+  (fn [db _]
+    (js/console.error ":get-contentful-data event failed, is the GraphQL server running ?")
+    db))
+
+(rf/reg-event-db
+  :get-contentful-data-success
+  (fn [db [_ db-key & [{data :data}]]]
+    (assoc db db-key data)))

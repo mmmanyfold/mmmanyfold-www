@@ -1,27 +1,91 @@
 (ns mmm.views.home
   (:require [re-frame.core :as rf]
-            [mmm.components.projects :refer [projects-component]]
-            [mmm.components.talks :refer [talks-component]]))
+            [mmm.components.bubble :refer [bubble]]))
+
+(def query
+  "{
+    allContentfulProject {
+      edges {
+        node {
+          title
+          cover {
+            id
+          }
+          category
+        }
+      }
+		},
+    allContentfulAsset {
+      edges {
+        node {
+          id
+          resize(width: 500) {
+            src
+          }
+        }
+      }
+		}
+	}")
+
+(def projects [{:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["art"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["art"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["art"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["art"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["art"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["art"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["online shop"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["online shop"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["business", "online shop"]},
+               {:title "project 1"
+                :cover "img/projects/tony-seltzer.gif"
+                :category ["education", "nonprofit"]}])
+
+(defn filter-by-cat [cat]
+  (filter (fn [p]
+            (some
+              #(when (= % cat) %)
+              (:category p)))
+    projects))
 
 (defn home-view []
-  (fn []
-    (rf/dispatch [:set-css-content-class "default-content"])
-    (rf/dispatch [:set-titles "" "web + app dev studio"])
-    [:div.home-wrap
-     ; [:div.greet
-     ;  [:h1 "Got a project idea?"]
-     ;  [:p "say " [:a {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"]]]
-     [projects-component]
-     [:div.flex-row.footer
-       [:div.dragon-fold
-        [:img {:src "img/dragon-fold-header-animated.svg"}]]
-       [:div.about
-        [:h1 "we build websites, apps, & learning experiences"]
-        [:h2 "Our mission is to turn ideas into well-crafted digital products through creative collaboration."]
-        [:h2 "Say " [:a.rainbow {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"] " !"]]]
-        ; [:h2 "mmmanyfold is "
-        ;  [:a.rainbow {:href "https://github.com/eemshi" :target "_blank"} "MSL"]
-        ;  " + "
-        ;  [:a.rainbow {:href "/david"} "DAVM"]
-        ;  " + all of our collaborators"]]]
-     [talks-component]]))
+  ;(let [db-key :projects]                                    ;; 0. declare unique db-key
+  ;  (rf/reg-sub db-key #(db-key %))                          ;; 1. register subscriber db-key
+  ;  (rf/dispatch [:get-contentful-data db-key query :media]) ;; 2. retrieve contentful data & pass key for assoc in db
+  ;  (if-let [projects (rf/subscribe [db-key])]
+  ;    (prn projects)
+  (let [categories ["art"
+                    "business"
+                    "online shop"
+                    "nonprofit"
+                    "education"
+                    "installation"
+                    "mobile"]]
+    [:div
+     [:div
+      (for [cat categories
+            :let [projects (filter-by-cat cat)]]
+        ^{:key (gensym)}
+        [:div
+         [:h1 cat]
+         (for [project projects
+               :let [{:keys [title cover category]} project]]
+           ^{:key (gensym)}
+           [bubble :blue title])])]]))
