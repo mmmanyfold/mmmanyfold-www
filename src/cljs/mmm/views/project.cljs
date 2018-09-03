@@ -4,7 +4,8 @@
 
 (def showdown (js/showdown.Converter.))
 
-(def project-titles ["Salter House"
+(def project-titles [
+                     ;"Salter House"
                      "Equalizer Demo"
                      "Playground Coffee Shop"
                      "Picture Room"
@@ -17,7 +18,8 @@
                      "Remember the Memories"
                      "Sporting Life"])
 
-(def images ["//images.ctfassets.net/x84uyf33pmv4/3wVDq47yI0OsM2kM6u06OA/d7372723f8a22d5e3b585bcd26eb1369/salter-house.png?w=500&fl=progressive&q=50"
+(def images [
+             ;"//images.ctfassets.net/x84uyf33pmv4/3wVDq47yI0OsM2kM6u06OA/d7372723f8a22d5e3b585bcd26eb1369/salter-house.png?w=500&fl=progressive&q=50"
              "//images.ctfassets.net/x84uyf33pmv4/N1F2TU3scw2gG08CoCcye/155861cf756af2bb0321785364428eef/equalizer.jpg?w=500&fl=progressive&q=50"
              "//images.ctfassets.net/x84uyf33pmv4/1VwYzsGEl6kKeCkmuqcUCA/8a21f77721283f2097d992f9f20b13d5/playground.gif?w=500&fl=progressive&q=50"
              "//images.ctfassets.net/x84uyf33pmv4/3TDU5LRkcgCSKy4MOgGgeg/13305714ef4377a06980150d82416b9e/picture-room.png?w=500&fl=progressive&q=50"
@@ -38,7 +40,7 @@
       [:div {:style {:padding "0 2em 3em 2em"}}
        [:h1.title "mmmanyfold dev studio"]
        [:h1 "We're building a new website! In the meantime, here are some of our projects (in no particular order). Contact: hello@mmmanyfold.com"]
-       (for [project projects
+       (for [project (rest projects)
              :let [{:keys [title description tech credits]} project
                    n (.indexOf project-titles title)
                    img (nth images n)]]
