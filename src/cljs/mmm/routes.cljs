@@ -32,7 +32,7 @@
   ;; define routes here
 
   (defroute "/" []
-            (rf/dispatch [:set-active-view :home-view]))
+            (rf/dispatch [:set-active-view :project-view]))
 
   (defroute "/contact" []
             (rf/dispatch [:set-active-view :contact-view]))

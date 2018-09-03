@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic:300,400,500,700');
 
 @offwhite: #F8F8F8;
 @blackish: #0A0608;
-@reddish: #fbb4ae;
+@reddish: #fb8072;
 @lightgray: #C5C5C5;
 @darkgray: #606060;
-@background: rgba(242, 236, 225, 1);
+@background: rgba(242, 236, 225, 0.75);
 
 html {
   height: 100%;
@@ -19,7 +19,7 @@ body {
   @media screen and (min-width: 500px) {
     font-size: 1em;
   }
-  font-family: Quicksand;
+  font-family: "Gentium Basic";
 }
 
 // default background content class
@@ -41,6 +41,10 @@ body {
 h1 {
   font-weight: 400;
   font-size: 2em;
+}
+
+h1.title {
+  font-size: 2.8em;
 }
 
 h2, h3 {
@@ -182,13 +186,17 @@ a {
   flex-flow: row wrap;
 
   .project-view-details {
-    margin: 1.75em 2em 0 2em;
+    flex: 1;
+    margin: 1.75em 0 0 2em;
+    @media screen and (max-width: 629px) {
+      margin: 0 0 2em 0;
+    }
   }
 
   .project-view-image {
     width: 252px;
     height: 252px;
-    margin: 2em 0 0 2em;
+    margin: 2em 0 0 0;
   }
 }
 
