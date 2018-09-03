@@ -1,13 +1,9 @@
 (ns mmm.events
-  (:require-macros [adzerk.env :as env])
+  (:require-macros [mmm-clj.env :refer [get-env]])
   (:require [re-frame.core :as rf]
             [ajax.core :as ajax :refer [POST]]
             [day8.re-frame.http-fx]
             [mmm.db :as db]))
-
-(env/def GRAPHQL_API_KEY "MMM_WWW_GRAPHQL_COOL_API_KEY")
-
-(defonce graphql-endpoint "https://api.graph.cool/simple/v1/cj2wiig1p3rcq0154lhr2nbk5")
 
 (rf/reg-event-db
   :initialize-db
@@ -18,28 +14,6 @@
   :set-active-view
   (fn [db [_ active-view]]
     (assoc db :active-view active-view)))
-
-(rf/reg-event-fx
-  :get-profile-data
-  (fn [{db :db} [_ user query]]
-    ;; TODO: add loading state...
-    {:db         db
-     :http-xhrio {:method          :post
-                  :headers         {:Authorization (str "Bearer " GRAPHQL_API_KEY)}
-                  :format          (ajax/json-request-format)
-                  :params          {:query query}
-                  :uri             graphql-endpoint
-                  :response-format (ajax/json-response-format {:keywords? true})
-                  :on-success      [:get-profile-data-success user]}}))
-
-(rf/reg-event-db
-  :get-profile-data-success
-  (rf/path [:profiles])
-  (fn [db [_ user & [{data :data}]]]
-    (let [{:keys [allProjects Collaborator]} data]
-      (-> db
-        (assoc-in [user] (merge (db user) Collaborator))
-        (assoc-in [user :projects] allProjects)))))
 
 (rf/reg-event-db
   :set-titles
@@ -54,15 +28,17 @@
 
 (rf/reg-event-fx
   :get-contentful-data
-  (fn [{db :db} [_ db-key query]]
+  (fn [{db :db} [_ db-key]]
     (when-not (db-key db)
-      (let [endpoint "http://localhost:8000/___graphql/"
-            space-id "x84uyf33pmv4"]
+      (let [endpoint "https://cdn.contentful.com"
+            space-id (get-env :mmm-contentful-server-space-id)
+            access-token (get-env :mmm-contentful-server-access-token)]
         {:db         db
-         :http-xhrio {:method          :post
+         :http-xhrio {:method          :get
+                      :headers         {:Authorization (str "Bearer " access-token)}
                       :format          (ajax/json-request-format)
-                      :params          {:query query}
-                      :uri             (str endpoint space-id)
+                      :params          {:access_token access-token}
+                      :uri             (str endpoint "/spaces/" space-id "/environments/master/entries")
                       :response-format (ajax/json-response-format {:keywords? true})
                       :on-failure      [:get-contentful-data-failed]
                       :on-success      [:get-contentful-data-success db-key]}}))))
@@ -75,5 +51,5 @@
 
 (rf/reg-event-db
   :get-contentful-data-success
-  (fn [db [_ db-key & [{data :data}]]]
-    (assoc db db-key data)))
+  (fn [db [_ db-key & [{items :items}]]]
+    (assoc db db-key items)))

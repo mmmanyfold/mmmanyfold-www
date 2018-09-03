@@ -12,6 +12,7 @@
                  [compojure "1.6.0"]
                  [ring "1.6.0"]
                  [cljs-ajax "0.6.0"]
+                 [environ "1.1.0"]
                  [day8.re-frame/http-fx "0.1.3"]
                  [adzerk/env "0.4.0"]]
 
@@ -26,13 +27,13 @@
 
   :min-lein-version "2.5.3"
 
-  :source-paths ["src/clj"]
+  :source-paths ["src/clj" "src/cljs"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
                                     "test/js"]
 
   :figwheel {:css-dirs     ["resources/public/css"]
-             :ring-handler mmm.handler/dev-handler}
+             :ring-handler mmm-clj.handler/dev-handler}
 
   :less {:source-paths ["less"]
          :target-path  "resources/public/css"}
@@ -42,13 +43,14 @@
    {:dependencies [[binaryage/devtools "0.8.2"]]
 
     :plugins      [[lein-figwheel "0.5.8"]
+                   [environ "1.0.1"]
                    [lein-doo "0.1.7"]]}}
 
 
   :cljsbuild
   {:builds
    [{:id           "dev"
-     :source-paths ["src/cljs"]
+     :source-paths ["src/clj" "src/cljs"]
      :figwheel     {:on-jsload "mmm.core/mount-root"}
      :compiler     {:main                 mmm.core
                     :output-to            "resources/public/js/compiled/app.js"
@@ -60,7 +62,7 @@
 
 
     {:id           "min"
-     :source-paths ["src/cljs"]
+     :source-paths ["src/clj" "src/cljs"]
      :jar          true
      :compiler     {:main            mmm.core
                     :output-to       "resources/public/js/compiled/app.js"
@@ -69,14 +71,14 @@
                     :pretty-print    false}}
 
     {:id           "test"
-     :source-paths ["src/cljs" "test/cljs"]
+     :source-paths ["src/clj" "src/cljs" "test/cljs"]
      :compiler     {:main          mmm.runner
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
                     :optimizations :none}}]}
 
-  :main mmm.server
+  :main mmm-clj.server
 
-  :aot [mmm.server]
+  :aot [mmm-clj.server]
 
   :prep-tasks [["cljsbuild" "once" "min"] "compile"])
