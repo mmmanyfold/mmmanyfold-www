@@ -2,6 +2,7 @@
 
 @offwhite: #F8F8F8;
 @blackish: #0A0608;
+@reddish: #fbb4ae;
 @lightgray: #C5C5C5;
 @darkgray: #606060;
 @background: rgba(242, 236, 225, 1);
@@ -39,20 +40,16 @@ body {
 
 h1 {
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 h2, h3 {
   font-weight: 300;
 }
 
-h2 {
-  padding: 2px 8px 2px 6px;
-}
-
 a {
   text-decoration: underline;
-  color: @offwhite;
+  color: @reddish;
 }
 
 .projects-gallery {
@@ -66,6 +63,10 @@ a {
   text-align: center;
   width: 470px;
   height: 630px;
+  @media screen and (max-width: 500px) {
+    width: 317px;
+    height: 450px;
+  }
 }
 
 .category-projects {
@@ -75,8 +76,16 @@ a {
 .bubble-wrap-outer {
   position: absolute;
   top: 0;
+
   width: 252px;
   height: 252px;
+
+  @media screen and (max-width: 500px) {
+    width: 170px;
+    height: 170px;
+    font-size: 0.8em;
+  }
+
   &:hover {
     z-index: 15;
   }
@@ -166,6 +175,21 @@ a {
   align-items: center;
   padding: 0.9em;
   .label { width: 100% }
+}
+
+.project-view-wrap {
+  display: flex;
+  flex-flow: row wrap;
+
+  .project-view-details {
+    margin: 1.75em 2em 0 2em;
+  }
+
+  .project-view-image {
+    width: 252px;
+    height: 252px;
+    margin: 2em 0 0 2em;
+  }
 }
 
 header {

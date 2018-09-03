@@ -22,18 +22,15 @@ body {
 }
 h1 {
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 h2,
 h3 {
   font-weight: 300;
 }
-h2 {
-  padding: 2px 8px 2px 6px;
-}
 a {
   text-decoration: underline;
-  color: #f8f8f8;
+  color: #fbb4ae;
 }
 .projects-gallery {
   width: 100%;
@@ -46,6 +43,12 @@ a {
   width: 470px;
   height: 630px;
 }
+@media screen and (max-width: 500px) {
+  .category-wrap {
+    width: 317px;
+    height: 450px;
+  }
+}
 .category-projects {
   position: relative;
 }
@@ -54,6 +57,13 @@ a {
   top: 0;
   width: 252px;
   height: 252px;
+}
+@media screen and (max-width: 500px) {
+  .bubble-wrap-outer {
+    width: 170px;
+    height: 170px;
+    font-size: 0.8em;
+  }
 }
 .bubble-wrap-outer:hover {
   z-index: 15;
@@ -138,6 +148,18 @@ a {
 }
 .label-bubble .label {
   width: 100%;
+}
+.project-view-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+.project-view-wrap .project-view-details {
+  margin: 1.75em 2em 0 2em;
+}
+.project-view-wrap .project-view-image {
+  width: 252px;
+  height: 252px;
+  margin: 2em 0 0 2em;
 }
 header {
   text-align: center;

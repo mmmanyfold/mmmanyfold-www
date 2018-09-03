@@ -7,6 +7,7 @@
                  [org.clojure/core.async "0.2.391"]
                  [re-com "1.0.0"]
                  [secretary "1.2.3"]
+                 [camel-snake-kebab "0.4.0"]
                  [cljsjs/jquery "2.2.4-0"]
                  [cljsjs/photoswipe "4.1.1-0"]
                  [compojure "1.6.0"]

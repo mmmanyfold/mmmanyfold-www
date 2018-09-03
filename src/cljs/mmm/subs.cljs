@@ -12,6 +12,11 @@
     (:active-view db)))
 
 (rf/reg-sub
+  :project-in-view
+  (fn [db _]
+    (:project-in-view db)))
+
+(rf/reg-sub
   :project-list
   (fn [db _]
     (get-in db [:profiles :davm :projects])))

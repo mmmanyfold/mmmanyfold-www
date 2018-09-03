@@ -12,8 +12,11 @@
 
 (rf/reg-event-db
   :set-active-view
-  (fn [db [_ active-view]]
-    (assoc db :active-view active-view)))
+  (fn [db [_ active-view & [project-name]]]
+    (if project-name
+      (assoc db :active-view active-view
+                :project-in-view project-name)
+      (assoc db :active-view active-view))))
 
 (rf/reg-event-db
   :set-titles
