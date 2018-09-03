@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic:300,400,500,700');
 
 @offwhite: #F8F8F8;
 @blackish: #0A0608;
+@reddish: #fb8072;
 @lightgray: #C5C5C5;
 @darkgray: #606060;
+@background: rgba(242, 236, 225, 0.75);
 
 html {
   height: 100%;
@@ -11,20 +13,13 @@ html {
 
 body {
   color: @blackish;
-  background-color: @offwhite;
+  background-color: @background;
   margin: 0;
   height: 100%;
   @media screen and (min-width: 500px) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
-  font-family: Quicksand;
-}
-
-.page {
-  margin-top: 3em;
-  @media screen and (max-width: 1133px) {
-    margin-top: 4em;
-  }
+  font-family: "Gentium Basic";
 }
 
 // default background content class
@@ -45,20 +40,164 @@ body {
 
 h1 {
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 2em;
+}
+
+h1.title {
+  font-size: 2.8em;
 }
 
 h2, h3 {
   font-weight: 300;
 }
 
-h2 {
-  padding: 2px 8px 2px 6px;
-}
-
 a {
   text-decoration: underline;
-  color: @offwhite;
+  color: @reddish;
+}
+
+.projects-gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.category-wrap {
+  text-align: center;
+  width: 470px;
+  height: 630px;
+  @media screen and (max-width: 500px) {
+    width: 317px;
+    height: 450px;
+  }
+}
+
+.category-projects {
+  position: relative;
+}
+
+.bubble-wrap-outer {
+  position: absolute;
+  top: 0;
+
+  width: 252px;
+  height: 252px;
+
+  @media screen and (max-width: 500px) {
+    width: 170px;
+    height: 170px;
+    font-size: 0.8em;
+  }
+
+  &:hover {
+    z-index: 15;
+  }
+  &:nth-child(1) {
+    transform: translate(43%, 0);
+    .label-bubble {
+      justify-content: center;
+    }
+  }
+  &:nth-child(2) {
+    transform: translate(86%, 25%);
+    .label-bubble {
+      justify-content: flex-end;
+    }
+  }
+  &:nth-child(3) {
+    transform: translate(86%, 75%);
+    .label-bubble {
+      justify-content: flex-end;
+    }
+  }
+  &:nth-child(4) {
+    transform: translate(43%, 100%);
+    .label-bubble {
+      justify-content: center;
+    }
+  }
+  &:nth-child(5) {
+    transform: translate(0, 75%);
+    .label-bubble {
+      justify-content: flex-start;
+    }
+  }
+  &:nth-child(6) {
+    transform: translate(0, 25%);
+    .label-bubble {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.bubble-wrap-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  text-align: center;
+  border-radius: 50% 50%;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.img-bubble {
+  z-index: 10;
+  overflow: hidden;
+  border: 2px solid;
+  div {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    visibility: hidden;
+  }
+  &:hover {
+    div {
+      visibility: visible;
+    }
+  }
+}
+
+.color-bubble {
+  opacity: 0.5;
+}
+
+.label-bubble {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0.9em;
+  .label { width: 100% }
+}
+
+.project-view-wrap {
+  display: flex;
+  flex-flow: row wrap;
+
+  .project-view-details {
+    flex: 1;
+    margin: 1.75em 0 0 2em;
+    @media screen and (max-width: 414px) {
+      margin: 0 0 2em 0;
+    }
+  }
+
+  .project-view-image {
+    width: 252px;
+    height: 252px;
+    margin: 2em 0 0 0;
+  }
 }
 
 header {

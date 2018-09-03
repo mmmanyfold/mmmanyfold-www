@@ -1,27 +1,46 @@
 (ns mmm.views.home
   (:require [re-frame.core :as rf]
-            [mmm.components.projects :refer [projects-component]]
-            [mmm.components.talks :refer [talks-component]]))
+            [mmm.components.bubble :refer [bubble]]))
+
+(def colors ["#fbb4ae"   ;red
+             "#fed9a6"   ;orange
+             "#ccebc5"   ;green
+             "#b3cde3"   ;blue
+             "#f2f2f2"    ;white
+             "#decbe4"   ;purple
+             "#b3cde3"   ;blue
+             "#f2f2f2"   ;white
+             "#decbe4"   ;purple
+             "#fbb4ae"   ;red
+             "#fed9a6"   ;orange
+             "#ccebc5"]) ;green
+
+(defn filter-by-cat [cat projects]
+  (filter (fn [p]
+            (some
+              #(when (= % cat) %)
+              (:category p)))
+          projects))
 
 (defn home-view []
-  (fn []
-    (rf/dispatch [:set-css-content-class "default-content"])
-    (rf/dispatch [:set-titles "" "web + app dev studio"])
-    [:div.home-wrap
-     ; [:div.greet
-     ;  [:h1 "Got a project idea?"]
-     ;  [:p "say " [:a {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"]]]
-     [projects-component]
-     [:div.flex-row.footer
-       [:div.dragon-fold
-        [:img {:src "img/dragon-fold-header-animated.svg"}]]
-       [:div.about
-        [:h1 "we build websites, apps, & learning experiences"]
-        [:h2 "Our mission is to turn ideas into well-crafted digital products through creative collaboration."]
-        [:h2 "Say " [:a.rainbow {:href "mailto:hello@mmmanyfold.com"} "hello@mmmanyfold.com"] " !"]]]
-        ; [:h2 "mmmanyfold is "
-        ;  [:a.rainbow {:href "https://github.com/eemshi" :target "_blank"} "MSL"]
-        ;  " + "
-        ;  [:a.rainbow {:href "/david"} "DAVM"]
-        ;  " + all of our collaborators"]]]
-     [talks-component]]))
+  (let [db-key :projects]
+    (rf/reg-sub db-key #(db-key %))
+    (rf/dispatch [:get-contentful-data db-key])
+    (if-let [projects (map #(:fields %) @(rf/subscribe [db-key]))]
+      (let [categories ["recent"
+                        "past"]]
+        [:div.projects-gallery
+         (for [cat categories
+               :let [projects (filter-by-cat cat projects)]]
+           ^{:key (gensym)}
+           [:div.category-wrap
+            [:h1 cat]
+            [:div.category-projects
+
+             (for [project projects
+                   :let [{:keys [title cover]} project
+                         n (.indexOf projects project)
+                         color (nth colors n)]]
+               ^{:key (gensym)}
+               [bubble color cover title])]])])
+      [:div "loading..."])))
