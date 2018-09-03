@@ -1,13 +1,9 @@
 (ns mmm.components.bubble)
 
-(def colors {:red "#EB5757"
-             :green "#6FCF97"
-             :blue "#56CCF2"
-             :purple "#BB6BD9"
-             :yellow "#F2C94C"})
-
-(defn bubble [color-key text]
-  (let [color-val (color-key colors)]
-    [:div.bubble {:style {:border-color color-val
-                          :background-color color-val}}
-     [:div.text text]]))
+(defn bubble [color cover label]
+  [:div.bubble-wrap-outer
+   [:div.bubble-wrap-inner
+    [:div.bubble.img-bubble {:style {:border-color color}}
+     [:div {:style {:background-image (str "url('" cover "')")}}]]
+    [:div.bubble.color-bubble {:style {:background-color color}}]
+    [:div.bubble.label-bubble label]]])
