@@ -83,42 +83,36 @@ a {
   &:nth-child(1) {
     transform: translate(43%, 0);
     .label-bubble {
-      align-items: flex-start;
       justify-content: center;
     }
   }
   &:nth-child(2) {
     transform: translate(86%, 25%);
     .label-bubble {
-      align-items: center;
       justify-content: flex-end;
     }
   }
   &:nth-child(3) {
     transform: translate(86%, 75%);
     .label-bubble {
-      align-items: center;
       justify-content: flex-end;
     }
   }
   &:nth-child(4) {
     transform: translate(43%, 100%);
     .label-bubble {
-      align-items: flex-end;
       justify-content: center;
     }
   }
   &:nth-child(5) {
     transform: translate(0, 75%);
     .label-bubble {
-      align-items: center;
       justify-content: flex-start;
     }
   }
   &:nth-child(6) {
     transform: translate(0, 25%);
     .label-bubble {
-      align-items: center;
       justify-content: flex-start;
     }
   }
@@ -169,6 +163,7 @@ a {
 .label-bubble {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   padding: 0.9em;
   .label { width: 100% }
 }

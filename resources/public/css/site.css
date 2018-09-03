@@ -62,42 +62,36 @@ a {
   transform: translate(43%, 0);
 }
 .bubble-wrap-outer:nth-child(1) .label-bubble {
-  align-items: flex-start;
   justify-content: center;
 }
 .bubble-wrap-outer:nth-child(2) {
   transform: translate(86%, 25%);
 }
 .bubble-wrap-outer:nth-child(2) .label-bubble {
-  align-items: center;
   justify-content: flex-end;
 }
 .bubble-wrap-outer:nth-child(3) {
   transform: translate(86%, 75%);
 }
 .bubble-wrap-outer:nth-child(3) .label-bubble {
-  align-items: center;
   justify-content: flex-end;
 }
 .bubble-wrap-outer:nth-child(4) {
   transform: translate(43%, 100%);
 }
 .bubble-wrap-outer:nth-child(4) .label-bubble {
-  align-items: flex-end;
   justify-content: center;
 }
 .bubble-wrap-outer:nth-child(5) {
   transform: translate(0, 75%);
 }
 .bubble-wrap-outer:nth-child(5) .label-bubble {
-  align-items: center;
   justify-content: flex-start;
 }
 .bubble-wrap-outer:nth-child(6) {
   transform: translate(0, 25%);
 }
 .bubble-wrap-outer:nth-child(6) .label-bubble {
-  align-items: center;
   justify-content: flex-start;
 }
 .bubble-wrap-inner {
@@ -139,6 +133,7 @@ a {
 .label-bubble {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   padding: 0.9em;
 }
 .label-bubble .label {

@@ -39,7 +39,7 @@
 
              (for [project projects
                    :let [{:keys [title cover]} project
-                         n (.indexOf all-projects project)
+                         n (.indexOf projects project)
                          color (nth colors n)]]
                ^{:key (gensym)}
                [bubble color cover title])]])])
