@@ -1,4 +1,4 @@
-(ns mmm.server
+(ns mmm-clj.server
   (:require [mmm.handler :refer [handler]]
             [config.core :refer [env]]
             [ring.adapter.jetty :refer [run-jetty]])
