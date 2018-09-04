@@ -1,5 +1,5 @@
 (ns mmm-clj.server
-  (:require [mmm.handler :refer [handler]]
+  (:require [mmm-clj.handler :refer [handler]]
             [config.core :refer [env]]
             [ring.adapter.jetty :refer [run-jetty]])
   (:gen-class))
