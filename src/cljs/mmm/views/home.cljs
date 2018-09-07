@@ -25,7 +25,7 @@
 (defn home-view []
   (let [db-key :projects]
     (rf/reg-sub db-key #(db-key %))
-    (rf/dispatch [:get-contentful-data db-key])
+    (rf/dispatch [:get-contentful-entries db-key])
     (if-let [projects (map #(:fields %) @(rf/subscribe [db-key]))]
       (let [categories ["recent"
                         "past"]]
