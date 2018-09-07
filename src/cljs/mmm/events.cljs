@@ -30,7 +30,36 @@
       (assoc db :content-css-class new-class)))
 
 (rf/reg-event-fx
-  :get-contentful-data
+  :get-contentful-entries
+  (fn [{db :db} [_ db-key]]
+    (when-not (db-key db)
+      (let [endpoint "https://cdn.contentful.com"
+            space-id (get-env :mmm-contentful-server-space-id)
+            access-token (get-env :mmm-contentful-server-access-token)]
+        {:db         db
+         :dispatch   [:get-contentful-assets :assets]
+         :http-xhrio {:method          :get
+                      :headers         {:Authorization (str "Bearer " access-token)}
+                      :format          (ajax/json-request-format)
+                      :params          {:access_token access-token}
+                      :uri             (str endpoint "/spaces/" space-id "/environments/master/entries")
+                      :response-format (ajax/json-response-format {:keywords? true})
+                      :on-failure      [:get-contentful-entries-failed]
+                      :on-success      [:get-contentful-entries-success db-key]}}))))
+
+(rf/reg-event-db
+  :get-contentful-entries-failed
+  (fn [db _]
+    (js/console.error ":get-contentful-entries event failed")
+    db))
+
+(rf/reg-event-db
+  :get-contentful-entries-success
+  (fn [db [_ db-key & [{items :items}]]]
+    (assoc db db-key items)))
+
+(rf/reg-event-fx
+  :get-contentful-assets
   (fn [{db :db} [_ db-key]]
     (when-not (db-key db)
       (let [endpoint "https://cdn.contentful.com"
@@ -41,18 +70,18 @@
                       :headers         {:Authorization (str "Bearer " access-token)}
                       :format          (ajax/json-request-format)
                       :params          {:access_token access-token}
-                      :uri             (str endpoint "/spaces/" space-id "/environments/master/entries")
+                      :uri             (str endpoint "/spaces/" space-id "/environments/master/assets")
                       :response-format (ajax/json-response-format {:keywords? true})
-                      :on-failure      [:get-contentful-data-failed]
-                      :on-success      [:get-contentful-data-success db-key]}}))))
+                      :on-failure      [:get-contentful-assets-failed]
+                      :on-success      [:get-contentful-assets-success db-key]}}))))
 
 (rf/reg-event-db
-  :get-contentful-data-failed
+  :get-contentful-assets-failed
   (fn [db _]
-    (js/console.error ":get-contentful-data event failed, is the GraphQL server running ?")
+    (js/console.error ":get-contentful-assets event failed")
     db))
 
 (rf/reg-event-db
-  :get-contentful-data-success
+  :get-contentful-assets-success
   (fn [db [_ db-key & [{items :items}]]]
     (assoc db db-key items)))
