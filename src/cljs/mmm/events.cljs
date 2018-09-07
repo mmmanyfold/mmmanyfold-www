@@ -42,7 +42,7 @@
                       :headers         {:Authorization (str "Bearer " access-token)}
                       :format          (ajax/json-request-format)
                       :params          {:access_token access-token}
-                      :uri             (str endpoint "/spaces/" space-id "/environments/master/entries?include=2")
+                      :uri             (str endpoint "/spaces/" space-id "/environments/master/entries")
                       :response-format (ajax/json-response-format {:keywords? true})
                       :on-failure      [:get-contentful-entries-failed]
                       :on-success      [:get-contentful-entries-success db-key]}}))))
