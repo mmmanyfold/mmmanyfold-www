@@ -22,25 +22,33 @@
               (:category p)))
           projects))
 
-(defn home-view []
-  (let [db-key :projects]
-    (rf/reg-sub db-key #(db-key %))
-    (rf/dispatch [:get-contentful-entries db-key])
-    (if-let [projects (map #(:fields %) @(rf/subscribe [db-key]))]
-      (let [categories ["recent"
-                        "past"]]
-        [:div.projects-gallery
-         (for [cat categories
-               :let [projects (filter-by-cat cat projects)]]
-           ^{:key (gensym)}
-           [:div.category-wrap
-            [:h1 cat]
-            [:div.category-projects
+(defn- get-image [id assets]
+  (let [img (some #(when (= id (-> % :sys :id)) %) assets)]
+    (-> img :fields :file :url)))
 
-             (for [project projects
-                   :let [{:keys [title cover]} project
-                         n (.indexOf projects project)
-                         color (nth colors n)]]
-               ^{:key (gensym)}
-               [bubble color cover title])]])])
+(defn home-view []
+  (let [subs #{:projects :assets}]
+    (doall (map (fn [s] (rf/reg-sub s #(s %))) subs))
+    (rf/dispatch [:get-contentful-entries (:projects subs)])
+    (if-let [projects @(rf/subscribe [(:projects subs)])]
+      (let [assets @(rf/subscribe [(:assets subs)])
+            projects (map #(:fields %) projects)
+            categories ["recent"
+                        "past"]]
+          [:div.projects-gallery
+           (for [cat categories
+                 :let [projects (filter-by-cat cat projects)]]
+             ^{:key (gensym)}
+             [:div.category-wrap
+              [:h1 cat]
+              [:div.category-projects
+
+               (for [project projects
+                     :let [{:keys [title cover]} project
+                           cover-id (-> cover :sys :id)
+                           img (get-image cover-id assets)
+                           n (.indexOf projects project)
+                           color (nth colors n)]]
+                 ^{:key (gensym)}
+                 [bubble color img title])]])])
       [:div "loading..."])))
