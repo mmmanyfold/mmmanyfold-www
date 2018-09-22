@@ -14,11 +14,12 @@
     (rf/dispatch [:get-contentful-entries (:projects subs)])
     (if-let [projects @(rf/subscribe [(:projects subs)])]
       (let [assets @(rf/subscribe [(:assets subs)])
-            projects (map #(:fields %) projects)]
+            projects (map #(:fields %) projects)
+            sorted-projects (reverse (sort-by :order projects))]
         [:div {:style {:padding "0 2em 3em 2em"}}
          [:h1.title "mmmanyfold dev studio"]
          [:h1 "We're building a new website! In the meantime, here are some of our projects (in no particular order). Contact: hello@mmmanyfold.com"]
-         (for [project projects
+         (for [project sorted-projects
                :let [{:keys [title description tech credits cover]} project
                      cover-id (-> cover :sys :id)
                      img (get-image cover-id assets)]]
