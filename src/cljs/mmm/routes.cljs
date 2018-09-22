@@ -34,6 +34,9 @@
   (defroute "/" []
             (rf/dispatch [:set-active-view :project-view]))
 
+  (defroute "/wip-home" []
+          (rf/dispatch [:set-active-view :home-view]))
+
   (defroute "/contact" []
             (rf/dispatch [:set-active-view :contact-view]))
 
