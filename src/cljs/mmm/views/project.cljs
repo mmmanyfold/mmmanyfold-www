@@ -17,8 +17,9 @@
             projects (map #(:fields %) projects)
             sorted-projects (reverse (sort-by :order projects))]
         [:div {:style {:padding "0 2em 3em 2em"}}
-         [:h1.title "mmmanyfold dev studio"]
-         [:h1 "We're building a new website! In the meantime, here are some of our projects (in no particular order). Contact: hello@mmmanyfold.com"]
+         [:h1.title [:b "mmmanyfold dev studio"]]
+         [:h1 "We're building a new website! In the meantime, here are some of our projects (in no particular order). "
+          [:i "Contact: hello@mmmanyfold.com"]]
          (for [project sorted-projects
                :let [{:keys [title description tech credits cover]} project
                      cover-id (-> cover :sys :id)
@@ -38,7 +39,7 @@
              [:h2 {"dangerouslySetInnerHTML"
                    #js{:__html (.makeHtml showdown description)}}]
              (when tech
-               [:p (str "Tech: " tech)])
+               [:p [:b (str "Tech: " tech)]])
              (when credits
                [:p credits])]])])
       [:div {:style {:padding "3em" :font-size "1em"}} "loading..."])))
