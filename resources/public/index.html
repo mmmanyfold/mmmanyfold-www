@@ -24,21 +24,53 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
     <link rel="manifest" href="img/icons/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
     <link href="css/site.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
 </head>
 <body>
+<div class="demo">
+    <div class="demo-content css-selector-demo">
+        <div class="l1 shape"></div>
+        <div class="l2 shape"></div>
+        <div class="l3 shape"></div>
+    </div>
+</div>
 <div id="app"></div>
 <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js?v=999"></script>
 <script src="js/compiled/app.js"></script>
 <script>mmm.core.init();</script>
 <script src="js/vendor/initPhotoSwipeFromDOM.js"></script>
+<script>
+	const a = anime.timeline({
+		// easing: 'easeOutExpo',
+		// translateX: 500,
+		duration: 750,
+        loop: true,
+	});
+
+	a.add({
+		rotate: 180,
+		targets: '.l1',
+	})
+
+	a.add({
+		rotate: 180,
+		targets: '.l2',
+	}, '-=50')
+
+	a.add({
+		rotate: 180,
+		targets: '.l3',
+	}, '-=125')
+</script>
 </body>
 </html>
